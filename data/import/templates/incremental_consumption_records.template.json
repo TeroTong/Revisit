@@ -1,0 +1,24 @@
+{
+  "operation": "INSERT",
+  "timestamp": "2026-01-15T10:00:00",
+  "institution_code": "BJ-HA-001",
+  "description": "新增消费记录示例",
+  "data": [
+    {
+      "order_number": "BJ-HA-001-ORD-20260115-0001",
+      "customer_code": "BJ-HA-001-C0001",
+      "doctor_code": "DOC-BJ-001",
+      "order_date": "2026-01-15",
+      "order_type": "PROJECT",
+      "project_code": "BOTOX-001",
+      "product_code": "BOTOX-100U",
+      "total_amount": 3980.00,
+      "discount_amount": 398.00,
+      "actual_amount": 3582.00,
+      "payment_method": "WECHAT",
+      "payment_status": "PAID",
+      "notes": "消费备注"
+    }
+  ]
+}
+

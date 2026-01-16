@@ -1,0 +1,82 @@
+Log file created at: 2026/01/12 01:57:36
+Running on machine: 7d23391da07d
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260112 01:57:36.350415     1 StorageDaemon.cpp:132] localhost = "storaged":9779
+I20260112 01:57:36.373955     1 StorageDaemon.cpp:147] data path= /data/storage
+I20260112 01:57:36.805518     1 MetaClient.cpp:80] Create meta client to "metad":9559
+I20260112 01:57:36.806573     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 1
+I20260112 01:57:36.809859     1 FileBasedClusterIdMan.cpp:53] Get clusterId: 5324093806865848853
+I20260112 01:57:36.912343    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:38.035387    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:39.043618    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.047761    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.069023    55 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.138180    56 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.144858    57 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.170931    58 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.177433    59 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.191229    60 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.222704    61 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.236203    62 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.266714    63 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.285555    64 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.308454    65 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.321619    66 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.322777    67 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.326709    68 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.328356     1 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 01:57:40.328929     1 MetaClient.cpp:3269] Load leader ok
+I20260112 01:57:40.329939    69 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260112 01:57:40.350363     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20260112 01:57:40.351531     1 StorageServer.cpp:250] Init schema manager
+I20260112 01:57:40.351943     1 StorageServer.cpp:253] Init index manager
+I20260112 01:57:40.352454     1 StorageServer.cpp:256] Init kvstore
+I20260112 01:57:40.353402     1 NebulaStore.cpp:48] Start the raft service...
+I20260112 01:57:40.357613     1 NebulaSnapshotManager.cpp:25] Send snapshot is rate limited to 10485760 for each part by default
+I20260112 01:57:40.377367     1 RaftexService.cpp:46] Start raft service on 9780
+I20260112 01:57:40.381279     1 NebulaStore.cpp:82] Scan the local path, and init the spaces_
+I20260112 01:57:40.384897     1 NebulaStore.cpp:90] Scan path "/data/storage/nebula/0"
+I20260112 01:57:40.385414     1 NebulaStore.cpp:90] Scan path "/data/storage/nebula/1"
+I20260112 01:57:40.401626    77 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20260112 01:57:40.404176    77 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20260112 01:57:40.405984    77 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20260112 01:57:40.426515    77 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20260112 01:57:40.625095    77 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/1/data
+I20260112 01:57:40.626009     1 NebulaStore.cpp:117] Load space 1 from disk
+I20260112 01:57:40.626598     1 NebulaStore.cpp:220] Load space 1 from disk
+I20260112 01:57:40.627211     1 NebulaStore.cpp:229] Need to open 1 parts of space 1
+I20260112 01:57:40.680744    71 NebulaStore.cpp:252] Load part 1, 1 from disk
+I20260112 01:57:40.681681     1 NebulaStore.cpp:286] Load space 1 complete
+I20260112 01:57:40.682030     1 NebulaStore.cpp:292] Init data from partManager for "storaged":9779
+I20260112 01:57:40.682344     1 NebulaStore.cpp:399] Data space 1 has existed!
+I20260112 01:57:40.682829     1 NebulaStore.cpp:451] [Space: 1, Part: 1] has existed!
+I20260112 01:57:40.683168     1 NebulaStore.cpp:75] Register handler...
+I20260112 01:57:40.683427     1 StorageServer.cpp:259] Init LogMonitor
+I20260112 01:57:40.684356     1 StorageServer.cpp:126] Starting Storage HTTP Service
+I20260112 01:57:40.687373     1 StorageServer.cpp:130] Http Thread Pool started
+I20260112 01:57:40.699100   100 WebService.cpp:124] Web service started on HTTP[19779]
+I20260112 01:57:40.703912     1 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20260112 01:57:40.704314     1 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20260112 01:57:40.704932     1 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20260112 01:57:40.706552     1 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20260112 01:57:40.842648     1 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/0/data
+I20260112 01:57:40.844120     1 AdminTaskManager.cpp:22] max concurrent subtasks: 10
+I20260112 01:57:40.844705   121 AdminTaskManager.cpp:224] waiting for incoming task
+I20260112 01:57:40.844785     1 AdminTaskManager.cpp:40] exit AdminTaskManager::init()
+E20260112 01:57:40.931921     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/127.998MiB
+I20260112 01:57:40.960770     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20260112 01:58:00.872406    70 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 01:58:00.873154    70 MetaClient.cpp:3269] Load leader ok
+I20260112 05:40:07.770202    70 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 05:40:07.771835    70 MetaClient.cpp:3269] Load leader ok
+I20260112 05:59:59.050469    70 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 05:59:59.053176    70 MetaClient.cpp:3269] Load leader ok
+I20260112 06:03:59.328428    70 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 06:03:59.328853    70 MetaClient.cpp:3269] Load leader ok
+I20260112 06:08:09.621280    70 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 06:08:09.621694    70 MetaClient.cpp:3269] Load leader ok
+I20260112 06:16:20.235903    70 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 06:16:20.236248    70 MetaClient.cpp:3269] Load leader ok
+I20260112 06:17:10.301119    70 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260112 06:17:10.302029    70 MetaClient.cpp:3269] Load leader ok

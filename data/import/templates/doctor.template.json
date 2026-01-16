@@ -1,0 +1,14 @@
+{
+  "_description": "医生数据模板",
+  "_note": "带下划线的字段为说明字段，导入时会被忽略",
+
+  "doctor_code": "医生编码，唯一，如 DOC-BJ-001",
+  "name": "医生姓名，必填",
+  "gender": "性别：MALE(男) / FEMALE(女) / UNKNOWN(未知)",
+  "phone": "联系电话",
+  "institution_code": "所属机构编码",
+  "title": "职称：主任医师 / 副主任医师 / 主治医师 / 住院医师",
+  "specialty": ["专长领域数组", "如：眼部整形", "鼻部整形"],
+  "introduction": "医生简介"
+}
+

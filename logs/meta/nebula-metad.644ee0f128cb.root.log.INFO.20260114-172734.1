@@ -1,0 +1,256 @@
+Log file created at: 2026/01/14 17:27:34
+Running on machine: 644ee0f128cb
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260114 17:27:34.183495     1 MetaDaemon.cpp:137] localhost = "metad":9559
+I20260114 17:27:34.208314     1 NebulaStore.cpp:48] Start the raft service...
+I20260114 17:27:34.210162     1 NebulaSnapshotManager.cpp:25] Send snapshot is rate limited to 10485760 for each part by default
+I20260114 17:27:34.391918     1 RaftexService.cpp:46] Start raft service on 9560
+I20260114 17:27:34.394439     1 NebulaStore.cpp:82] Scan the local path, and init the spaces_
+I20260114 17:27:34.401332     1 NebulaStore.cpp:90] Scan path "/data/meta/nebula/0"
+I20260114 17:27:34.402269     1 NebulaStore.cpp:292] Init data from partManager for "metad":9559
+I20260114 17:27:34.404080     1 NebulaStore.cpp:417] Create data space 0
+I20260114 17:27:34.617591    73 RocksEngine.cpp:107] open rocksdb on /data/meta/nebula/0/data
+I20260114 17:28:46.195485     1 NebulaStore.cpp:480] Space 0, part 0 has been added, asLearner 0
+I20260114 17:28:46.195990     1 NebulaStore.cpp:75] Register handler...
+I20260114 17:28:46.196278     1 MetaDaemonInit.cpp:106] Waiting for the leader elected...
+I20260114 17:28:46.196548     1 MetaDaemonInit.cpp:118] Leader has not been elected, sleep 1s
+I20260114 17:28:47.197829     1 MetaDaemonInit.cpp:153] Get meta version is 4
+I20260114 17:28:47.199445     1 MetaDaemonInit.cpp:169] Nebula store init succeeded, clusterId 5324093806865848853
+I20260114 17:28:47.200047     1 MetaDaemon.cpp:150] Start http service
+I20260114 17:28:47.200654     1 MetaDaemonInit.cpp:226] Starting Meta HTTP Service
+I20260114 17:28:47.203253   130 WebService.cpp:124] Web service started on HTTP[19559]
+I20260114 17:28:47.203887     1 MetaDaemonInit.cpp:192] Check root user
+I20260114 17:28:47.204457     1 RootUserMan.h:35] God user exists
+I20260114 17:28:47.207770     1 MetaDaemon.cpp:193] The meta daemon start on "metad":9559
+I20260114 17:28:47.209090     1 JobManager.cpp:64] JobManager initialized
+I20260114 17:28:47.209132   136 JobManager.cpp:150] JobManager::scheduleThread enter
+I20260114 17:28:47.839443   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:28:47.840279   143 HBProcessor.cpp:89] Update host "graphd":9669 dir info, root path: /usr/local/nebula, data path size: 0
+I20260114 17:28:47.846668   143 SessionManagerProcessor.cpp:150] resp session size: 13
+I20260114 17:28:47.851204   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.851569   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.851804   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.852023   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.852239   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.852458   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.852676   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.852923   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.853302   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.853634   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.853878   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.854214   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.854566   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.854997   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.855248   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.855448   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.855641   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.855968   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.856196   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.856405   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.856613   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.856840   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.857112   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.857280   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.857493   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.857744   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.858554   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.858952   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.861850   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.865367   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.866952   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.868010   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.870324   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.873030   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.875867   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.878306   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.880019   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.881388   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.884202   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.889420   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.898715   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.899577   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.900415   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.901160   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.901511   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.901976   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.902596   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.903275   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.903769   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.904245   143 ListHostsProcessor.cpp:249] skip inactive host: "storaged":9779
+I20260114 17:28:47.909055   143 SessionManagerProcessor.cpp:150] resp session size: 13
+I20260114 17:28:52.967526   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:28:52.968034   143 HBProcessor.cpp:52] Set clusterId for new host "storaged":9779!
+I20260114 17:28:52.968485   143 HBProcessor.cpp:89] Update host "storaged":9779 dir info, root path: /usr/local/nebula, data path size: 1
+I20260114 17:28:52.981041   143 SessionManagerProcessor.cpp:150] resp session size: 13
+I20260114 17:28:58.307750   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:29:03.613739   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:29:08.318569   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:29:08.324190   143 SessionManagerProcessor.cpp:150] resp session size: 13
+I20260114 17:29:13.626926   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:29:13.634528   143 SessionManagerProcessor.cpp:150] resp session size: 14
+I20260114 17:29:18.338084   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:29:23.646809   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:29:28.353335   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:29:33.661599   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:29:38.360877   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:29:43.673657   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:29:48.371711   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:29:53.688510   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:29:58.383512   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:30:03.697778   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:30:08.394039   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:30:13.710863   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:30:18.407272   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:30:23.725533   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:30:28.422327   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:30:33.740417   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:30:38.433450   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:30:43.753901   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:30:48.451923   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:30:53.767612   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:30:58.465502   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:31:03.780202   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:31:08.475663   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:31:13.789654   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:31:18.491725   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:31:23.804852   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:31:28.506564   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:31:33.817528   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:31:38.519454   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:31:43.826347   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:31:48.533809   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:31:53.832828   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:31:58.548987   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:32:03.840523   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:32:08.560796   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:32:13.847721   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:32:18.579881   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:32:23.866196   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:32:28.593298   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:32:33.878234   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:32:38.600854   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:32:43.889652   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:32:48.615629   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:32:53.902778   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:32:58.629576   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:33:03.916177   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:33:08.642187   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:33:13.926072   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:33:18.653556   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:33:23.938405   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:33:28.658658   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:33:33.946405   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:33:38.663203   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:33:43.950380   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:33:48.674650   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:33:53.959661   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:33:58.681974   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:34:03.982236   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:34:08.702356   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:34:13.997838   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:34:18.722535   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:34:24.018683   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:34:28.730504   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:34:34.031356   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:34:38.741180   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:34:44.038515   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:34:48.757316   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:34:54.054323   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:34:58.769003   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:35:04.062294   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:35:08.789541   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:35:14.076218   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:35:18.802979   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:35:24.101627   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:35:28.817698   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:35:34.166292   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:35:38.828744   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:35:44.175477   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:35:48.834040   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:35:54.186277   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:35:58.845680   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:36:04.198622   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:36:08.848331   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:36:14.203143   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:36:18.860222   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:36:24.226089   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:36:28.879824   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:36:34.359061   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:36:38.890767   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:36:44.370182   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:36:48.902119   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:36:54.382215   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:36:58.914268   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:37:04.393014   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:37:08.917716   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:37:14.394840   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:37:18.928092   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:37:24.409026   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:37:28.941689   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:37:34.415594   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:37:38.954941   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:37:44.424647   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:37:48.970959   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:37:54.432153   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:37:58.975931   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:38:04.442993   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:38:08.985173   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:38:14.453449   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:38:18.997180   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:38:24.467281   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:38:29.009581   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:38:34.475319   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:38:39.021001   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:38:44.484226   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:38:49.034575   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:38:54.495669   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:38:59.048619   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:39:04.510629   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:39:09.058187   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:39:14.519261   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:39:19.064198   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:39:24.527472   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:39:29.080317   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:39:34.538589   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:39:39.091886   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:39:44.542227   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:39:49.103408   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:39:54.558293   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:39:59.122773   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:40:04.563241   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:40:09.133994   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:40:14.577145   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:40:19.148789   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:40:24.586300   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:40:29.164659   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:40:34.594707   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:40:39.171607   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:40:44.600742   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:40:49.180935   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:40:54.611819   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:40:59.196139   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:41:04.618386   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:41:09.209499   143 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
+I20260114 17:41:14.629002   143 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260114 17:41:16.093456     1 MetaDaemon.cpp:230] Signal 15(Terminated) received, stopping this server
+I20260114 17:41:16.096863     1 JobManager.cpp:138] JobManager::shutDown() begin
+I20260114 17:41:16.098804   136 JobManager.cpp:155] Detect shutdown called, exit
+I20260114 17:41:16.099435   136 JobDescription.cpp:113] Loading job description failed, error: E_JOB_NOT_IN_SPACE
+I20260114 17:41:16.100050   136 JobManager.cpp:175] Load an invalid job from space 0 jodId 0
+I20260114 17:41:16.101052     1 JobManager.cpp:146] JobManager::shutDown() end
+I20260114 17:41:16.101799     1 NebulaStore.cpp:343] Stop the raft service...
+I20260114 17:41:16.102459     1 RaftexService.cpp:67] Stopping the raftex service on port 9560
+I20260114 17:41:16.103314     1 RaftexService.cpp:77] All partitions have stopped
+I20260114 17:41:16.104238     1 NebulaStore.cpp:346] Stop kv engine...
+I20260114 17:41:16.106280     1 NebulaStore.cpp:343] Stop the raft service...
+I20260114 17:41:16.106998     1 RaftexService.cpp:67] Stopping the raftex service on port 9560
+I20260114 17:41:16.107522     1 RaftexService.cpp:77] All partitions have stopped
+I20260114 17:41:16.108021     1 NebulaStore.cpp:346] Stop kv engine...
+I20260114 17:41:16.108493     1 NebulaStore.cpp:36] Cut off the relationship with meta client
+I20260114 17:41:16.109259     1 Part.h:59] [Port: 9560, Space: 0, Part: 0] ~Part()
+I20260114 17:41:16.116093     1 RocksEngine.h:247] Release rocksdb on /data/meta/nebula/0
+I20260114 17:41:16.131573     1 NebulaStore.cpp:44] ~NebulaStore()
+I20260114 17:41:16.133155     1 MetaDaemon.cpp:215] The meta Daemon stopped
+I20260114 17:41:16.136806     1 JobManager.cpp:138] JobManager::shutDown() begin
+I20260114 17:41:16.137988     1 JobManager.cpp:141] JobManager not running, exit

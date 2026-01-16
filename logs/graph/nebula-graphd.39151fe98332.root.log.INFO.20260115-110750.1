@@ -1,0 +1,57 @@
+Log file created at: 2026/01/15 11:07:50
+Running on machine: 39151fe98332
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260115 11:07:50.277845     1 GraphDaemon.cpp:122] Starting Graph HTTP Service
+I20260115 11:07:50.284072     8 WebService.cpp:124] Web service started on HTTP[19669]
+I20260115 11:07:50.285296     1 GraphDaemon.cpp:136] Number of networking IO threads: 2
+I20260115 11:07:50.285517     1 GraphDaemon.cpp:145] Number of worker threads: 2
+I20260115 11:07:50.287823     1 MetaClient.cpp:80] Create meta client to "metad":9559
+I20260115 11:07:50.287950     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 0
+I20260115 11:07:50.299086    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:07:51.301589    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:07:52.302953    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:07:53.303957    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+E20260115 11:07:53.304351    30 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260115 11:07:53.311388    30 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260115 11:07:53.311959     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260115 11:07:53.313201     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260115 11:08:03.314174    31 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:08:04.315296    31 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:08:05.318485    31 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:08:06.320380    31 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+E20260115 11:08:06.321003    31 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260115 11:08:06.321269    31 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260115 11:08:06.321610     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260115 11:08:06.321841     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260115 11:08:16.322578    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:08:16.326053    31 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.7":9559
+I20260115 11:08:16.334134     1 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260115 11:08:16.334378     1 MetaClient.cpp:3269] Load leader ok
+I20260115 11:08:16.335886     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20260115 11:08:16.339473     1 GraphSessionManager.cpp:337] Total of 229 sessions are loaded
+E20260115 11:08:16.339915     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/29.000MiB
+I20260115 11:08:16.340840     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20260115 11:08:16.367818     1 Snowflake.cpp:17] WorkerId init success: 1
+I20260115 11:08:16.368683    43 GraphServer.cpp:63] Starting nebula-graphd on graphd:9669
+I20260115 11:08:37.051429    39 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260115 11:08:37.051884    39 MetaClient.cpp:3269] Load leader ok
+I20260115 11:08:46.342592    21 GraphService.cpp:77] Authenticating user root from 172.20.0.4:39234
+I20260115 11:09:17.877789    21 GraphService.cpp:77] Authenticating user root from 172.20.0.4:49824
+I20260115 11:09:49.467487    20 GraphService.cpp:77] Authenticating user root from 172.20.0.4:51144
+I20260115 11:10:20.522241    20 GraphService.cpp:77] Authenticating user root from 172.20.0.9:51382
+E20260115 11:10:20.536578    21 QueryInstance.cpp:151] Existed!, query: ADD HOSTS "storaged":9779
+I20260115 11:10:20.882946    20 GraphService.cpp:77] Authenticating user root from 172.20.0.4:48310
+I20260115 11:10:52.361634    20 GraphService.cpp:77] Authenticating user root from 172.20.0.4:55140
+I20260115 11:11:23.895299    21 GraphService.cpp:77] Authenticating user root from 172.20.0.4:41540
+I20260115 11:11:53.628374    21 GraphService.cpp:77] Authenticating user root from 172.20.0.1:33780
+I20260115 11:11:55.415122    21 GraphService.cpp:77] Authenticating user root from 172.20.0.4:44542
+I20260115 11:13:40.972178    21 GraphService.cpp:77] Authenticating user root from 172.20.0.1:53762
+I20260115 11:16:06.440610    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:40130
+I20260115 11:18:28.270686    21 GraphService.cpp:77] Authenticating user root from 172.20.0.1:41730
+I20260115 11:26:13.763029    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:39926
+I20260115 11:27:48.661027    21 GraphService.cpp:77] Authenticating user root from 172.20.0.1:50016
+I20260115 11:30:33.741360    21 GraphService.cpp:77] Authenticating user root from 172.20.0.1:55188
+I20260115 11:40:51.983265    21 GraphService.cpp:77] Authenticating user root from 172.20.0.1:49288
+I20260115 11:50:28.103648    21 GraphService.cpp:77] Authenticating user root from 172.20.0.1:45524
+I20260115 11:55:40.755390    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:41722

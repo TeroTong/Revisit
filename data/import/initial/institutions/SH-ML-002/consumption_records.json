@@ -1,0 +1,45 @@
+[
+  {
+    "order_number": "SH-ML-002-ORD-20260112-0001",
+    "customer_code": "SH-ML-002-C0001",
+    "doctor_code": "DOC-SH-001",
+    "order_date": "2026-01-12",
+    "order_type": "PROJECT",
+    "project_code": "FILLER-001",
+    "product_code": "JUVEDERM-VOLUMA",
+    "total_amount": 12800.00,
+    "discount_amount": 1280.00,
+    "actual_amount": 11520.00,
+    "payment_method": "WECHAT",
+    "payment_status": "PAID"
+  },
+  {
+    "order_number": "SH-ML-002-ORD-20251228-0001",
+    "customer_code": "SH-ML-002-C0002",
+    "doctor_code": "DOC-SH-002",
+    "order_date": "2025-12-28",
+    "order_type": "PROJECT",
+    "project_code": "BOTOX-001",
+    "product_code": "BOTOX-100U",
+    "total_amount": 4500.00,
+    "discount_amount": 450.00,
+    "actual_amount": 4050.00,
+    "payment_method": "ALIPAY",
+    "payment_status": "PAID"
+  },
+  {
+    "order_number": "SH-ML-002-ORD-20251120-0001",
+    "customer_code": "SH-ML-002-C0003",
+    "doctor_code": "DOC-SH-001",
+    "order_date": "2025-11-20",
+    "order_type": "PROJECT",
+    "project_code": "THERMAGE-001",
+    "product_code": "THERMAGE-FLX",
+    "total_amount": 28000.00,
+    "discount_amount": 2800.00,
+    "actual_amount": 25200.00,
+    "payment_method": "CARD",
+    "payment_status": "PAID"
+  }
+]
+

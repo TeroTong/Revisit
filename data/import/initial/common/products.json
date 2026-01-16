@@ -1,0 +1,99 @@
+[
+  {
+    "product_code": "BOTOX-100U",
+    "name": "保妥适",
+    "brand": "艾尔建",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "unit": "瓶",
+    "effect_level": 5,
+    "indications": "面部动态皱纹治疗",
+    "contraindications": "神经肌肉疾病患者禁用",
+    "description": "进口A型肉毒素，100单位/瓶，全球销量领先的肉毒素品牌"
+  },
+  {
+    "product_code": "DYSPORT-300U",
+    "name": "吉适",
+    "brand": "益普生",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "unit": "瓶",
+    "effect_level": 4,
+    "indications": "面部动态皱纹治疗",
+    "contraindications": "神经肌肉疾病患者禁用",
+    "description": "进口A型肉毒素，300单位/瓶，扩散性好"
+  },
+  {
+    "product_code": "JUVEDERM-VOLUMA",
+    "name": "乔雅登丰颜",
+    "brand": "艾尔建",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "unit": "支",
+    "effect_level": 5,
+    "indications": "面部轮廓塑形、苹果肌填充、下颌线塑形",
+    "contraindications": "注射部位有感染者禁用",
+    "description": "高密度玻尿酸，1ml/支，适用于深层组织填充，效果可维持18-24个月"
+  },
+  {
+    "product_code": "JUVEDERM-ULTRA",
+    "name": "乔雅登极致",
+    "brand": "艾尔建",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "unit": "支",
+    "effect_level": 4,
+    "indications": "法令纹、唇部丰盈、泪沟填充",
+    "contraindications": "注射部位有感染者禁用",
+    "description": "中密度玻尿酸，1ml/支，适用于中层组织填充"
+  },
+  {
+    "product_code": "RESTYLANE-LYFT",
+    "name": "瑞蓝丽芙",
+    "brand": "高德美",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "unit": "支",
+    "effect_level": 4,
+    "indications": "面部轮廓填充、苹果肌、下颌",
+    "contraindications": "注射部位有感染者禁用",
+    "description": "瑞典进口玻尿酸，1ml/支，NASHA技术"
+  },
+  {
+    "product_code": "RESTYLANE-KYSSE",
+    "name": "瑞蓝Kysse",
+    "brand": "高德美",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "unit": "支",
+    "effect_level": 4,
+    "indications": "唇部丰盈、唇周细纹",
+    "contraindications": "注射部位有感染者禁用",
+    "description": "专为唇部设计的玻尿酸，柔软自然"
+  },
+  {
+    "product_code": "PICOWAY",
+    "name": "皮秒激光仪",
+    "brand": "赛诺秀",
+    "category": "EQUIPMENT",
+    "body_part": null,
+    "unit": "台",
+    "effect_level": null,
+    "indications": "色素性皮肤问题治疗",
+    "contraindications": null,
+    "description": "皮秒激光设备，精准祛斑"
+  },
+  {
+    "product_code": "THERMAGE-FLX",
+    "name": "热玛吉FLX",
+    "brand": "Solta Medical",
+    "category": "EQUIPMENT",
+    "body_part": null,
+    "unit": "台",
+    "effect_level": null,
+    "indications": "皮肤紧致提升",
+    "contraindications": null,
+    "description": "第五代热玛吉设备，智能全层加热"
+  }
+]
+

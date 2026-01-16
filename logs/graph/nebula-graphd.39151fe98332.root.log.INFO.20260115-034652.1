@@ -1,0 +1,267 @@
+Log file created at: 2026/01/15 03:46:52
+Running on machine: 39151fe98332
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260115 03:46:52.808426     1 GraphDaemon.cpp:122] Starting Graph HTTP Service
+I20260115 03:46:52.820107     7 WebService.cpp:124] Web service started on HTTP[19669]
+I20260115 03:46:52.820428     1 GraphDaemon.cpp:136] Number of networking IO threads: 2
+I20260115 03:46:52.820600     1 GraphDaemon.cpp:145] Number of worker threads: 2
+I20260115 03:46:52.822448     1 MetaClient.cpp:80] Create meta client to "metad":9559
+I20260115 03:46:52.822758     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 0
+I20260115 03:46:52.833904    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:46:53.836470    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:46:54.840340    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:46:55.844410    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+E20260115 03:46:55.844982    29 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260115 03:46:55.854948    29 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260115 03:46:55.855798     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260115 03:46:55.856427     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260115 03:47:05.854022    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:06.857249    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:07.861871    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:08.865988    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+E20260115 03:47:08.870882    30 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260115 03:47:08.871420    30 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260115 03:47:08.871850     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260115 03:47:08.873243     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260115 03:47:18.874509    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:19.876832    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:20.878773    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:21.880975    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+E20260115 03:47:21.881428    29 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260115 03:47:21.882025    29 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260115 03:47:21.882948     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260115 03:47:21.883858     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260115 03:47:31.883258    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:31.889727    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.6":9559
+I20260115 03:47:31.900923     1 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260115 03:47:31.901490     1 MetaClient.cpp:3269] Load leader ok
+I20260115 03:47:31.904881     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20260115 03:47:31.906599     1 GraphSessionManager.cpp:337] Total of 57 sessions are loaded
+E20260115 03:47:31.907537     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/27.000MiB
+I20260115 03:47:31.908619     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20260115 03:47:31.910007     1 Snowflake.cpp:17] WorkerId init success: 1
+I20260115 03:47:31.910833    49 GraphServer.cpp:63] Starting nebula-graphd on graphd:9669
+I20260115 03:47:42.601979    46 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260115 03:47:42.602450    46 MetaClient.cpp:3269] Load leader ok
+I20260115 03:47:48.606403    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42318
+I20260115 03:48:20.337404    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45992
+I20260115 03:48:51.985355    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54046
+I20260115 03:49:23.582476    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54772
+I20260115 03:49:55.162308    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:59702
+I20260115 03:50:26.780506    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41428
+I20260115 03:50:58.606079    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:59678
+I20260115 03:51:30.279963    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51848
+I20260115 03:52:01.834771    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51362
+I20260115 03:52:33.418954    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60020
+I20260115 03:53:05.045810    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:34030
+I20260115 03:53:36.684331    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60694
+I20260115 03:54:08.326838    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:57168
+I20260115 03:54:40.117812    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:44688
+I20260115 03:55:11.779312    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:57972
+I20260115 03:55:43.492203    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:57762
+I20260115 03:56:15.046267    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49298
+I20260115 03:56:46.691686    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37554
+I20260115 03:57:18.347518    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:59220
+I20260115 03:57:50.128129    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:55058
+I20260115 03:58:21.722941    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49428
+I20260115 03:58:53.507001    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38448
+I20260115 03:59:25.080520    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41168
+I20260115 03:59:56.712961    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:43364
+I20260115 04:00:28.263056    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49282
+I20260115 04:00:59.962965    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51012
+I20260115 04:01:31.564095    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46560
+I20260115 04:02:03.195015    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60484
+I20260115 04:02:34.764915    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:35890
+I20260115 04:03:06.496192    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:43158
+I20260115 04:03:38.272660    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51344
+I20260115 04:04:09.774647    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45122
+I20260115 04:04:41.218828    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41580
+I20260115 04:05:12.776556    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37926
+I20260115 04:05:44.246063    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54614
+I20260115 04:06:15.893842    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39718
+I20260115 04:06:31.305877    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:58326
+I20260115 04:06:47.857409    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42312
+I20260115 04:07:19.583997    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37408
+I20260115 04:07:51.237740    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51750
+I20260115 04:08:22.791270    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:55126
+I20260115 04:08:55.218924    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41430
+I20260115 04:09:26.779332    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:44068
+I20260115 04:09:58.353109    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51364
+I20260115 04:10:29.873369    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50656
+I20260115 04:11:01.511582    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41296
+I20260115 04:11:33.135422    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48156
+I20260115 04:12:04.777704    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48432
+I20260115 04:12:36.312150    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:35870
+I20260115 04:13:07.786144    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45098
+I20260115 04:13:39.242060    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39510
+I20260115 04:14:10.764097    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:40338
+I20260115 04:14:42.294301    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42624
+I20260115 04:15:13.818818    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49426
+I20260115 04:15:45.295118    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:59794
+I20260115 04:16:16.768743    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:57272
+I20260115 04:16:48.245539    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39026
+I20260115 04:17:19.974593    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:56840
+I20260115 04:17:51.561205    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:33984
+I20260115 04:18:23.284919    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49670
+I20260115 04:18:54.794562    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:59294
+I20260115 04:19:26.253144    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38276
+I20260115 04:19:57.678834    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58828
+I20260115 04:20:29.112875    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:34568
+I20260115 04:21:00.585175    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36404
+I20260115 04:21:32.043464    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45220
+I20260115 04:22:03.593412    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60866
+I20260115 04:22:35.249560    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36058
+I20260115 04:23:06.713356    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50310
+I20260115 04:23:38.312697    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42092
+I20260115 04:24:09.813627    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45384
+I20260115 04:24:41.305547    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51072
+I20260115 04:25:12.831674    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39556
+I20260115 04:25:44.391589    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45314
+I20260115 04:26:16.006178    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42428
+I20260115 04:26:47.610569    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41372
+I20260115 04:27:19.196624    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48704
+I20260115 04:27:50.689036    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:34186
+I20260115 04:28:22.226332    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46548
+I20260115 04:28:53.780577    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:34890
+I20260115 04:29:25.334525    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38960
+I20260115 04:29:56.848716    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:47322
+I20260115 04:30:28.462641    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58224
+I20260115 04:31:00.019779    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58442
+I20260115 04:31:31.548377    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42070
+I20260115 04:32:03.095575    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:53100
+I20260115 04:32:34.693564    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41654
+I20260115 04:33:06.219561    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37612
+I20260115 04:33:37.706722    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:32968
+I20260115 04:34:09.187213    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:47936
+I20260115 04:34:40.696862    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36272
+I20260115 04:35:12.387151    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38426
+I20260115 04:35:44.014186    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54030
+I20260115 04:36:15.594731    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:33028
+I20260115 04:36:47.125702    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:43550
+I20260115 04:37:18.692292    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37176
+I20260115 04:37:50.169323    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39974
+I20260115 04:38:21.819325    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:57776
+I20260115 04:38:53.320976    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:52902
+I20260115 04:39:24.998661    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:52116
+I20260115 04:39:56.535949    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:53308
+I20260115 04:40:28.113632    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:55448
+I20260115 04:40:59.716436    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58368
+I20260115 04:41:31.237550    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:43728
+I20260115 04:42:02.815281    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:43058
+I20260115 04:42:34.491901    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37122
+I20260115 04:43:05.976269    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39204
+I20260115 04:43:37.457455    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:33506
+I20260115 04:44:08.959331    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:40414
+I20260115 04:44:40.435998    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:52610
+I20260115 04:45:11.844810    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45772
+I20260115 04:45:43.333940    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:53206
+I20260115 04:46:14.965360    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36668
+I20260115 04:46:46.482168    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58434
+I20260115 04:47:18.195815    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:35678
+I20260115 04:47:49.664565    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51942
+I20260115 04:48:21.165002    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:40042
+I20260115 04:48:52.672112    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38472
+I20260115 04:49:24.279302    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51980
+I20260115 04:49:55.798170    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54400
+I20260115 04:50:27.266144    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:33530
+I20260115 04:50:58.756340    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:56618
+I20260115 04:51:30.322814    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:57934
+I20260115 04:52:01.865581    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37254
+I20260115 04:52:33.422645    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:56300
+I20260115 04:53:05.032645    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51150
+I20260115 04:53:36.627439    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49220
+I20260115 04:54:08.082810    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60212
+I20260115 04:54:40.982854    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:40582
+I20260115 04:55:12.506908    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48220
+I20260115 04:55:44.164449    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51410
+I20260115 04:56:15.855106    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39298
+I20260115 04:56:47.463138    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58314
+I20260115 04:57:18.933655    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41150
+I20260115 04:57:50.553390    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38084
+I20260115 04:58:21.994498    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39104
+I20260115 04:58:53.615116    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:43238
+I20260115 04:59:25.130999    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50834
+I20260115 04:59:56.622483    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:40426
+I20260115 05:00:28.039791    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42382
+I20260115 05:00:59.545600    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:33590
+I20260115 05:01:30.979674    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50758
+I20260115 05:02:02.785262    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51312
+I20260115 05:02:34.251252    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:47140
+I20260115 05:03:05.797999    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:47996
+I20260115 05:03:37.340821    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37726
+I20260115 05:04:08.828099    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:44990
+I20260115 05:04:40.298226    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:33176
+I20260115 05:05:12.119159    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:34096
+I20260115 05:05:43.594985    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50296
+I20260115 05:06:16.232437    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37540
+I20260115 05:06:31.489581    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:57406
+I20260115 05:06:47.695472    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37170
+I20260115 05:07:19.261317    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45228
+I20260115 05:07:50.752727    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37812
+I20260115 05:08:22.163147    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:56356
+I20260115 05:08:53.642051    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48382
+I20260115 05:09:25.208981    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45358
+I20260115 05:09:56.650602    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49952
+I20260115 05:10:28.155737    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50626
+I20260115 05:10:59.633416    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60362
+I20260115 05:11:31.105055    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60992
+I20260115 05:12:02.626896    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36070
+I20260115 05:12:34.226665    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:53126
+I20260115 05:13:05.841717    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:34144
+I20260115 05:13:37.397672    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38128
+I20260115 05:14:08.931671    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:37704
+I20260115 05:14:40.346436    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:52586
+I20260115 05:15:11.774960    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:53542
+I20260115 05:15:43.226245    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51878
+I20260115 05:16:14.692363    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:55158
+I20260115 05:16:46.202709    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46076
+I20260115 05:17:17.812404    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:47118
+I20260115 05:17:49.218482    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50368
+I20260115 05:18:20.706385    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:41398
+I20260115 05:18:52.224687    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38988
+I20260115 05:19:23.941759    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:35438
+I20260115 05:19:55.506867    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48034
+I20260115 05:20:26.959010    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45002
+I20260115 05:20:58.401526    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60940
+I20260115 05:21:29.961477    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48292
+I20260115 05:22:01.485881    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54538
+I20260115 05:22:32.952133    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36414
+I20260115 05:23:04.420956    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:34924
+I20260115 05:23:35.931324    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46744
+I20260115 05:24:07.370276    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39394
+I20260115 05:24:38.910374    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:49610
+I20260115 05:25:10.348232    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:53966
+I20260115 05:25:41.773406    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36280
+I20260115 05:26:13.235589    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:59808
+I20260115 05:26:44.753595    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38368
+I20260115 05:27:16.375471    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58316
+I20260115 05:27:47.851900    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58536
+I20260115 05:28:19.329758    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46388
+I20260115 05:28:50.731462    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:43294
+I20260115 05:29:22.224749    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:56992
+I20260115 05:29:53.736992    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:42328
+I20260115 05:30:25.348781    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:50328
+I20260115 05:30:56.881695    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:57514
+I20260115 05:31:28.391290    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:55872
+I20260115 05:31:39.060384    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:40000
+I20260115 05:31:59.854579    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36574
+I20260115 05:32:31.395560    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39552
+I20260115 05:33:02.838954    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:39482
+I20260115 05:33:34.290071    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46186
+I20260115 05:34:05.759532    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:38008
+I20260115 05:34:37.288991    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:47648
+I20260115 05:35:08.845384    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:33936
+I20260115 05:35:40.413064    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:60914
+I20260115 05:36:11.892067    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:44806
+I20260115 05:36:43.378530    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54982
+I20260115 05:37:14.928800    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46204
+I20260115 05:37:46.418627    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:45472
+I20260115 05:38:17.928114    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:48494
+I20260115 05:38:49.398398    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:51696
+I20260115 05:38:52.165051    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:51530
+I20260115 05:39:20.978509    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:36556
+I20260115 05:39:52.433679    19 GraphService.cpp:77] Authenticating user root from 172.20.0.5:46378
+I20260115 05:40:23.872269    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:58076
+I20260115 05:40:31.226825    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:38642
+I20260115 05:40:55.383810    20 GraphService.cpp:77] Authenticating user root from 172.20.0.5:54626

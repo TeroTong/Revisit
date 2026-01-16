@@ -1,0 +1,63 @@
+[
+  {
+    "customer_code": "SH-ML-002-C0001",
+    "person": {
+      "name": "刘晓梅",
+      "phone": "13912340001",
+      "gender": "FEMALE",
+      "birthday": "1992-01-17"
+    },
+    "vip_level": "DIAMOND",
+    "status": "ACTIVE",
+    "first_visit_date": "2023-03-15",
+    "last_visit_date": "2026-01-10",
+    "referrer_code": null,
+    "doctor_code": "DOC-SH-001"
+  },
+  {
+    "customer_code": "SH-ML-002-C0002",
+    "person": {
+      "name": "陈雅琴",
+      "phone": "13912340002",
+      "gender": "FEMALE",
+      "birthday": "1985-01-18"
+    },
+    "vip_level": "PLATINUM",
+    "status": "ACTIVE",
+    "first_visit_date": "2024-01-20",
+    "last_visit_date": "2025-12-28",
+    "referrer_code": "SH-ML-002-C0001",
+    "doctor_code": "DOC-SH-002"
+  },
+  {
+    "customer_code": "SH-ML-002-C0003",
+    "person": {
+      "name": "周静怡",
+      "phone": "13912340003",
+      "gender": "FEMALE",
+      "birthday": "1998-01-20"
+    },
+    "vip_level": "GOLD",
+    "status": "ACTIVE",
+    "first_visit_date": "2025-05-10",
+    "last_visit_date": "2025-11-20",
+    "referrer_code": null,
+    "doctor_code": "DOC-SH-001"
+  },
+  {
+    "customer_code": "SH-ML-002-C0004",
+    "person": {
+      "name": "吴思琪",
+      "phone": "13912340004",
+      "gender": "FEMALE",
+      "birthday": "1993-02-14"
+    },
+    "vip_level": "SILVER",
+    "status": "ACTIVE",
+    "first_visit_date": "2025-08-01",
+    "last_visit_date": "2025-10-15",
+    "referrer_code": "SH-ML-002-C0002",
+    "doctor_code": "DOC-SH-002"
+  }
+]
+

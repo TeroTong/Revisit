@@ -1,0 +1,434 @@
+Log file created at: 2026/01/13 01:58:07
+Running on machine: a8ba178e3613
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E20260113 01:58:07.081895    30 ThriftClientManager-inl.h:70] Failed to resolve address for 'metad': Name or service not known (error=-2): Unknown error -2
+E20260113 01:58:10.189728    30 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260113 01:58:10.192850    30 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260113 01:58:10.198220     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+E20260113 01:58:23.206913    31 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260113 01:58:23.208104    31 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260113 01:58:23.209307     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+E20260113 01:58:36.225153    30 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260113 01:58:36.225675    30 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260113 01:58:36.226248     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+E20260113 01:58:46.265800     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/27.000MiB
+E20260113 07:58:53.733614    21 QueryInstance.cpp:151] SyntaxError: syntax error near `st', query: 
+            CREATE TAG IF NOT EXISTS institution_customer (
+                institution_customer_id string,     -- 机构用户ID（主键）
+                customer_code string,              -- 客户编号
+                name string,                       -- 姓名
+                phone string,                      -- 电话号码
+                gender string,                     -- 性别
+                birthday string,                   -- 出生日期
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+E20260113 08:00:37.536593    20 QueryInstance.cpp:151] SyntaxError: syntax error near `st', query: 
+            CREATE TAG IF NOT EXISTS institution_customer (
+                institution_customer_id string,     -- 机构用户ID（主键）
+                customer_code string,              -- 客户编号
+                name string,                       -- 姓名
+                phone string,                      -- 电话号码
+                gender string,                     -- 性别
+                birthday string,                   -- 出生日期
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+E20260113 08:02:30.618084    20 QueryInstance.cpp:151] SyntaxError: syntax error near `st', query: 
+            CREATE TAG IF NOT EXISTS institution_customer (
+                institution_customer_id string,     -- 机构用户ID（主键）
+                customer_code string,              -- 客户编号
+                name string,                       -- 姓名
+                phone string,                      -- 电话号码
+                gender string,                     -- 性别
+                birthday string,                   -- 出生日期
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+E20260113 08:15:03.008469    20 QueryInstance.cpp:151] SyntaxError: syntax error near ` NOT', query: 
+            CREATE TAG IF NOT EXISTS doctor (
+                doctor_id string,
+                doctor_code string,
+                name string,
+                phone string,
+                gender string,
+                birthday string,
+                title string,
+                institution_code string,
+                specialty list<string>,
+                description string,
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+W20260113 08:15:03.077613    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:15:03.078399    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:15:03.082515    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:15:03.083339    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:15:03.085747    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:15:03.085942    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:15:03.090014    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:15:03.090319    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:15:03.102249    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:15:03.102710    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 08:15:03.106752    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_category' at tag: `project' failed: Invalid param!
+E20260113 08:15:03.107293    21 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_category ON project(category)
+W20260113 08:15:03.109858    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:15:03.110312    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:15:03.113739    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:15:03.114056    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:15:03.116596    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_recommends_date' at edge: `recommends' failed: Key not existed!
+E20260113 08:15:03.116997    21 QueryInstance.cpp:151] Key not existed!, query: CREATE EDGE INDEX IF NOT EXISTS idx_recommends_date ON recommends(referral_date)
+W20260113 08:15:03.121130    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:15:03.121546    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:15:03.128645    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:15:03.128937    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+W20260113 08:20:25.856551    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:20:25.856822    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:20:25.860241    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:20:25.860507    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:20:25.862596    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:20:25.862939    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:20:25.866120    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:20:25.866389    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:20:25.872438    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:20:25.872640    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 08:20:25.876430    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_category' at tag: `project' failed: Invalid param!
+E20260113 08:20:25.877947    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_category ON project(category)
+W20260113 08:20:25.881408    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:20:25.881738    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:20:25.886076    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:20:25.886572    21 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:20:25.890272    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_recommends_date' at edge: `recommends' failed: Key not existed!
+E20260113 08:20:25.890548    20 QueryInstance.cpp:151] Key not existed!, query: CREATE EDGE INDEX IF NOT EXISTS idx_recommends_date ON recommends(referral_date)
+W20260113 08:20:25.893775    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:20:25.894058    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:20:25.898712    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:20:25.900215    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+E20260113 08:27:26.533411    21 QueryInstance.cpp:151] SyntaxError: syntax error near ` NOT', query: 
+            CREATE TAG IF NOT EXISTS doctor (
+                doctor_id string,
+                doctor_code string,
+                name string,
+                phone string,
+                gender string,
+                birthday string,
+                title string,
+                institution_code string,
+                specialty list<string>,
+                description string,
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+W20260113 08:27:26.564702    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:27:26.565500    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:27:26.570873    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:27:26.571349    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:27:26.577325    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:27:26.577889    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:27:26.582232    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:27:26.582527    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:27:26.590430    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:27:26.595431    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 08:27:26.602782    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_category' at tag: `project' failed: Invalid param!
+E20260113 08:27:26.603466    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_category ON project(category)
+W20260113 08:27:26.607441    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:27:26.608265    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:27:26.613888    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:27:26.614607    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:27:26.618834    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_recommends_date' at edge: `recommends' failed: Key not existed!
+E20260113 08:27:26.619449    21 QueryInstance.cpp:151] Key not existed!, query: CREATE EDGE INDEX IF NOT EXISTS idx_recommends_date ON recommends(referral_date)
+W20260113 08:27:26.623525    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:27:26.624178    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:27:26.631170    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:27:26.632330    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+E20260113 08:29:29.204970    20 QueryInstance.cpp:151] SyntaxError: syntax error near ` NOT', query: 
+            CREATE TAG IF NOT EXISTS doctor (
+                doctor_id string,
+                doctor_code string,
+                name string,
+                phone string,
+                gender string,
+                birthday string,
+                title string,
+                institution_code string,
+                specialty list<string>,
+                description string,
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+W20260113 08:29:29.235657    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:29:29.236138    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:29:29.241240    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:29:29.241735    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:29:29.244445    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:29:29.244906    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:29:29.249487    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:29:29.249979    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:29:29.255270    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:29:29.255782    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 08:29:29.258973    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_category' at tag: `project' failed: Invalid param!
+E20260113 08:29:29.259193    21 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_category ON project(category)
+W20260113 08:29:29.261242    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:29:29.261574    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:29:29.265614    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:29:29.265960    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:29:29.267938    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_recommends_date' at edge: `recommends' failed: Key not existed!
+E20260113 08:29:29.268152    20 QueryInstance.cpp:151] Key not existed!, query: CREATE EDGE INDEX IF NOT EXISTS idx_recommends_date ON recommends(referral_date)
+W20260113 08:29:29.271900    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:29:29.272204    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:29:29.277876    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:29:29.278909    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+E20260113 08:34:38.461752    21 QueryInstance.cpp:151] SyntaxError: syntax error near ` NOT', query: 
+            CREATE TAG IF NOT EXISTS doctor (
+                doctor_id string,
+                doctor_code string,
+                name string,
+                phone string,
+                gender string,
+                birthday string,
+                title string,
+                institution_code string,
+                specialty list<string>,
+                description string,
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+W20260113 08:34:38.493690    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:34:38.494576    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:34:38.502413    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:34:38.503249    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:34:38.508535    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:34:38.509011    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:34:38.514600    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:34:38.514976    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:34:38.521566    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:34:38.522735    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 08:34:38.528318    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_category' at tag: `project' failed: Invalid param!
+E20260113 08:34:38.529130    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_category ON project(category)
+W20260113 08:34:38.531944    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:34:38.532421    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:34:38.536931    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:34:38.537489    21 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:34:38.540603    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_recommends_date' at edge: `recommends' failed: Key not existed!
+E20260113 08:34:38.541194    20 QueryInstance.cpp:151] Key not existed!, query: CREATE EDGE INDEX IF NOT EXISTS idx_recommends_date ON recommends(referral_date)
+W20260113 08:34:38.544674    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:34:38.545142    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:34:38.553457    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:34:38.554008    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+E20260113 08:38:31.444321    21 QueryInstance.cpp:151] SyntaxError: syntax error near ` NOT', query: 
+            CREATE TAG IF NOT EXISTS doctor (
+                doctor_id string,
+                doctor_code string,
+                name string,
+                phone string,
+                gender string,
+                birthday string,
+                title string,
+                institution_code string,
+                specialty list<string>,
+                description string,
+                created_at timestamp,
+                updated_at timestamp
+            )
+            
+W20260113 08:38:31.474498    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:38:31.475646    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:38:31.480444    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:38:31.480913    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:38:31.486475    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:38:31.487457    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:38:31.494266    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:38:31.494721    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:38:31.500072    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:38:31.500962    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 08:38:31.506537    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_category' at tag: `project' failed: Invalid param!
+E20260113 08:38:31.507267    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_category ON project(category)
+W20260113 08:38:31.510200    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:38:31.510738    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:38:31.517537    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:38:31.518050    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:38:31.524070    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:38:31.524480    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:38:31.530264    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:38:31.532482    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+W20260113 08:39:22.165040    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:39:22.165572    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:39:22.169853    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:39:22.170575    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:39:22.173648    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:39:22.174197    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:39:22.179719    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:39:22.180150    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:39:22.185910    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:39:22.186426    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 08:39:22.191921    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_category' at tag: `project' failed: Invalid param!
+E20260113 08:39:22.192284    21 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_category ON project(category)
+W20260113 08:39:22.194739    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:39:22.195187    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:39:22.200455    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:39:22.201344    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:39:22.206423    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:39:22.206874    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:39:22.211880    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:39:22.212417    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+W20260113 08:43:35.238685    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:43:35.239682    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 08:43:35.246214    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:43:35.246512    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 08:43:35.248977    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:43:35.249296    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:43:35.253682    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:43:35.254042    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:43:35.257774    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:43:35.258095    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 08:43:35.264549    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:43:35.264933    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:43:35.268885    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:43:35.269212    21 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:43:35.273895    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:43:35.274427    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:43:35.279307    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:43:35.279595    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+W20260113 08:44:28.004004    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:44:28.005187    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 08:44:28.009732    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:44:28.010052    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 08:44:28.012389    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:44:28.012666    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 08:44:28.018155    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:44:28.018412    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 08:44:28.021919    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:44:28.022231    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 08:44:28.027925    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:44:28.028311    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 08:44:28.032624    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_brand' at tag: `product' failed: Invalid param!
+E20260113 08:44:28.033354    21 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_brand ON product(brand)
+W20260113 08:44:28.036371    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 08:44:28.036665    20 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+W20260113 08:44:28.041563    21 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_belongs_status' at edge: `customer_belongs_to_institution' failed: Invalid param!
+E20260113 08:44:28.041896    21 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_belongs_status ON customer_belongs_to_institution(status)
+W20260113 08:46:08.436900    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:46:08.437429    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 08:46:08.442801    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:46:08.443226    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 08:46:08.449914    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:46:08.450608    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id(64))
+W20260113 08:46:08.455896    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:46:08.456302    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id(64))
+W20260113 08:46:08.460657    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:46:08.461123    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 08:46:08.467691    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:46:08.468200    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id(64))
+W20260113 08:52:43.133332    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:52:43.134227    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 08:52:43.141613    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:52:43.144161    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 08:52:43.146481    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:52:43.146832    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id(64))
+W20260113 08:52:43.150249    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:52:43.150508    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id(64))
+W20260113 08:52:43.153143    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:52:43.153452    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 08:52:43.157033    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:52:43.157644    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id(64))
+E20260113 08:57:52.753347    20 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: SHOW TAG INDEXES
+E20260113 08:57:52.757436    21 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: SHOW EDGE INDEXES
+E20260113 08:57:52.762463    20 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: SHOW EDGES
+E20260113 08:57:52.771126    20 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: SHOW TAGS
+W20260113 08:57:57.853307    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:57:57.854525    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 08:57:57.861335    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:57:57.862236    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 08:57:57.867621    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:57:57.868775    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id(64))
+W20260113 08:57:57.875172    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:57:57.876607    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id(64))
+W20260113 08:57:57.883010    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:57:57.883737    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 08:57:57.892473    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:57:57.893728    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id(64))
+W20260113 08:59:21.350049    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:59:21.350705    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 08:59:21.356293    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 08:59:21.356714    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 08:59:21.359272    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 08:59:21.359686    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id(64))
+W20260113 08:59:21.364892    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 08:59:21.365350    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id(64))
+W20260113 08:59:21.369014    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 08:59:21.369365    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 08:59:21.376405    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 08:59:21.376811    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id(64))
+W20260113 09:03:03.761397    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:03:03.761916    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 09:03:03.765949    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:03:03.766371    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 09:03:03.771688    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 09:03:03.772270    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id(64))
+W20260113 09:03:03.776738    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 09:03:03.777098    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id(64))
+W20260113 09:03:03.781591    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 09:03:03.781931    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 09:03:03.788107    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 09:03:03.788756    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id(64))
+W20260113 09:05:14.801976    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:05:14.803087    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 09:05:14.810418    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:05:14.811290    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 09:05:14.815037    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 09:05:14.815532    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id(64))
+W20260113 09:05:14.820191    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 09:05:14.820526    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id(64))
+W20260113 09:05:14.825093    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 09:05:14.825616    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 09:05:14.829994    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 09:05:14.830384    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id(64))
+W20260113 09:08:27.928633    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:08:27.929699    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id(64))
+W20260113 09:08:27.936378    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:08:27.936669    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone(64))
+W20260113 09:08:27.938578    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 09:08:27.938843    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id(64))
+W20260113 09:08:27.941848    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 09:08:27.942199    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id(64))
+W20260113 09:08:27.945653    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 09:08:27.945878    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id(64))
+W20260113 09:08:27.950086    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 09:08:27.950489    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id(64))
+W20260113 09:10:28.394770    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:10:28.395262    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 09:10:28.407423    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:10:28.408298    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 09:10:28.413579    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 09:10:28.414731    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 09:10:28.420889    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 09:10:28.421427    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 09:10:28.430752    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 09:10:28.431272    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 09:10:28.439594    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 09:10:28.440105    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 09:11:56.799165    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:11:56.799530    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 09:11:56.802698    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_customer_phone' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:11:56.803119    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_customer_phone ON institution_customer(phone)
+W20260113 09:11:56.804832    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Key not existed!
+E20260113 09:11:56.805194    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 09:11:56.809211    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Key not existed!
+E20260113 09:11:56.809466    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 09:11:56.812361    21 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Key not existed!
+E20260113 09:11:56.812633    21 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 09:11:56.817312    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Key not existed!
+E20260113 09:11:56.817515    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 09:12:31.813946    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:12:31.814204    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+E20260113 09:13:11.633560    21 QueryInstance.cpp:151] SyntaxError: syntax error near `IF', query: CREATE TAG INDEX idx_institution_customer_id ON institution_customer(institution_customer_id) IF NOT EXISTS
+W20260113 09:17:21.769011    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:17:21.769697    20 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)

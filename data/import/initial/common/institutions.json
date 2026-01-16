@@ -1,0 +1,17 @@
+[
+  {
+    "institution_code": "BJ-HA-001",
+    "name": "北京华美医疗美容医院",
+    "alias": "华美北京总院",
+    "type": "HOSPITAL",
+    "status": "ACTIVE"
+  },
+  {
+    "institution_code": "SH-ML-002",
+    "name": "上海美莱医疗美容医院",
+    "alias": "美莱上海分院",
+    "type": "CLINIC",
+    "status": "ACTIVE"
+  }
+]
+

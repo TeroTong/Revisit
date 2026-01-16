@@ -1,0 +1,60 @@
+Log file created at: 2026/01/12 01:57:39
+Running on machine: a8ba178e3613
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E20260112 01:57:39.437425     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/27.000MiB
+E20260112 01:58:20.825911    20 QueryInstance.cpp:151] Existed!, query: ADD HOSTS "storaged":9779
+W20260112 05:40:07.672014    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_natural_person_person_id' at tag: `natural_person' failed: Invalid param!
+E20260112 05:40:07.673012    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_natural_person_person_id ON natural_person(person_id)
+E20260112 05:42:35.569803    19 QueryInstance.cpp:151] SyntaxError: syntax error near `INDEX', query: CREATE INDEX IF NOT EXISTS idx_natural_person_person_id ON natural_person(person_id)
+E20260112 05:42:35.571221    19 QueryInstance.cpp:151] SyntaxError: syntax error near `INDEX', query: CREATE INDEX IF NOT EXISTS idx_institution_customer_customer_code ON institution_customer(customer_code)
+E20260112 05:42:35.572575    19 QueryInstance.cpp:151] SyntaxError: syntax error near `INDEX', query: CREATE INDEX IF NOT EXISTS idx_institution_institution_code ON institution(institution_code)
+E20260112 05:42:35.573848    19 QueryInstance.cpp:151] SyntaxError: syntax error near `INDEX', query: CREATE INDEX IF NOT EXISTS idx_project_project_code ON project(project_code)
+E20260112 05:42:35.575248    20 QueryInstance.cpp:151] SyntaxError: syntax error near `INDEX', query: CREATE INDEX IF NOT EXISTS idx_product_product_code ON product(product_code)
+E20260112 05:42:35.576643    19 QueryInstance.cpp:151] SyntaxError: syntax error near `INDEX', query: CREATE INDEX IF NOT EXISTS idx_doctor_doctor_code ON doctor(doctor_code)
+W20260112 05:46:19.837615    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_natural_person_person_id' at tag: `natural_person' failed: Invalid param!
+E20260112 05:46:19.838171    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_natural_person_person_id ON natural_person(person_id)
+W20260112 05:46:19.840380    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_customer_code' at tag: `institution_customer' failed: Invalid param!
+E20260112 05:46:19.840824    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_customer_code ON institution_customer(customer_code)
+W20260112 05:46:19.843421    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_institution_code' at tag: `institution' failed: Invalid param!
+E20260112 05:46:19.843940    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_institution_code ON institution(institution_code)
+W20260112 05:46:19.845893    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_project_code' at tag: `project' failed: Invalid param!
+E20260112 05:46:19.846210    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_project_code ON project(project_code)
+W20260112 05:46:19.848143    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_product_code' at tag: `product' failed: Invalid param!
+E20260112 05:46:19.848404    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_product_code ON product(product_code)
+W20260112 05:46:19.850090    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_doctor_code' at tag: `doctor' failed: Invalid param!
+E20260112 05:46:19.850360    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_doctor_code ON doctor(doctor_code)
+W20260112 05:53:48.318909    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_test' at tag: `natural_person' failed: Invalid param!
+E20260112 05:53:48.319669    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX idx_test ON natural_person(person_id);
+E20260112 05:56:27.615803    20 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: DESCRIBE TAG natural_person
+E20260112 05:59:56.058640    20 QueryInstance.cpp:151] SyntaxError: syntax error near `(', query: CREATE TAG IF NOT EXISTS natural_person (
+E20260112 05:59:56.059549    20 QueryInstance.cpp:151] SyntaxError: syntax error near `person_id', query: person_id fixed_string(128),
+E20260112 05:59:56.060397    20 QueryInstance.cpp:151] SyntaxError: syntax error near `name', query: name string,
+E20260112 05:59:56.061285    20 QueryInstance.cpp:151] SyntaxError: syntax error near `gender', query: gender string,
+E20260112 05:59:56.062515    19 QueryInstance.cpp:151] SyntaxError: syntax error near `birthday', query: birthday string,
+E20260112 05:59:56.063742    20 QueryInstance.cpp:151] SyntaxError: syntax error near `phone', query: phone string,
+E20260112 05:59:56.064772    20 QueryInstance.cpp:151] SyntaxError: syntax error near `email', query: email string
+E20260112 05:59:56.065618    19 QueryInstance.cpp:151] SyntaxError: syntax error near `);', query: );
+W20260112 06:00:48.589583    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_test' at tag: `natural_person' failed: TagNotFound: Tag not existed!
+E20260112 06:00:48.590420    19 QueryInstance.cpp:151] TagNotFound: Tag not existed!, query: CREATE TAG INDEX idx_test ON natural_person(person_id);
+E20260112 06:02:06.201831    20 QueryInstance.cpp:151] SyntaxError: syntax error near `(', query: CREATE TAG natural_person (
+E20260112 06:02:06.202970    20 QueryInstance.cpp:151] SyntaxError: syntax error near `person_id', query:   person_id fixed_string(128),
+E20260112 06:02:06.203759    19 QueryInstance.cpp:151] SyntaxError: syntax error near `name', query:   name string,
+E20260112 06:02:06.204617    19 QueryInstance.cpp:151] SyntaxError: syntax error near `gender', query:   gender string,
+E20260112 06:02:06.205130    20 QueryInstance.cpp:151] SyntaxError: syntax error near `birthday', query:   birthday string,
+E20260112 06:02:06.205729    20 QueryInstance.cpp:151] SyntaxError: syntax error near `phone', query:   phone string,
+E20260112 06:02:06.206367    19 QueryInstance.cpp:151] SyntaxError: syntax error near `email', query:   email string
+E20260112 06:02:06.206851    19 QueryInstance.cpp:151] SyntaxError: syntax error near `);', query: );
+E20260112 06:05:42.323166    20 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: DESCRIBE TAG natural_person;
+E20260112 06:05:57.832492    20 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: DESCRIBE TAG natural_person;
+E20260112 06:06:58.085323    20 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: DESCRIBE TAG natural_person;
+W20260112 06:12:55.809271    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_customer_code' at tag: `institution_customer' failed: Invalid param!
+E20260112 06:12:55.809710    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_customer_code ON institution_customer(customer_code)
+W20260112 06:12:55.811672    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_institution_code' at tag: `institution' failed: Invalid param!
+E20260112 06:12:55.811988    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_institution_code ON institution(institution_code)
+W20260112 06:12:55.813841    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_project_code' at tag: `project' failed: Invalid param!
+E20260112 06:12:55.814082    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_project_code ON project(project_code)
+W20260112 06:12:55.815616    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_product_code' at tag: `product' failed: Invalid param!
+E20260112 06:12:55.815866    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_product_code ON product(product_code)
+W20260112 06:12:55.817732    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_doctor_code' at tag: `doctor' failed: Invalid param!
+E20260112 06:12:55.818018    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_doctor_code ON doctor(doctor_code)

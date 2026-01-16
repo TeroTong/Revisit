@@ -1,0 +1,16 @@
+{
+  "_description": "产品数据模板",
+  "_note": "带下划线的字段为说明字段，导入时会被忽略",
+
+  "product_code": "产品编码，唯一，如 BOTOX-100U",
+  "name": "产品名称，必填",
+  "brand": "品牌，如：艾尔建 / 高德美 / 赛诺秀",
+  "category": "分类：INJECTION(注射类) / EQUIPMENT(设备类) / CONSUMABLE(耗材类)",
+  "body_part": "作用部位，设备类可为 null",
+  "unit": "单位：瓶 / 支 / 台 / 盒",
+  "effect_level": "效果等级 1-5，设备类可为 null",
+  "indications": "适应症",
+  "contraindications": "禁忌症",
+  "description": "产品描述"
+}
+

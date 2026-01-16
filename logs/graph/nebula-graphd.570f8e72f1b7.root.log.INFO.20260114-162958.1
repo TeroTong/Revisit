@@ -1,0 +1,671 @@
+Log file created at: 2026/01/14 16:29:58
+Running on machine: 570f8e72f1b7
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260114 16:29:58.844101     1 GraphDaemon.cpp:122] Starting Graph HTTP Service
+I20260114 16:29:58.856178     7 WebService.cpp:124] Web service started on HTTP[19669]
+I20260114 16:29:58.858122     1 GraphDaemon.cpp:136] Number of networking IO threads: 2
+I20260114 16:29:58.859426     1 GraphDaemon.cpp:145] Number of worker threads: 2
+I20260114 16:29:58.862061     1 MetaClient.cpp:80] Create meta client to "metad":9559
+I20260114 16:29:58.864233     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 0
+I20260114 16:29:58.878304    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.4":9559
+I20260114 16:29:59.881026    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.4":9559
+I20260114 16:30:00.882387    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.4":9559
+I20260114 16:30:01.883170    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.4":9559
+E20260114 16:30:01.884449    29 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260114 16:30:01.895212    29 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260114 16:30:01.896584     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260114 16:30:01.897132     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260114 16:30:11.896780    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.4":9559
+I20260114 16:30:11.900638    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.4":9559
+I20260114 16:30:11.908164     1 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260114 16:30:11.908360     1 MetaClient.cpp:3269] Load leader ok
+I20260114 16:30:11.909871     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20260114 16:30:11.911000     1 GraphSessionManager.cpp:337] Total of 6 sessions are loaded
+E20260114 16:30:11.911397     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/28.000MiB
+I20260114 16:30:11.913048     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20260114 16:30:11.921864     1 Snowflake.cpp:17] WorkerId init success: 1
+I20260114 16:30:11.922166    41 GraphServer.cpp:63] Starting nebula-graphd on graphd:9669
+I20260114 16:30:12.937502    20 GraphService.cpp:77] Authenticating user root from 172.20.0.8:33410
+E20260114 16:30:12.953222    20 QueryInstance.cpp:151] Existed!, query: ADD HOSTS "storaged":9779
+I20260114 16:30:22.686211    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260114 16:30:22.692808    38 MetaClient.cpp:3269] Load leader ok
+I20260114 16:32:20.140687    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:40774
+I20260114 16:32:20.150146    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:33:17.626224    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:32940
+I20260114 16:50:59.799959    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:35618
+I20260114 16:53:41.096359    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:49964
+I20260114 16:53:41.113938    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:12.851296    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:40732
+I20260114 16:56:12.857375    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:12.863591    29 ThriftClientManager-inl.h:67] resolve "storaged":9779 as "172.20.0.6":9779
+I20260114 16:56:12.896720    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:12.917203    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:12.921142    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 16:56:12.922804    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "4ac48281-8afb-4a15-a5ed-1de998b17b9b": ("4ac48281-8afb-4a15-a5ed-1de998b17b9b", "DOC-BJ-001", 
+                    "张明华", "MALE", 
+                    "13800138001", "BJ-HA-001", 
+                    "主任医师", "眼部整形,鼻部整形,面部年轻化", 
+                    "从业25年，资深整形外科专家，擅长眼部和鼻部精细整形手术")
+            
+I20260114 16:56:12.937120    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:12.939128    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 16:56:12.940610    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "68ee170f-7e38-4927-bc58-9b525a0bc872": ("68ee170f-7e38-4927-bc58-9b525a0bc872", "DOC-BJ-002", 
+                    "李雪梅", "FEMALE", 
+                    "13800138002", "BJ-HA-001", 
+                    "副主任医师", "皮肤美容,激光治疗,注射美容", 
+                    "皮肤科专家，擅长各种激光治疗和注射美容")
+            
+I20260114 16:56:12.953892    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:12.956656    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 16:56:12.958734    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "5a988e1c-4098-484d-b868-e79183d05a30": ("5a988e1c-4098-484d-b868-e79183d05a30", "DOC-BJ-003", 
+                    "王建国", "MALE", 
+                    "13800138003", "BJ-HA-001", 
+                    "主任医师", "胸部整形,形体雕塑,吸脂塑形", 
+                    "形体雕塑专家，擅长胸部整形和身体塑形")
+            
+I20260114 16:56:12.972801    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:12.974243    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 16:56:12.974983    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "e3bb04e5-cf4f-4e24-96ae-038115dd5207": ("e3bb04e5-cf4f-4e24-96ae-038115dd5207", "DOC-SH-001", 
+                    "陈美玲", "FEMALE", 
+                    "13900139001", "SH-ML-002", 
+                    "主任医师", "面部轮廓,颌面整形,面部年轻化", 
+                    "颌面整形专家，擅长面部轮廓手术和微整形")
+            
+I20260114 16:56:12.992655    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:12.995186    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 16:56:12.996435    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "21d6bf82-a6a8-4538-bd18-a3b353323e90": ("21d6bf82-a6a8-4538-bd18-a3b353323e90", "DOC-SH-002", 
+                    "林志远", "MALE", 
+                    "13900139002", "SH-ML-002", 
+                    "副主任医师", "微整形,注射美容,玻尿酸填充", 
+                    "注射美容专家，精通各类玻尿酸和肉毒素注射")
+            
+I20260114 16:56:13.018393    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:13.020432    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 16:56:13.021803    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "18243f1f-cc16-4855-a7f7-e1ab30ea2cbc": ("18243f1f-cc16-4855-a7f7-e1ab30ea2cbc", "DOC-SH-003", 
+                    "黄晓燕", "FEMALE", 
+                    "13900139003", "SH-ML-002", 
+                    "主治医师", "激光美容,光电治疗,祛斑祛痘", 
+                    "激光美容专家，擅长各种光电设备操作")
+            
+I20260114 16:56:13.062994    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.143263    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.183005    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.227113    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.259510    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.300415    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.350934    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.353283    30 ThriftClientManager-inl.h:67] resolve "storaged":9779 as "172.20.0.6":9779
+I20260114 16:56:13.394004    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.440908    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.487907    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.537513    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.580119    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.608840    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.631603    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.669765    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.696676    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 16:56:13.754988    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:13.760799    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "52bb04a2-b818-4390-8b3d-80c868dda7e8" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 16:56:13.792649    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:13.796613    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "c13981d0-7a3c-4a94-badd-071efc528023" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 16:56:13.832195    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:13.837247    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "b3c10bf3-1f39-41d6-af74-e0c6377a81ac" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 16:56:13.869794    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:13.874290    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "9366e32a-f078-40af-b490-4fb298fda97c" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 16:56:13.909991    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 16:56:13.913805    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "4f60e131-82a6-4bbe-9673-f2c92d46ffa1" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:03:14.621472    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:51072
+I20260114 17:03:14.626012    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:14.649274    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:14.666045    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:30.758771    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:53982
+I20260114 17:03:30.762876    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:30.784951    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:30.801816    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:30.803241    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:03:30.803990    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "4ac48281-8afb-4a15-a5ed-1de998b17b9b": ("4ac48281-8afb-4a15-a5ed-1de998b17b9b", "DOC-BJ-001", 
+                    "张明华", "MALE", 
+                    "13800138001", "BJ-HA-001", 
+                    "主任医师", "眼部整形,鼻部整形,面部年轻化", 
+                    "从业25年，资深整形外科专家，擅长眼部和鼻部精细整形手术")
+            
+I20260114 17:03:30.817672    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:30.819274    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:03:30.820232    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "68ee170f-7e38-4927-bc58-9b525a0bc872": ("68ee170f-7e38-4927-bc58-9b525a0bc872", "DOC-BJ-002", 
+                    "李雪梅", "FEMALE", 
+                    "13800138002", "BJ-HA-001", 
+                    "副主任医师", "皮肤美容,激光治疗,注射美容", 
+                    "皮肤科专家，擅长各种激光治疗和注射美容")
+            
+I20260114 17:03:30.832706    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:30.834255    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:03:30.835523    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "5a988e1c-4098-484d-b868-e79183d05a30": ("5a988e1c-4098-484d-b868-e79183d05a30", "DOC-BJ-003", 
+                    "王建国", "MALE", 
+                    "13800138003", "BJ-HA-001", 
+                    "主任医师", "胸部整形,形体雕塑,吸脂塑形", 
+                    "形体雕塑专家，擅长胸部整形和身体塑形")
+            
+I20260114 17:03:30.847174    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:30.848884    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:03:30.850090    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "e3bb04e5-cf4f-4e24-96ae-038115dd5207": ("e3bb04e5-cf4f-4e24-96ae-038115dd5207", "DOC-SH-001", 
+                    "陈美玲", "FEMALE", 
+                    "13900139001", "SH-ML-002", 
+                    "主任医师", "面部轮廓,颌面整形,面部年轻化", 
+                    "颌面整形专家，擅长面部轮廓手术和微整形")
+            
+I20260114 17:03:30.862099    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:30.863724    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:03:30.864959    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "21d6bf82-a6a8-4538-bd18-a3b353323e90": ("21d6bf82-a6a8-4538-bd18-a3b353323e90", "DOC-SH-002", 
+                    "林志远", "MALE", 
+                    "13900139002", "SH-ML-002", 
+                    "副主任医师", "微整形,注射美容,玻尿酸填充", 
+                    "注射美容专家，精通各类玻尿酸和肉毒素注射")
+            
+I20260114 17:03:30.876148    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:30.880824    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:03:30.881419    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "18243f1f-cc16-4855-a7f7-e1ab30ea2cbc": ("18243f1f-cc16-4855-a7f7-e1ab30ea2cbc", "DOC-SH-003", 
+                    "黄晓燕", "FEMALE", 
+                    "13900139003", "SH-ML-002", 
+                    "主治医师", "激光美容,光电治疗,祛斑祛痘", 
+                    "激光美容专家，擅长各种光电设备操作")
+            
+I20260114 17:03:30.893049    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:30.932088    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:30.956658    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:30.981115    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.006752    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.030925    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.068303    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.108300    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.150882    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.187453    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.214692    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.259580    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.305542    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.330185    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.365938    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.407518    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:03:31.469347    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:31.474493    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "52bb04a2-b818-4390-8b3d-80c868dda7e8" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:03:31.506026    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:31.509934    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "c13981d0-7a3c-4a94-badd-071efc528023" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:03:31.540726    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:31.545039    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "b3c10bf3-1f39-41d6-af74-e0c6377a81ac" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:03:31.561286    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:31.564637    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "9366e32a-f078-40af-b490-4fb298fda97c" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:03:31.590440    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:03:31.593931    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "4f60e131-82a6-4bbe-9673-f2c92d46ffa1" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:05:48.862332    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:47490
+I20260114 17:05:48.866339    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:48.890694    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:48.905184    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:48.906888    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:05:48.907781    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "4ac48281-8afb-4a15-a5ed-1de998b17b9b": ("4ac48281-8afb-4a15-a5ed-1de998b17b9b", "DOC-BJ-001", 
+                    "张明华", "MALE", 
+                    "13800138001", "BJ-HA-001", 
+                    "主任医师", "眼部整形,鼻部整形,面部年轻化", 
+                    "从业25年，资深整形外科专家，擅长眼部和鼻部精细整形手术")
+            
+I20260114 17:05:48.918939    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:48.920579    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:05:48.921458    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "68ee170f-7e38-4927-bc58-9b525a0bc872": ("68ee170f-7e38-4927-bc58-9b525a0bc872", "DOC-BJ-002", 
+                    "李雪梅", "FEMALE", 
+                    "13800138002", "BJ-HA-001", 
+                    "副主任医师", "皮肤美容,激光治疗,注射美容", 
+                    "皮肤科专家，擅长各种激光治疗和注射美容")
+            
+I20260114 17:05:48.932776    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:48.934279    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:05:48.934984    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "5a988e1c-4098-484d-b868-e79183d05a30": ("5a988e1c-4098-484d-b868-e79183d05a30", "DOC-BJ-003", 
+                    "王建国", "MALE", 
+                    "13800138003", "BJ-HA-001", 
+                    "主任医师", "胸部整形,形体雕塑,吸脂塑形", 
+                    "形体雕塑专家，擅长胸部整形和身体塑形")
+            
+I20260114 17:05:48.946925    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:48.948282    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:05:48.949239    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "e3bb04e5-cf4f-4e24-96ae-038115dd5207": ("e3bb04e5-cf4f-4e24-96ae-038115dd5207", "DOC-SH-001", 
+                    "陈美玲", "FEMALE", 
+                    "13900139001", "SH-ML-002", 
+                    "主任医师", "面部轮廓,颌面整形,面部年轻化", 
+                    "颌面整形专家，擅长面部轮廓手术和微整形")
+            
+I20260114 17:05:48.962889    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:48.964560    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:05:48.966214    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "21d6bf82-a6a8-4538-bd18-a3b353323e90": ("21d6bf82-a6a8-4538-bd18-a3b353323e90", "DOC-SH-002", 
+                    "林志远", "MALE", 
+                    "13900139002", "SH-ML-002", 
+                    "副主任医师", "微整形,注射美容,玻尿酸填充", 
+                    "注射美容专家，精通各类玻尿酸和肉毒素注射")
+            
+I20260114 17:05:48.977721    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:48.979331    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:05:48.981428    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "18243f1f-cc16-4855-a7f7-e1ab30ea2cbc": ("18243f1f-cc16-4855-a7f7-e1ab30ea2cbc", "DOC-SH-003", 
+                    "黄晓燕", "FEMALE", 
+                    "13900139003", "SH-ML-002", 
+                    "主治医师", "激光美容,光电治疗,祛斑祛痘", 
+                    "激光美容专家，擅长各种光电设备操作")
+            
+I20260114 17:05:48.994066    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.028569    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.070600    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.098438    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.122222    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.157634    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.197343    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.221307    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.265286    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.304997    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.346216    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.373575    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.397431    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.449918    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.494199    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.530434    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:05:49.572875    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:49.577296    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "52bb04a2-b818-4390-8b3d-80c868dda7e8" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:05:49.610195    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:49.614898    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "c13981d0-7a3c-4a94-badd-071efc528023" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:05:49.630424    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:49.636175    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "b3c10bf3-1f39-41d6-af74-e0c6377a81ac" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:05:49.656566    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:49.661193    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "9366e32a-f078-40af-b490-4fb298fda97c" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:05:49.694026    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:05:49.698609    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "4f60e131-82a6-4bbe-9673-f2c92d46ffa1" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:06:23.339648    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:47756
+I20260114 17:06:23.345256    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.371847    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.385799    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:23.387944    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:06:23.389281    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "4ac48281-8afb-4a15-a5ed-1de998b17b9b": ("4ac48281-8afb-4a15-a5ed-1de998b17b9b", "DOC-BJ-001", 
+                    "张明华", "MALE", 
+                    "13800138001", "BJ-HA-001", 
+                    "主任医师", "眼部整形,鼻部整形,面部年轻化", 
+                    "从业25年，资深整形外科专家，擅长眼部和鼻部精细整形手术")
+            
+I20260114 17:06:23.406911    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:23.412676    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:06:23.413914    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "68ee170f-7e38-4927-bc58-9b525a0bc872": ("68ee170f-7e38-4927-bc58-9b525a0bc872", "DOC-BJ-002", 
+                    "李雪梅", "FEMALE", 
+                    "13800138002", "BJ-HA-001", 
+                    "副主任医师", "皮肤美容,激光治疗,注射美容", 
+                    "皮肤科专家，擅长各种激光治疗和注射美容")
+            
+I20260114 17:06:23.435062    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:23.437281    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:06:23.438669    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "5a988e1c-4098-484d-b868-e79183d05a30": ("5a988e1c-4098-484d-b868-e79183d05a30", "DOC-BJ-003", 
+                    "王建国", "MALE", 
+                    "13800138003", "BJ-HA-001", 
+                    "主任医师", "胸部整形,形体雕塑,吸脂塑形", 
+                    "形体雕塑专家，擅长胸部整形和身体塑形")
+            
+I20260114 17:06:23.461678    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:23.466837    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:06:23.469200    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "e3bb04e5-cf4f-4e24-96ae-038115dd5207": ("e3bb04e5-cf4f-4e24-96ae-038115dd5207", "DOC-SH-001", 
+                    "陈美玲", "FEMALE", 
+                    "13900139001", "SH-ML-002", 
+                    "主任医师", "面部轮廓,颌面整形,面部年轻化", 
+                    "颌面整形专家，擅长面部轮廓手术和微整形")
+            
+I20260114 17:06:23.482146    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:23.484647    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:06:23.486631    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "21d6bf82-a6a8-4538-bd18-a3b353323e90": ("21d6bf82-a6a8-4538-bd18-a3b353323e90", "DOC-SH-002", 
+                    "林志远", "MALE", 
+                    "13900139002", "SH-ML-002", 
+                    "副主任医师", "微整形,注射美容,玻尿酸填充", 
+                    "注射美容专家，精通各类玻尿酸和肉毒素注射")
+            
+I20260114 17:06:23.497876    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:23.499156    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:06:23.500015    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "18243f1f-cc16-4855-a7f7-e1ab30ea2cbc": ("18243f1f-cc16-4855-a7f7-e1ab30ea2cbc", "DOC-SH-003", 
+                    "黄晓燕", "FEMALE", 
+                    "13900139003", "SH-ML-002", 
+                    "主治医师", "激光美容,光电治疗,祛斑祛痘", 
+                    "激光美容专家，擅长各种光电设备操作")
+            
+I20260114 17:06:23.513955    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.538064    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.562575    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.595585    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.617215    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.655795    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.677773    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.701998    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.726769    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.751574    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.783782    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.808595    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.835145    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.876469    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.916824    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:23.951365    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:06:24.003402    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:24.009003    20 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "52bb04a2-b818-4390-8b3d-80c868dda7e8" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:06:24.047430    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:24.052011    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "c13981d0-7a3c-4a94-badd-071efc528023" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:06:24.067732    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:24.071308    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "b3c10bf3-1f39-41d6-af74-e0c6377a81ac" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:06:24.086968    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:24.090817    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "9366e32a-f078-40af-b490-4fb298fda97c" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:06:24.106976    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:06:24.111068    19 QueryInstance.cpp:151] EdgeNotFound: EdgeName `belongs_to_institution`, query: 
+                    INSERT EDGE belongs_to_institution() 
+                    VALUES "4f60e131-82a6-4bbe-9673-f2c92d46ffa1" -> "ae596b48-ce85-4fb7-bda6-d2d0769f781b": ()
+                
+I20260114 17:16:29.503723    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:39270
+I20260114 17:16:29.507700    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:29.527261    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:29.541128    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:29.542794    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:29.544190    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "4ac48281-8afb-4a15-a5ed-1de998b17b9b": ("4ac48281-8afb-4a15-a5ed-1de998b17b9b", "DOC-BJ-001", 
+                    "张明华", "MALE", 
+                    "13800138001", "BJ-HA-001", 
+                    "主任医师", "眼部整形,鼻部整形,面部年轻化", 
+                    "从业25年，资深整形外科专家，擅长眼部和鼻部精细整形手术")
+            
+I20260114 17:16:29.557813    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:29.559118    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:29.560009    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "68ee170f-7e38-4927-bc58-9b525a0bc872": ("68ee170f-7e38-4927-bc58-9b525a0bc872", "DOC-BJ-002", 
+                    "李雪梅", "FEMALE", 
+                    "13800138002", "BJ-HA-001", 
+                    "副主任医师", "皮肤美容,激光治疗,注射美容", 
+                    "皮肤科专家，擅长各种激光治疗和注射美容")
+            
+I20260114 17:16:29.570961    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:29.572980    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:29.573905    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "5a988e1c-4098-484d-b868-e79183d05a30": ("5a988e1c-4098-484d-b868-e79183d05a30", "DOC-BJ-003", 
+                    "王建国", "MALE", 
+                    "13800138003", "BJ-HA-001", 
+                    "主任医师", "胸部整形,形体雕塑,吸脂塑形", 
+                    "形体雕塑专家，擅长胸部整形和身体塑形")
+            
+I20260114 17:16:29.585229    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:29.586628    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:29.587298    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "e3bb04e5-cf4f-4e24-96ae-038115dd5207": ("e3bb04e5-cf4f-4e24-96ae-038115dd5207", "DOC-SH-001", 
+                    "陈美玲", "FEMALE", 
+                    "13900139001", "SH-ML-002", 
+                    "主任医师", "面部轮廓,颌面整形,面部年轻化", 
+                    "颌面整形专家，擅长面部轮廓手术和微整形")
+            
+I20260114 17:16:29.600493    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:29.602001    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:29.602855    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "21d6bf82-a6a8-4538-bd18-a3b353323e90": ("21d6bf82-a6a8-4538-bd18-a3b353323e90", "DOC-SH-002", 
+                    "林志远", "MALE", 
+                    "13900139002", "SH-ML-002", 
+                    "副主任医师", "微整形,注射美容,玻尿酸填充", 
+                    "注射美容专家，精通各类玻尿酸和肉毒素注射")
+            
+I20260114 17:16:29.614975    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:29.617251    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:29.618219    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "18243f1f-cc16-4855-a7f7-e1ab30ea2cbc": ("18243f1f-cc16-4855-a7f7-e1ab30ea2cbc", "DOC-SH-003", 
+                    "黄晓燕", "FEMALE", 
+                    "13900139003", "SH-ML-002", 
+                    "主治医师", "激光美容,光电治疗,祛斑祛痘", 
+                    "激光美容专家，擅长各种光电设备操作")
+            
+I20260114 17:16:29.630237    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.384596    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:33360
+I20260114 17:16:48.389348    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.419572    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.437584    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:48.439071    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:48.439632    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "4ac48281-8afb-4a15-a5ed-1de998b17b9b": ("4ac48281-8afb-4a15-a5ed-1de998b17b9b", "DOC-BJ-001", 
+                    "张明华", "MALE", 
+                    "13800138001", "BJ-HA-001", 
+                    "主任医师", "眼部整形,鼻部整形,面部年轻化", 
+                    "从业25年，资深整形外科专家，擅长眼部和鼻部精细整形手术")
+            
+I20260114 17:16:48.450096    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:48.451443    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:48.452019    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "68ee170f-7e38-4927-bc58-9b525a0bc872": ("68ee170f-7e38-4927-bc58-9b525a0bc872", "DOC-BJ-002", 
+                    "李雪梅", "FEMALE", 
+                    "13800138002", "BJ-HA-001", 
+                    "副主任医师", "皮肤美容,激光治疗,注射美容", 
+                    "皮肤科专家，擅长各种激光治疗和注射美容")
+            
+I20260114 17:16:48.463058    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:48.464526    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:48.465031    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "5a988e1c-4098-484d-b868-e79183d05a30": ("5a988e1c-4098-484d-b868-e79183d05a30", "DOC-BJ-003", 
+                    "王建国", "MALE", 
+                    "13800138003", "BJ-HA-001", 
+                    "主任医师", "胸部整形,形体雕塑,吸脂塑形", 
+                    "形体雕塑专家，擅长胸部整形和身体塑形")
+            
+I20260114 17:16:48.479820    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:48.481485    19 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:48.482396    19 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "e3bb04e5-cf4f-4e24-96ae-038115dd5207": ("e3bb04e5-cf4f-4e24-96ae-038115dd5207", "DOC-SH-001", 
+                    "陈美玲", "FEMALE", 
+                    "13900139001", "SH-ML-002", 
+                    "主任医师", "面部轮廓,颌面整形,面部年轻化", 
+                    "颌面整形专家，擅长面部轮廓手术和微整形")
+            
+I20260114 17:16:48.494045    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:48.495519    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:48.496336    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "21d6bf82-a6a8-4538-bd18-a3b353323e90": ("21d6bf82-a6a8-4538-bd18-a3b353323e90", "DOC-SH-002", 
+                    "林志远", "MALE", 
+                    "13900139002", "SH-ML-002", 
+                    "副主任医师", "微整形,注射美容,玻尿酸填充", 
+                    "注射美容专家，精通各类玻尿酸和肉毒素注射")
+            
+I20260114 17:16:48.508594    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260114 17:16:48.510644    20 MutateValidator.cpp:85] Unknown column `introduction' in schema
+E20260114 17:16:48.511826    20 QueryInstance.cpp:151] SemanticError: Unknown column `introduction' in schema, query: 
+                INSERT VERTEX doctor(doctor_id, doctor_code, name, gender, phone, 
+                    institution_code, title, specialty, introduction)
+                VALUES "18243f1f-cc16-4855-a7f7-e1ab30ea2cbc": ("18243f1f-cc16-4855-a7f7-e1ab30ea2cbc", "DOC-SH-003", 
+                    "黄晓燕", "FEMALE", 
+                    "13900139003", "SH-ML-002", 
+                    "主治医师", "激光美容,光电治疗,祛斑祛痘", 
+                    "激光美容专家，擅长各种光电设备操作")
+            
+I20260114 17:16:48.525729    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.572808    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.597029    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.632915    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.658093    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.697105    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.721808    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.779217    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.829417    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.854231    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.883687    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.910041    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.934466    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:48.976531    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:49.022217    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:49.069710    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:49.112905    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:49.166149    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:49.187049    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:49.222280    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:16:49.244572    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260114 17:17:21.400620    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:45854
+I20260114 17:17:26.420652    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 0 space
+I20260114 17:17:26.420928    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:17:36.433085    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 0 space
+I20260114 17:17:36.433477    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:17:46.448323    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 0 space
+I20260114 17:17:46.448587    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:18:14.092412    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:54264
+W20260114 17:18:14.095268    19 SpaceExecutor.cpp:116] Get space ID failed when prepare text index: revisit
+I20260114 17:18:26.507553    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 0 space
+I20260114 17:18:26.508002    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:18:36.518043    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260114 17:18:36.518514    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:21:13.913846    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:52750
+I20260114 17:21:13.929323    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 2
+I20260114 17:21:16.701774    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260114 17:21:16.702054    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:21:36.735136    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260114 17:21:36.735632    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:21:46.760492    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260114 17:21:46.760923    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:21:56.786926    38 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260114 17:21:56.787210    38 MetaClient.cpp:3269] Load leader ok
+I20260114 17:26:38.974565     1 GraphDaemon.cpp:176] Signal 15(Terminated) received, stopping this server
+I20260114 17:26:38.990846    41 GraphServer.cpp:74] nebula-graphd on graphd:9669 has been stopped
+I20260114 17:26:38.991747     1 GraphDaemon.cpp:161] The graph Daemon stopped
+I20260114 17:26:38.994033     1 GraphServer.cpp:109] The graph server has been stopped

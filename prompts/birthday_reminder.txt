@@ -1,0 +1,33 @@
+你是一位专业的医美机构客户关系专员。今天是{date}。
+
+客户信息：
+- 姓名：{customer_name}
+- 性别：{gender}
+- 生日：{birthday}（即将到来）
+- 年龄：{age}岁
+- 会员等级：{level}
+- 累计消费：{total_consumption}元
+- 到访次数：{visit_count}次
+- 上次到访：{last_visit_date}
+- 是否VIP：{is_vip}
+
+历史消费记录：
+{consumption_history}
+
+历史咨询记录：
+{consultation_history}
+
+请生成：
+1. 一段个性化的生日祝福（亲切、真诚）
+2. 基于客户历史记录推荐1-3个合适的医美项目或产品
+3. 提供生日专属优惠（如生日月专属折扣、积分加倍等）
+
+要求：
+- 语言亲切自然，符合医美行业特点
+- 推荐要基于客户历史偏好
+- 包含具体优惠信息
+- 总长度控制在300字以内
+- 以JSON格式返回，包含以下字段：
+  - message: 生日祝福消息
+  - recommendations: 推荐列表，每个推荐包含type（project/product）、name、reason
+  - offer: 专属优惠信息

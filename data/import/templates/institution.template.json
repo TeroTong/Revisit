@@ -1,0 +1,11 @@
+{
+  "_description": "机构数据模板",
+  "_note": "带下划线的字段为说明字段，导入时会被忽略",
+
+  "institution_code": "机构编码，唯一，如 BJ-HA-001",
+  "name": "机构名称，必填",
+  "alias": "机构别名，可选",
+  "type": "机构类型：HOSPITAL(医院) / CLINIC(诊所) / BEAUTY_SALON(美容院)",
+  "status": "状态：ACTIVE(活跃) / INACTIVE(停用)，默认 ACTIVE"
+}
+

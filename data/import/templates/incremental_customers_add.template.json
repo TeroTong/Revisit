@@ -1,0 +1,25 @@
+{
+  "operation": "INSERT",
+  "timestamp": "2026-01-15T10:00:00",
+  "institution_code": "BJ-HA-001",
+  "description": "新增客户数据示例",
+  "data": [
+    {
+      "customer_code": "BJ-HA-001-C0100",
+      "person": {
+        "name": "新客户姓名",
+        "phone": "13800138000",
+        "gender": "FEMALE",
+        "birthday": "1995-06-15",
+        "id_card": null,
+        "email": null,
+        "address": null
+      },
+      "vip_level": "NORMAL",
+      "source": "ONLINE",
+      "consultant_id": null,
+      "notes": "新客户备注"
+    }
+  ]
+}
+

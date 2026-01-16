@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医美客户回访系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-group select,
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .result-area {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            min-height: 100px;
+            display: none;
+        }
+
+        .result-area.show {
+            display: block;
+        }
+
+        .customer-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .customer-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .customer-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .customer-info h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .customer-info p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .customer-meta {
+            text-align: right;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-vip {
+            background: #ffd700;
+            color: #333;
+        }
+
+        .badge-days {
+            background: #667eea;
+            color: white;
+            margin-top: 8px;
+        }
+
+        .speech-content {
+            background: white;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #667eea;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error {
+            color: #dc3545;
+            background: #fff5f5;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ffcccc;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .stat-item .label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+        }
+
+        .success-msg {
+            color: #28a745;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* 回访状态相关样式 */
+        .customer-item.completed {
+            opacity: 0.6;
+            background: #f0fff0;
+            border-color: #28a745;
+        }
+
+        .customer-item.completed .customer-info h3 {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .customer-item.deferred {
+            background: #fffbf0;
+            border-color: #ffc107;
+        }
+
+        .status-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-complete {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-complete:hover {
+            background: #218838;
+        }
+
+        .btn-defer {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .btn-defer:hover {
+            background: #e0a800;
+        }
+
+        .btn-pending {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-pending:hover {
+            background: #5a6268;
+        }
+
+        .btn-undo {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-undo:hover {
+            background: #5a6268;
+        }
+
+        .btn-generate {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .btn-generate:hover {
+            background: #138496;
+        }
+
+        .customer-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .badge-completed {
+            background: #28a745;
+            color: white;
+        }
+
+        .badge-deferred {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .badge-pending {
+            background: #667eea;
+            color: white;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+        }
+
+        .status-section {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px dashed #ddd;
+        }
+
+        .status-section h4 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-section.pending h4 {
+            color: #667eea;
+        }
+
+        .status-section.deferred h4 {
+            color: #ffc107;
+        }
+
+        .status-section.completed h4 {
+            color: #28a745;
+        }
+
+        /* 卡片内话术展示区域 */
+        .speech-area {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .speech-area .speech-content {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .speech-area .speech-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .speech-area .loading-inline {
+            color: #666;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .speech-area .loading-inline::after {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #667eea;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .btn-copy {
+            background: #28a745;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn-copy:hover {
+            background: #218838;
+        }
+
+        .btn-close-speech {
+            background: #6c757d;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn-close-speech:hover {
+            background: #5a6268;
+        }
+
+        .copy-success {
+            color: #28a745;
+            font-size: 12px;
+        }
+
+        /* 分页相关样式 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .pagination button {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination .page-info {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .pagination select {
+            padding: 6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .search-bar input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .quick-stats {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .quick-stats span {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+
+        /* 批量操作栏样式 */
+        .batch-action-bar {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+        .btn-batch-generate {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-batch-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-batch-generate:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .batch-progress {
+            flex: 1;
+            display: none;
+        }
+
+        .batch-progress.show {
+            display: block;
+        }
+
+        .batch-progress-bar {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .batch-progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .batch-progress-text {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* 排序按钮样式 */
+        .sort-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .sort-bar label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .sort-btn {
+            padding: 8px 16px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .sort-btn.active {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .sort-btn:hover {
+            border-color: #667eea;
+        }
+
+        .vip-filter-select {
+            padding: 8px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            background: white;
+            min-width: 140px;
+        }
+
+        .vip-filter-select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* 登录相关样式 */
+        .login-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .login-box p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .login-box .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .login-box input, .login-box select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .login-box input:focus, .login-box select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .login-box .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .login-box .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .login-error {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .logout-btn {
+            background: #dc3545;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 15px;
+        }
+
+        .logout-btn:hover {
+            background: #c82333;
+        }
+
+        .current-institution {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 登录遮罩层 -->
+    <div id="loginOverlay" class="login-overlay">
+        <div class="login-box">
+            <h2>🏥 医美客户回访系统</h2>
+            <p>请选择您的机构并输入访问密码</p>
+
+            <div class="form-group">
+                <label>选择机构</label>
+                <select id="loginInstitution">
+                    <option value="">-- 请选择机构 --</option>
+                    <option value="BJ-HA-001">北京华美医疗美容 (BJ-HA-001)</option>
+                    <option value="SH-ML-002">上海美莱医疗美容 (SH-ML-002)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>访问密码</label>
+                <input type="password" id="loginPassword" placeholder="请输入机构访问密码" onkeypress="if(event.key==='Enter') doLogin()">
+            </div>
+
+            <button class="btn-login" onclick="doLogin()">🔐 登录系统</button>
+
+            <div id="loginError" class="login-error" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- 主内容区域（登录后显示） -->
+    <div id="mainContent" class="container" style="display: none;">
+        <div class="header">
+            <h1>🏥 医美客户回访系统</h1>
+            <p>智能生成个性化生日祝福话术，提升客户满意度</p>
+            <div class="current-institution">
+                <span id="currentInstitutionName">北京华美医疗美容</span>
+                <button class="logout-btn" onclick="doLogout()">退出登录</button>
+            </div>
+        </div>
+
+
+        <!-- 功能选项卡 -->
+        <div class="card">
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('birthday')">🎂 生日回访</button>
+                <button class="tab" onclick="switchTab('generate')">✨ 生成话术</button>
+            </div>
+
+            <!-- 生日回访列表 -->
+            <div id="birthday-section" class="section active">
+                <h2>🎂 即将生日的客户</h2>
+                <p style="color: #666; margin-bottom: 20px;">查看未来几天内过生日的客户，提前准备回访</p>
+
+                <div class="form-group">
+                    <label>查询未来几天内生日的客户：</label>
+                    <select id="daysSelect">
+                        <option value="1">今天</option>
+                        <option value="3">未来 3 天</option>
+                        <option value="7" selected>未来 7 天</option>
+                        <option value="14">未来 14 天</option>
+                        <option value="30">未来 30 天</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" onclick="getBirthdayCustomers()">
+                    🔍 查询生日客户
+                </button>
+
+                <div id="birthday-result" class="result-area">
+                    <!-- 结果将在这里显示 -->
+                </div>
+            </div>
+
+            <!-- 生成话术 -->
+            <div id="generate-section" class="section">
+                <h2>✨ 生成个性化回访话术</h2>
+                <p style="color: #666; margin-bottom: 20px;">AI 将根据客户的消费记录和偏好，生成专属的生日祝福话术</p>
+
+                <div class="form-group">
+                    <label>请输入客户代码：</label>
+                    <input type="text" id="customerCode" placeholder="例如：BJ-HA-001-C-001">
+                    <p style="font-size: 12px; color: #999; margin-top: 5px;">
+                        提示：可以先在「生日回访」中查询客户，点击客户卡片自动填入代码
+                    </p>
+                </div>
+
+                <button class="btn btn-primary" onclick="generateContent()">
+                    🤖 生成回访话术
+                </button>
+
+                <div id="generate-result" class="result-area">
+                    <!-- 结果将在这里显示 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 使用说明 -->
+        <div class="card">
+            <h2>📖 使用说明</h2>
+            <ol style="line-height: 2; color: #555; padding-left: 20px;">
+                <li><strong>查看生日客户</strong>：点击「生日回访」查看即将过生日的客户列表</li>
+                <li><strong>生成话术</strong>：点击「💬 生成话术」按钮，系统将自动生成个性化的生日祝福话术</li>
+                <li><strong>标记状态</strong>：
+                    <ul style="margin-top: 5px;">
+                        <li>📋 <strong>待回访</strong>：新客户默认状态，需要进行回访</li>
+                        <li>⏸️ <strong>暂缓回访</strong>：暂时无法联系或需要稍后处理的客户</li>
+                        <li>✅ <strong>已完成</strong>：回访完成后标记</li>
+                    </ul>
+                </li>
+                <li><strong>筛选查看</strong>：使用顶部筛选按钮快速查看不同状态的客户</li>
+                <li><strong>退出登录</strong>：点击顶部「退出登录」按钮切换机构</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+
+        // ==================== 登录认证 ====================
+
+        // 机构密码配置（简单版本，前端验证）
+        const INSTITUTION_PASSWORDS = {
+            'BJ-HA-001': 'huamei2026',    // 北京华美
+            'SH-ML-002': 'meilai2026'     // 上海美莱
+        };
+
+        const INSTITUTION_NAMES = {
+            'BJ-HA-001': '北京华美医疗美容',
+            'SH-ML-002': '上海美莱医疗美容'
+        };
+
+        // 当前登录的机构
+        let currentInstitution = null;
+        let currentInstitutionName = null;
+
+        // 页面加载时检查登录状态
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLoginStatus();
+        });
+
+        function checkLoginStatus() {
+            const savedInstitution = sessionStorage.getItem('loggedInInstitution');
+            const savedTime = sessionStorage.getItem('loginTime');
+
+            // 检查是否已登录且未过期（8小时有效期）
+            if (savedInstitution && savedTime) {
+                const loginTime = parseInt(savedTime);
+                const now = Date.now();
+                const eightHours = 8 * 60 * 60 * 1000;
+
+                if (now - loginTime < eightHours) {
+                    // 登录有效，显示主界面
+                    currentInstitution = savedInstitution;
+                    currentInstitutionName = INSTITUTION_NAMES[savedInstitution] || savedInstitution;
+                    showMainContent();
+                    return;
+                }
+            }
+
+            // 未登录或已过期，显示登录界面
+            showLoginOverlay();
+        }
+
+        function doLogin() {
+            const institution = document.getElementById('loginInstitution').value;
+            const password = document.getElementById('loginPassword').value;
+            const errorDiv = document.getElementById('loginError');
+
+            // 验证
+            if (!institution) {
+                errorDiv.textContent = '请选择机构';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            if (!password) {
+                errorDiv.textContent = '请输入密码';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            // 验证密码
+            if (INSTITUTION_PASSWORDS[institution] !== password) {
+                errorDiv.textContent = '密码错误，请重试';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            // 登录成功
+            currentInstitution = institution;
+            currentInstitutionName = INSTITUTION_NAMES[institution] || institution;
+            sessionStorage.setItem('loggedInInstitution', institution);
+            sessionStorage.setItem('loginTime', Date.now().toString());
+
+            errorDiv.style.display = 'none';
+            showMainContent();
+        }
+
+        function doLogout() {
+            if (confirm('确定要退出登录吗？')) {
+                sessionStorage.removeItem('loggedInInstitution');
+                sessionStorage.removeItem('loginTime');
+                currentInstitution = null;
+                currentInstitutionName = null;
+
+                // 清空数据
+                allCustomersData = [];
+
+                // 显示登录界面
+                showLoginOverlay();
+            }
+        }
+
+        function showLoginOverlay() {
+            document.getElementById('loginOverlay').style.display = 'flex';
+            document.getElementById('mainContent').style.display = 'none';
+
+            // 清空输入
+            document.getElementById('loginPassword').value = '';
+            document.getElementById('loginError').style.display = 'none';
+        }
+
+        function showMainContent() {
+            document.getElementById('loginOverlay').style.display = 'none';
+            document.getElementById('mainContent').style.display = 'block';
+
+            // 更新显示的机构名称
+            document.getElementById('currentInstitutionName').textContent =
+                currentInstitutionName || currentInstitution;
+        }
+
+        // 获取当前登录的机构
+        function getInstitution() {
+            if (!currentInstitution) {
+                alert('请先登录！');
+                showLoginOverlay();
+                return null;
+            }
+            return currentInstitution;
+        }
+
+
+        function switchTab(tab) {
+            // 更新标签样式
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add('active');
+
+            // 显示对应内容
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(`${tab}-section`).classList.add('active');
+        }
+
+        // ==================== 业务逻辑 ====================
+
+        // 回访状态常量
+        const REMINDER_STATUS = {
+            PENDING: 'PENDING',      // 待回访
+            DEFERRED: 'DEFERRED',    // 暂缓回访
+            COMPLETED: 'COMPLETED'   // 已完成
+        };
+
+        const STATUS_LABELS = {
+            PENDING: '待回访',
+            DEFERRED: '暂缓回访',
+            COMPLETED: '已完成'
+        };
+
+        // 分页配置
+        const PAGE_SIZE_OPTIONS = [10, 20, 50, 100];
+        let currentPageSize = 20;
+        let currentPage = 1;
+        let currentFilter = 'all';
+        let searchKeyword = '';
+        let currentSortBy = 'birthday'; // 排序方式: 'birthday' 或 'vip'
+        let currentVipFilter = 'all'; // 星级筛选: 'all', 'DIAMOND', 'PLATINUM', 'GOLD', 'SILVER', 'NORMAL'
+
+        // VIP等级排序权重（越高越优先）
+        const VIP_ORDER = {
+            'DIAMOND': 0,
+            'PLATINUM': 1,
+            'GOLD': 2,
+            'SILVER': 3,
+            'NORMAL': 4
+        };
+
+        // VIP等级显示名称
+        const VIP_LABELS = {
+            'DIAMOND': '💎 钻石',
+            'PLATINUM': '👑 铂金',
+            'GOLD': '🥇 金卡',
+            'SILVER': '🥈 银卡',
+            'NORMAL': '普通'
+        };
+
+        // 存储所有客户数据（用于状态切换时不重新请求）
+        let allCustomersData = [];
+
+        // 存储回访状态（使用 localStorage 作为缓存，同时同步到后端）
+        function getLocalStatuses() {
+            const data = localStorage.getItem('reminderStatuses');
+            return data ? JSON.parse(data) : {};
+        }
+
+        function setLocalStatus(customerCode, status) {
+            const statuses = getLocalStatuses();
+            statuses[customerCode] = status;
+            localStorage.setItem('reminderStatuses', JSON.stringify(statuses));
+        }
+
+        function getCustomerStatus(customerCode) {
+            const statuses = getLocalStatuses();
+            return statuses[customerCode] || REMINDER_STATUS.PENDING;
+        }
+
+        // 更新后端回访状态（异步，不阻塞UI）
+        function updateReminderStatusAsync(customerCode, status) {
+            const institution = currentInstitution;
+            if (!institution) return;
+
+            // 异步更新后端，不等待结果
+            fetch(`${API_BASE}/api/api/v1/reminders/${institution}/update-reminder-status`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    customer_code: customerCode,
+                    status: status
+                })
+            }).catch(error => {
+                console.error('后端状态更新失败:', error);
+            });
+        }
+
+
+        async function getBirthdayCustomers() {
+            const institution = getInstitution();
+            if (!institution) return;
+
+            const days = document.getElementById('daysSelect').value;
+            const resultDiv = document.getElementById('birthday-result');
+
+            resultDiv.classList.add('show');
+            resultDiv.innerHTML = '<div class="loading">正在查询客户数据</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/api/v1/reminders/${institution}/upcoming-birthdays?days=${days}`);
+
+                if (!response.ok) {
+                    throw new Error(`请求失败: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (data.total_customers === 0) {
+                    resultDiv.innerHTML = `
+                        <div style="text-align: center; padding: 40px; color: #666;">
+                            <p style="font-size: 48px; margin-bottom: 10px;">😊</p>
+                            <p>未来 ${days} 天内没有客户过生日</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // 收集所有客户并按状态分组
+                allCustomersData = [];
+                if (data.by_day) {
+                    for (const [dayKey, dayData] of Object.entries(data.by_day)) {
+                        for (const customer of dayData.customers) {
+                            customer.dayKey = dayKey;
+                            customer.status = getCustomerStatus(customer.customer_code);
+                            allCustomersData.push(customer);
+                        }
+                    }
+                }
+
+                // 使用统一的渲染函数
+                renderCustomerList();
+
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">❌ 查询失败：${error.message}</div>`;
+            }
+        }
+
+        function renderCustomerCard(customer) {
+            const status = customer.status || REMINDER_STATUS.PENDING;
+            const statusClass = status.toLowerCase();
+
+            // 状态徽章
+            let statusBadge = '';
+            if (status === REMINDER_STATUS.DEFERRED) {
+                statusBadge = '<span class="badge badge-deferred">暂缓</span>';
+            } else if (status === REMINDER_STATUS.COMPLETED) {
+                statusBadge = '<span class="badge badge-completed">已完成</span>';
+            }
+
+            // 根据当前状态显示不同的操作按钮
+            let actionButtons = '';
+            if (status === REMINDER_STATUS.PENDING) {
+                actionButtons = `
+                    <button class="status-btn btn-defer" onclick="event.stopPropagation(); changeStatus('${customer.customer_code}', '${REMINDER_STATUS.DEFERRED}')">⏸️ 暂缓</button>
+                    <button class="status-btn btn-complete" onclick="event.stopPropagation(); changeStatus('${customer.customer_code}', '${REMINDER_STATUS.COMPLETED}')">✅ 完成</button>
+                `;
+            } else if (status === REMINDER_STATUS.DEFERRED) {
+                actionButtons = `
+                    <button class="status-btn btn-pending" onclick="event.stopPropagation(); changeStatus('${customer.customer_code}', '${REMINDER_STATUS.PENDING}')">📋 待回访</button>
+                    <button class="status-btn btn-complete" onclick="event.stopPropagation(); changeStatus('${customer.customer_code}', '${REMINDER_STATUS.COMPLETED}')">✅ 完成</button>
+                `;
+            } else if (status === REMINDER_STATUS.COMPLETED) {
+                actionButtons = `
+                    <button class="status-btn btn-pending" onclick="event.stopPropagation(); changeStatus('${customer.customer_code}', '${REMINDER_STATUS.PENDING}')">↩️ 重新回访</button>
+                `;
+            }
+
+            const daysText = customer.days_until_birthday === 0 ? '今天生日' : customer.days_until_birthday + '天后';
+
+            return `
+                <div class="customer-item ${statusClass}" id="customer-${customer.customer_code}">
+                    <div class="customer-info" style="flex: 1;">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div>
+                                <h3>${customer.name || '客户'} ${statusBadge}</h3>
+                                <p>客户代码：${customer.customer_code}</p>
+                                <p>电话尾号：${customer.phone_suffix || '****'}</p>
+                                <p>累计消费：¥${(customer.total_consumption || 0).toLocaleString()}</p>
+                            </div>
+                            <div class="customer-meta">
+                                <span class="badge badge-vip">${customer.vip_level || '普通'}</span>
+                                <br>
+                                <span class="badge badge-days">${daysText}</span>
+                            </div>
+                        </div>
+                        <div class="customer-actions">
+                            <button class="status-btn btn-generate" onclick="event.stopPropagation(); generateForCustomer('${customer.customer_code}')">💬 生成话术</button>
+                            ${actionButtons}
+                        </div>
+                        <!-- 话术展示区域 -->
+                        <div id="speech-area-${customer.customer_code}" class="speech-area" style="display: none;"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function changeStatus(customerCode, newStatus) {
+            // 1. 立即更新本地状态
+            setLocalStatus(customerCode, newStatus);
+
+            // 2. 更新内存中的客户数据
+            const customer = allCustomersData.find(c => c.customer_code === customerCode);
+            if (customer) {
+                customer.status = newStatus;
+            }
+
+            // 3. 异步更新后端（不阻塞UI）
+            updateReminderStatusAsync(customerCode, newStatus);
+
+            // 4. 立即重新渲染列表（使用内存数据，不请求API）
+            renderCustomerList();
+        }
+
+        // 重新渲染客户列表（使用内存中的数据，支持分页）
+        function renderCustomerList() {
+            const resultDiv = document.getElementById('birthday-result');
+
+            if (allCustomersData.length === 0) {
+                return;
+            }
+
+            // 1. 按状态统计
+            const allPending = allCustomersData.filter(c => c.status === REMINDER_STATUS.PENDING);
+            const allDeferred = allCustomersData.filter(c => c.status === REMINDER_STATUS.DEFERRED);
+            const allCompleted = allCustomersData.filter(c => c.status === REMINDER_STATUS.COMPLETED);
+
+            // 2. 根据筛选条件过滤
+            let filteredCustomers = [];
+            if (currentFilter === 'all') {
+                filteredCustomers = [...allCustomersData];
+            } else if (currentFilter === 'pending') {
+                filteredCustomers = allPending;
+            } else if (currentFilter === 'deferred') {
+                filteredCustomers = allDeferred;
+            } else if (currentFilter === 'completed') {
+                filteredCustomers = allCompleted;
+            }
+
+            // 3. 搜索过滤
+            if (searchKeyword) {
+                const keyword = searchKeyword.toLowerCase();
+                filteredCustomers = filteredCustomers.filter(c =>
+                    (c.name && c.name.toLowerCase().includes(keyword)) ||
+                    (c.customer_code && c.customer_code.toLowerCase().includes(keyword)) ||
+                    (c.phone_suffix && c.phone_suffix.includes(keyword))
+                );
+            }
+
+            // 3.5 星级筛选
+            if (currentVipFilter !== 'all') {
+                filteredCustomers = filteredCustomers.filter(c => c.vip_level === currentVipFilter);
+            }
+
+            // 统计各星级数量（用于显示）
+            const vipCounts = {};
+            const baseFiltered = currentFilter === 'all' ? allCustomersData :
+                currentFilter === 'pending' ? allPending :
+                currentFilter === 'deferred' ? allDeferred : allCompleted;
+            for (const level of Object.keys(VIP_ORDER)) {
+                vipCounts[level] = baseFiltered.filter(c => c.vip_level === level).length;
+            }
+
+            // 4. 排序
+            filteredCustomers.sort((a, b) => {
+                // 首先按状态排序（待回访 > 暂缓 > 已完成）
+                const statusOrder = { PENDING: 0, DEFERRED: 1, COMPLETED: 2 };
+                const statusDiff = statusOrder[a.status] - statusOrder[b.status];
+                if (statusDiff !== 0) return statusDiff;
+
+                // 根据排序方式选择
+                if (currentSortBy === 'vip') {
+                    // 按星级排序，星级相同按生日排序
+                    const vipA = VIP_ORDER[a.vip_level] ?? 99;
+                    const vipB = VIP_ORDER[b.vip_level] ?? 99;
+                    const vipDiff = vipA - vipB;
+                    if (vipDiff !== 0) return vipDiff;
+                    return (a.days_until_birthday || 0) - (b.days_until_birthday || 0);
+                } else {
+                    // 按生日排序，生日相同按星级排序
+                    const daysDiff = (a.days_until_birthday || 0) - (b.days_until_birthday || 0);
+                    if (daysDiff !== 0) return daysDiff;
+                    const vipA = VIP_ORDER[a.vip_level] ?? 99;
+                    const vipB = VIP_ORDER[b.vip_level] ?? 99;
+                    return vipA - vipB;
+                }
+            });
+
+            // 5. 分页计算
+            const totalItems = filteredCustomers.length;
+            const totalPages = Math.ceil(totalItems / currentPageSize);
+            currentPage = Math.min(currentPage, totalPages || 1);
+            const startIndex = (currentPage - 1) * currentPageSize;
+            const endIndex = Math.min(startIndex + currentPageSize, totalItems);
+            const pageCustomers = filteredCustomers.slice(startIndex, endIndex);
+
+            // 6. 生成 HTML
+            let html = `
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="number">${allCustomersData.length.toLocaleString()}</div>
+                        <div class="label">总客户数</div>
+                    </div>
+                    <div class="stat-item" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="number">${allPending.length.toLocaleString()}</div>
+                        <div class="label">待回访</div>
+                    </div>
+                    <div class="stat-item" style="background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);">
+                        <div class="number">${allDeferred.length.toLocaleString()}</div>
+                        <div class="label">暂缓回访</div>
+                    </div>
+                    <div class="stat-item" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%);">
+                        <div class="number">${allCompleted.length.toLocaleString()}</div>
+                        <div class="label">已完成</div>
+                    </div>
+                </div>
+
+                <!-- 批量操作栏 -->
+                ${allPending.length > 0 ? `
+                <div class="batch-action-bar" id="batchActionBar">
+                    <button class="btn-batch-generate" id="btnBatchGenerate" onclick="batchGenerateSpeeches()">
+                        🚀 一键生成全部话术 (${allPending.length}人)
+                    </button>
+                    <div class="batch-progress" id="batchProgress">
+                        <div class="batch-progress-bar">
+                            <div class="batch-progress-fill" id="batchProgressFill" style="width: 0%"></div>
+                        </div>
+                        <div class="batch-progress-text" id="batchProgressText">准备中...</div>
+                    </div>
+                </div>
+                ` : ''}
+
+                <!-- 搜索栏 -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="搜索客户姓名、代码或电话..."
+                           value="${searchKeyword}" onkeypress="if(event.key==='Enter') doSearch()">
+                    <button onclick="doSearch()">🔍 搜索</button>
+                    ${searchKeyword ? `<button onclick="clearSearch()" style="background: #6c757d;">✕ 清除</button>` : ''}
+                </div>
+
+                <!-- 筛选按钮 -->
+                <div class="filter-bar">
+                    <button class="filter-btn ${currentFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">
+                        全部 (${allCustomersData.length.toLocaleString()})
+                    </button>
+                    <button class="filter-btn ${currentFilter === 'pending' ? 'active' : ''}" onclick="setFilter('pending')">
+                        待回访 (${allPending.length.toLocaleString()})
+                    </button>
+                    <button class="filter-btn ${currentFilter === 'deferred' ? 'active' : ''}" onclick="setFilter('deferred')">
+                        暂缓 (${allDeferred.length.toLocaleString()})
+                    </button>
+                    <button class="filter-btn ${currentFilter === 'completed' ? 'active' : ''}" onclick="setFilter('completed')">
+                        已完成 (${allCompleted.length.toLocaleString()})
+                    </button>
+                </div>
+
+                <!-- 排序按钮 -->
+                <div class="sort-bar">
+                    <label>排序方式：</label>
+                    <button class="sort-btn ${currentSortBy === 'birthday' ? 'active' : ''}" onclick="setSortBy('birthday')">
+                        📅 按生日排序
+                    </button>
+                    <button class="sort-btn ${currentSortBy === 'vip' ? 'active' : ''}" onclick="setSortBy('vip')">
+                        ⭐ 按星级排序
+                    </button>
+
+                    <span style="margin-left: 20px;"></span>
+
+                    <label>星级筛选：</label>
+                    <select class="vip-filter-select" onchange="setVipFilter(this.value)">
+                        <option value="all" ${currentVipFilter === 'all' ? 'selected' : ''}>全部星级</option>
+                        <option value="DIAMOND" ${currentVipFilter === 'DIAMOND' ? 'selected' : ''}>💎 钻石 (${vipCounts['DIAMOND'] || 0})</option>
+                        <option value="PLATINUM" ${currentVipFilter === 'PLATINUM' ? 'selected' : ''}>👑 铂金 (${vipCounts['PLATINUM'] || 0})</option>
+                        <option value="GOLD" ${currentVipFilter === 'GOLD' ? 'selected' : ''}>🥇 金卡 (${vipCounts['GOLD'] || 0})</option>
+                        <option value="SILVER" ${currentVipFilter === 'SILVER' ? 'selected' : ''}>🥈 银卡 (${vipCounts['SILVER'] || 0})</option>
+                        <option value="NORMAL" ${currentVipFilter === 'NORMAL' ? 'selected' : ''}>普通 (${vipCounts['NORMAL'] || 0})</option>
+                    </select>
+                </div>
+
+                <!-- 当前显示信息 -->
+                <div class="quick-stats">
+                    <span>当前筛选: ${totalItems.toLocaleString()} 人</span>
+                    <span>显示: 第 ${totalItems > 0 ? startIndex + 1 : 0}-${endIndex} 条</span>
+                    <span>排序: ${currentSortBy === 'vip' ? '⭐星级优先' : '📅生日优先'}</span>
+                    ${currentVipFilter !== 'all' ? `<span>星级: ${VIP_LABELS[currentVipFilter]}</span>` : ''}
+                </div>
+            `;
+
+            // 客户列表
+            html += `<div class="customer-list">`;
+            if (pageCustomers.length > 0) {
+                for (const customer of pageCustomers) {
+                    html += renderCustomerCard(customer);
+                }
+            } else {
+                html += `<p style="color: #999; padding: 20px; text-align: center;">没有符合条件的客户</p>`;
+            }
+            html += `</div>`;
+
+            // 分页控件
+            if (totalPages > 1 || totalItems > 10) {
+                html += `
+                    <div class="pagination">
+                        <button onclick="goToPage(1)" ${currentPage === 1 ? 'disabled' : ''}>首页</button>
+                        <button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>上一页</button>
+
+                        <span class="page-info">
+                            第 <input type="number" value="${currentPage}" min="1" max="${totalPages}"
+                                      style="width: 50px; text-align: center;"
+                                      onchange="goToPage(parseInt(this.value))" /> / ${totalPages} 页
+                        </span>
+
+                        <button onclick="goToPage(${currentPage + 1})" ${currentPage >= totalPages ? 'disabled' : ''}>下一页</button>
+                        <button onclick="goToPage(${totalPages})" ${currentPage >= totalPages ? 'disabled' : ''}>末页</button>
+
+                        <select onchange="changePageSize(parseInt(this.value))">
+                            ${PAGE_SIZE_OPTIONS.map(size =>
+                                `<option value="${size}" ${size === currentPageSize ? 'selected' : ''}>${size}条/页</option>`
+                            ).join('')}
+                        </select>
+                    </div>
+                `;
+            }
+
+            resultDiv.innerHTML = html;
+        }
+
+        // 分页相关函数
+        function goToPage(page) {
+            const totalItems = getFilteredCustomers().length;
+            const totalPages = Math.ceil(totalItems / currentPageSize);
+            currentPage = Math.max(1, Math.min(page, totalPages));
+            renderCustomerList();
+            // 滚动到顶部
+            document.getElementById('birthday-result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function changePageSize(size) {
+            currentPageSize = size;
+            currentPage = 1;
+            renderCustomerList();
+        }
+
+        function setFilter(filter) {
+            currentFilter = filter;
+            currentPage = 1;
+            renderCustomerList();
+        }
+
+        function doSearch() {
+            searchKeyword = document.getElementById('searchInput').value.trim();
+            currentPage = 1;
+            renderCustomerList();
+        }
+
+        function clearSearch() {
+            searchKeyword = '';
+            currentPage = 1;
+            renderCustomerList();
+        }
+
+        function setSortBy(sortBy) {
+            currentSortBy = sortBy;
+            currentPage = 1;
+            renderCustomerList();
+        }
+
+        function setVipFilter(vipLevel) {
+            currentVipFilter = vipLevel;
+            currentPage = 1;
+            renderCustomerList();
+        }
+
+        function getFilteredCustomers() {
+            let filtered = [];
+            if (currentFilter === 'all') {
+                filtered = [...allCustomersData];
+            } else if (currentFilter === 'pending') {
+                filtered = allCustomersData.filter(c => c.status === REMINDER_STATUS.PENDING);
+            } else if (currentFilter === 'deferred') {
+                filtered = allCustomersData.filter(c => c.status === REMINDER_STATUS.DEFERRED);
+            } else if (currentFilter === 'completed') {
+                filtered = allCustomersData.filter(c => c.status === REMINDER_STATUS.COMPLETED);
+            }
+
+            if (searchKeyword) {
+                const keyword = searchKeyword.toLowerCase();
+                filtered = filtered.filter(c =>
+                    (c.name && c.name.toLowerCase().includes(keyword)) ||
+                    (c.customer_code && c.customer_code.toLowerCase().includes(keyword)) ||
+                    (c.phone_suffix && c.phone_suffix.includes(keyword))
+                );
+            }
+
+            // 星级筛选
+            if (currentVipFilter !== 'all') {
+                filtered = filtered.filter(c => c.vip_level === currentVipFilter);
+            }
+
+            return filtered;
+        }
+
+        // 批量生成话术相关变量
+        let batchGenerating = false;
+        let batchResults = {}; // 存储生成的话术结果
+
+        // 一键生成全部话术（批量API版本）
+        async function batchGenerateSpeeches() {
+            if (batchGenerating) return;
+
+            const institution = getInstitution();
+            if (!institution) return;
+
+            // 获取所有待回访客户
+            const pendingCustomers = allCustomersData.filter(c => c.status === REMINDER_STATUS.PENDING);
+            if (pendingCustomers.length === 0) {
+                alert('没有待回访的客户');
+                return;
+            }
+
+            // 确认操作
+            if (!confirm(`确定要为 ${pendingCustomers.length} 位待回访客户生成话术吗？\n\n系统将批量处理，预计需要10-30秒。`)) {
+                return;
+            }
+
+            batchGenerating = true;
+            const btn = document.getElementById('btnBatchGenerate');
+            const progress = document.getElementById('batchProgress');
+            const progressFill = document.getElementById('batchProgressFill');
+            const progressText = document.getElementById('batchProgressText');
+
+            btn.disabled = true;
+            btn.innerHTML = '⏳ 正在批量生成...';
+            progress.classList.add('show');
+            progressFill.style.width = '10%';
+            progressText.textContent = `正在为 ${pendingCustomers.length} 位客户批量生成话术...`;
+
+            const total = pendingCustomers.length;
+            let completed = 0;
+            let failed = 0;
+
+            // 分批处理（每批最多20个）
+            const batchSize = 20;
+            const batches = [];
+            for (let i = 0; i < pendingCustomers.length; i += batchSize) {
+                batches.push(pendingCustomers.slice(i, i + batchSize));
+            }
+
+            for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
+                const batch = batches[batchIndex];
+                const customerCodes = batch.map(c => c.customer_code);
+
+                progressText.textContent = `正在处理第 ${batchIndex + 1}/${batches.length} 批 (${customerCodes.length}人)...`;
+
+                try {
+                    const response = await fetch(`${API_BASE}/api/api/v1/reminders/${institution}/batch-generate-content`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            customer_codes: customerCodes
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+
+                        // 处理每个客户的结果
+                        for (const result of data.results) {
+                            if (result.success && result.content) {
+                                batchResults[result.customer_code] = result.content;
+                                displayGeneratedSpeech(result.customer_code, result.content);
+                                completed++;
+                            } else {
+                                failed++;
+                                console.error(`生成 ${result.customer_code} 话术失败:`, result.error);
+                            }
+                        }
+                    } else {
+                        // 批次失败
+                        failed += batch.length;
+                        console.error(`批次 ${batchIndex + 1} 请求失败`);
+                    }
+                } catch (error) {
+                    failed += batch.length;
+                    console.error(`批次 ${batchIndex + 1} 出错:`, error);
+                }
+
+                // 更新进度条
+                const percent = Math.round(((batchIndex + 1) / batches.length) * 100);
+                progressFill.style.width = `${percent}%`;
+            }
+
+            // 完成
+            batchGenerating = false;
+            btn.disabled = false;
+            btn.innerHTML = `🚀 一键生成全部话术 (${pendingCustomers.length}人)`;
+
+            if (failed === 0) {
+                progressText.textContent = `✅ 全部完成！成功生成 ${completed} 个话术`;
+                progressFill.style.background = 'linear-gradient(135deg, #28a745 0%, #20c997 100%)';
+            } else {
+                progressText.textContent = `⚠️ 完成！成功 ${completed} 个，失败 ${failed} 个`;
+                progressFill.style.background = 'linear-gradient(135deg, #ffc107 0%, #fd7e14 100%)';
+            }
+
+            // 提示完成
+            setTimeout(() => {
+                alert(`话术生成完成！\n\n✅ 成功: ${completed} 个\n❌ 失败: ${failed} 个\n\n已在每个客户卡片下方显示生成的话术。`);
+            }, 500);
+        }
+
+        // 显示生成的话术到客户卡片
+        function displayGeneratedSpeech(customerCode, content) {
+            const speechArea = document.getElementById(`speech-area-${customerCode}`);
+            if (!speechArea) return;
+
+            const customer = allCustomersData.find(c => c.customer_code === customerCode);
+            const status = customer ? customer.status : REMINDER_STATUS.PENDING;
+
+            let statusButtons = '';
+            if (status === REMINDER_STATUS.PENDING) {
+                statusButtons = `
+                    <button class="status-btn btn-defer" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.DEFERRED}')">⏸️ 暂缓</button>
+                    <button class="status-btn btn-complete" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.COMPLETED}')">✅ 完成</button>
+                `;
+            } else if (status === REMINDER_STATUS.DEFERRED) {
+                statusButtons = `
+                    <button class="status-btn btn-pending" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.PENDING}')">📋 待回访</button>
+                    <button class="status-btn btn-complete" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.COMPLETED}')">✅ 完成</button>
+                `;
+            } else if (status === REMINDER_STATUS.COMPLETED) {
+                statusButtons = `
+                    <button class="status-btn btn-pending" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.PENDING}')">↩️ 重新回访</button>
+                `;
+            }
+
+            speechArea.style.display = 'block';
+            speechArea.innerHTML = `
+                <div class="speech-content" id="speech-content-${customerCode}">${content}</div>
+                <div class="speech-actions">
+                    <button class="btn-copy" onclick="event.stopPropagation(); copySpeechContent('${customerCode}')">📋 复制话术</button>
+                    ${statusButtons}
+                    <button class="btn-close-speech" onclick="event.stopPropagation(); closeSpeechArea('${customerCode}')">✕ 关闭</button>
+                    <span id="copy-success-${customerCode}" class="copy-success" style="display: none;">✅ 已复制</span>
+                </div>
+            `;
+        }
+
+        async function quickGenerate(customerCode) {
+            document.getElementById('customerCode').value = customerCode;
+            switchTab('generate');
+            document.getElementById('generate-section').scrollIntoView({ behavior: 'smooth' });
+            // 自动触发生成
+            await generateContent();
+        }
+
+        // 在客户卡片内生成话术
+        async function generateForCustomer(customerCode) {
+            const institution = getInstitution();
+            if (!institution) return;
+
+            const speechArea = document.getElementById(`speech-area-${customerCode}`);
+            if (!speechArea) return;
+
+            // 显示加载状态
+            speechArea.style.display = 'block';
+            speechArea.innerHTML = '<div class="loading-inline">AI 正在生成个性化话术</div>';
+
+            // 滚动到话术区域
+            speechArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            try {
+                const response = await fetch(`${API_BASE}/api/api/v1/reminders/${institution}/generate-content`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        customer_code: customerCode
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || `请求失败: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // 获取当前客户状态，显示对应的操作按钮
+                const customer = allCustomersData.find(c => c.customer_code === customerCode);
+                const status = customer ? customer.status : REMINDER_STATUS.PENDING;
+
+                let statusButtons = '';
+                if (status === REMINDER_STATUS.PENDING) {
+                    statusButtons = `
+                        <button class="status-btn btn-defer" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.DEFERRED}')">⏸️ 暂缓</button>
+                        <button class="status-btn btn-complete" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.COMPLETED}')">✅ 完成</button>
+                    `;
+                } else if (status === REMINDER_STATUS.DEFERRED) {
+                    statusButtons = `
+                        <button class="status-btn btn-pending" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.PENDING}')">📋 待回访</button>
+                        <button class="status-btn btn-complete" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.COMPLETED}')">✅ 完成</button>
+                    `;
+                } else if (status === REMINDER_STATUS.COMPLETED) {
+                    statusButtons = `
+                        <button class="status-btn btn-pending" onclick="event.stopPropagation(); changeStatus('${customerCode}', '${REMINDER_STATUS.PENDING}')">↩️ 重新回访</button>
+                    `;
+                }
+
+                speechArea.innerHTML = `
+                    <div class="speech-content" id="speech-content-${customerCode}">${data.content}</div>
+                    <div class="speech-actions">
+                        <button class="btn-copy" onclick="event.stopPropagation(); copySpeechContent('${customerCode}')">📋 复制话术</button>
+                        ${statusButtons}
+                        <button class="btn-close-speech" onclick="event.stopPropagation(); closeSpeechArea('${customerCode}')">✕ 关闭</button>
+                        <span id="copy-success-${customerCode}" class="copy-success" style="display: none;">✅ 已复制</span>
+                    </div>
+                `;
+
+            } catch (error) {
+                speechArea.innerHTML = `
+                    <div style="color: #dc3545; padding: 10px;">❌ 生成失败：${error.message}</div>
+                    <button class="btn-close-speech" onclick="event.stopPropagation(); closeSpeechArea('${customerCode}')" style="margin-top: 10px;">✕ 关闭</button>
+                `;
+            }
+        }
+
+        // 复制话术内容
+        function copySpeechContent(customerCode) {
+            const content = document.getElementById(`speech-content-${customerCode}`);
+            if (!content) return;
+
+            navigator.clipboard.writeText(content.innerText).then(() => {
+                const successMsg = document.getElementById(`copy-success-${customerCode}`);
+                if (successMsg) {
+                    successMsg.style.display = 'inline';
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                    }, 2000);
+                }
+            }).catch(err => {
+                alert('复制失败，请手动选择复制');
+            });
+        }
+
+        // 关闭话术区域
+        function closeSpeechArea(customerCode) {
+            const speechArea = document.getElementById(`speech-area-${customerCode}`);
+            if (speechArea) {
+                speechArea.style.display = 'none';
+                speechArea.innerHTML = '';
+            }
+        }
+
+        function selectCustomer(customerCode) {
+            document.getElementById('customerCode').value = customerCode;
+            switchTab('generate');
+            // 滚动到生成话术区域
+            document.getElementById('generate-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        async function generateContent() {
+            const institution = getInstitution();
+            if (!institution) return;
+
+            const customerCode = document.getElementById('customerCode').value.trim();
+            if (!customerCode) {
+                alert('请输入客户代码！');
+                return;
+            }
+
+            const resultDiv = document.getElementById('generate-result');
+            resultDiv.classList.add('show');
+            resultDiv.innerHTML = '<div class="loading">AI 正在生成个性化话术，请稍候</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/api/v1/reminders/${institution}/generate-content`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        customer_code: customerCode
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.detail || `请求失败: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                resultDiv.innerHTML = `
+                    <h4 style="margin-bottom: 15px;">👤 ${data.customer_name} 的生日祝福话术</h4>
+                    <div class="speech-content" id="speech-content">${data.content}</div>
+                    <button class="copy-btn" onclick="copyContent()">📋 复制话术</button>
+                    <span id="copy-success" class="success-msg" style="display: none;">✅ 已复制到剪贴板</span>
+                `;
+
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">❌ 生成失败：${error.message}</div>`;
+            }
+        }
+
+        function copyContent() {
+            const content = document.getElementById('speech-content').innerText;
+            navigator.clipboard.writeText(content).then(() => {
+                const successMsg = document.getElementById('copy-success');
+                successMsg.style.display = 'inline';
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                alert('复制失败，请手动选择复制');
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+

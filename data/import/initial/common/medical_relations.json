@@ -1,0 +1,73 @@
+[
+  {
+    "source_type": "PROJECT",
+    "source_code": "BOTOX-001",
+    "target_type": "PROJECT",
+    "target_code": "BOTOX-002",
+    "relation_type": "UPGRADE",
+    "relation_level": 4,
+    "is_bidirectional": false,
+    "description": "从基础肉毒素升级到进阶版本，效果更全面持久"
+  },
+  {
+    "source_type": "PROJECT",
+    "source_code": "FILLER-001",
+    "target_type": "PROJECT",
+    "target_code": "FILLER-002",
+    "relation_type": "UPGRADE",
+    "relation_level": 4,
+    "is_bidirectional": false,
+    "description": "从基础玻尿酸升级到高端版本，塑形更精细"
+  },
+  {
+    "source_type": "PROJECT",
+    "source_code": "THERMAGE-001",
+    "target_type": "PROJECT",
+    "target_code": "ULTHERA-001",
+    "relation_type": "SIMILAR",
+    "relation_level": 3,
+    "is_bidirectional": true,
+    "description": "两种抗衰项目，作用层次不同但效果互补"
+  },
+  {
+    "source_type": "PROJECT",
+    "source_code": "BOTOX-001",
+    "target_type": "PROJECT",
+    "target_code": "FILLER-001",
+    "relation_type": "COMBINATION",
+    "relation_level": 5,
+    "is_bidirectional": true,
+    "description": "肉毒素+玻尿酸联合治疗，实现综合年轻化效果"
+  },
+  {
+    "source_type": "PRODUCT",
+    "source_code": "BOTOX-100U",
+    "target_type": "PRODUCT",
+    "target_code": "DYSPORT-300U",
+    "relation_type": "ALTERNATIVE",
+    "relation_level": 4,
+    "is_bidirectional": true,
+    "description": "两种肉毒素品牌可互相替代，根据客户偏好选择"
+  },
+  {
+    "source_type": "PRODUCT",
+    "source_code": "JUVEDERM-VOLUMA",
+    "target_type": "PRODUCT",
+    "target_code": "RESTYLANE-LYFT",
+    "relation_type": "ALTERNATIVE",
+    "relation_level": 3,
+    "is_bidirectional": true,
+    "description": "两种高密度玻尿酸，适用场景类似"
+  },
+  {
+    "source_type": "PRODUCT",
+    "source_code": "JUVEDERM-VOLUMA",
+    "target_type": "PRODUCT",
+    "target_code": "JUVEDERM-ULTRA",
+    "relation_type": "COMBINATION",
+    "relation_level": 5,
+    "is_bidirectional": true,
+    "description": "深浅层组合使用，效果更自然"
+  }
+]
+

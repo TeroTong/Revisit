@@ -1,0 +1,63 @@
+[
+  {
+    "doctor_code": "DOC-BJ-001",
+    "name": "张明华",
+    "gender": "MALE",
+    "phone": "13800138001",
+    "institution_code": "BJ-HA-001",
+    "title": "主任医师",
+    "specialty": ["眼部整形", "鼻部整形", "面部年轻化"],
+    "introduction": "从业25年，资深整形外科专家，擅长眼部和鼻部精细整形手术"
+  },
+  {
+    "doctor_code": "DOC-BJ-002",
+    "name": "李雪梅",
+    "gender": "FEMALE",
+    "phone": "13800138002",
+    "institution_code": "BJ-HA-001",
+    "title": "副主任医师",
+    "specialty": ["皮肤美容", "激光治疗", "注射美容"],
+    "introduction": "皮肤科专家，擅长各种激光治疗和注射美容"
+  },
+  {
+    "doctor_code": "DOC-BJ-003",
+    "name": "王建国",
+    "gender": "MALE",
+    "phone": "13800138003",
+    "institution_code": "BJ-HA-001",
+    "title": "主任医师",
+    "specialty": ["胸部整形", "形体雕塑", "吸脂塑形"],
+    "introduction": "形体雕塑专家，擅长胸部整形和身体塑形"
+  },
+  {
+    "doctor_code": "DOC-SH-001",
+    "name": "陈美玲",
+    "gender": "FEMALE",
+    "phone": "13900139001",
+    "institution_code": "SH-ML-002",
+    "title": "主任医师",
+    "specialty": ["面部轮廓", "颌面整形", "面部年轻化"],
+    "introduction": "颌面整形专家，擅长面部轮廓手术和微整形"
+  },
+  {
+    "doctor_code": "DOC-SH-002",
+    "name": "林志远",
+    "gender": "MALE",
+    "phone": "13900139002",
+    "institution_code": "SH-ML-002",
+    "title": "副主任医师",
+    "specialty": ["微整形", "注射美容", "玻尿酸填充"],
+    "introduction": "注射美容专家，精通各类玻尿酸和肉毒素注射"
+  },
+  {
+    "doctor_code": "DOC-SH-003",
+    "name": "黄晓燕",
+    "gender": "FEMALE",
+    "phone": "13900139003",
+    "institution_code": "SH-ML-002",
+    "title": "主治医师",
+    "specialty": ["激光美容", "光电治疗", "祛斑祛痘"],
+    "introduction": "激光美容专家，擅长各种光电设备操作"
+  }
+]
+

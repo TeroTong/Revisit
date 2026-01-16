@@ -1,0 +1,16 @@
+{
+  "operation": "UPDATE",
+  "timestamp": "2026-01-14T11:00:00",
+  "institution_code": "BJ-HA-001",
+  "data": [
+    {
+      "customer_code": "BJ-HA-001-C0005",
+      "updates": {
+        "status": "ACTIVE",
+        "last_visit_date": "2026-01-14",
+        "vip_level": "PLATINUM"
+      }
+    }
+  ]
+}
+

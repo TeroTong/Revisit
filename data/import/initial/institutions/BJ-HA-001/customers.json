@@ -1,0 +1,78 @@
+[
+  {
+    "customer_code": "BJ-HA-001-C0001",
+    "person": {
+      "name": "张小红",
+      "phone": "13811110001",
+      "gender": "FEMALE",
+      "birthday": "1990-01-16"
+    },
+    "vip_level": "GOLD",
+    "status": "ACTIVE",
+    "first_visit_date": "2024-01-16",
+    "last_visit_date": "2025-12-20",
+    "referrer_code": null,
+    "doctor_code": "DOC-BJ-001"
+  },
+  {
+    "customer_code": "BJ-HA-001-C0002",
+    "person": {
+      "name": "李美丽",
+      "phone": "13811110002",
+      "gender": "FEMALE",
+      "birthday": "1988-01-19"
+    },
+    "vip_level": "PLATINUM",
+    "status": "ACTIVE",
+    "first_visit_date": "2023-06-10",
+    "last_visit_date": "2026-01-05",
+    "referrer_code": "BJ-HA-001-C0001",
+    "doctor_code": "DOC-BJ-002"
+  },
+  {
+    "customer_code": "BJ-HA-001-C0003",
+    "person": {
+      "name": "王芳芳",
+      "phone": "13811110003",
+      "gender": "FEMALE",
+      "birthday": "1995-03-08"
+    },
+    "vip_level": "SILVER",
+    "status": "ACTIVE",
+    "first_visit_date": "2025-06-01",
+    "last_visit_date": "2025-11-15",
+    "referrer_code": null,
+    "doctor_code": "DOC-BJ-001"
+  },
+  {
+    "customer_code": "BJ-HA-001-C0004",
+    "person": {
+      "name": "赵丽娜",
+      "phone": "13811110004",
+      "gender": "FEMALE",
+      "birthday": "1992-01-20"
+    },
+    "vip_level": "NORMAL",
+    "status": "ACTIVE",
+    "first_visit_date": "2025-10-20",
+    "last_visit_date": "2025-10-20",
+    "referrer_code": "BJ-HA-001-C0002",
+    "doctor_code": null
+  },
+  {
+    "customer_code": "BJ-HA-001-C0005",
+    "person": {
+      "name": "刘婷婷",
+      "phone": "13811110005",
+      "gender": "FEMALE",
+      "birthday": "1985-07-20"
+    },
+    "vip_level": "GOLD",
+    "status": "DORMANT",
+    "first_visit_date": "2022-03-15",
+    "last_visit_date": "2024-08-10",
+    "referrer_code": null,
+    "doctor_code": "DOC-BJ-003"
+  }
+]
+

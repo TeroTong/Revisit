@@ -1,0 +1,83 @@
+[
+  {
+    "project_code": "BOTOX-001",
+    "name": "肉毒素注射-基础版",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "risk_level": 2,
+    "indications": "祛除面部动态皱纹，如额头纹、眉间纹、鱼尾纹",
+    "contraindications": "妊娠期、哺乳期女性；神经肌肉疾病患者；对肉毒素过敏者",
+    "description": "通过注射肉毒素阻断神经肌肉信号，达到祛除动态皱纹的效果"
+  },
+  {
+    "project_code": "BOTOX-002",
+    "name": "肉毒素注射-进阶版",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "risk_level": 3,
+    "indications": "全面部动态皱纹治疗，包括额头、眉间、眼周、下颌等区域",
+    "contraindications": "妊娠期、哺乳期女性；神经肌肉疾病患者；对肉毒素过敏者",
+    "description": "全面部肉毒素注射，效果更持久，适合对效果要求较高的客户"
+  },
+  {
+    "project_code": "FILLER-001",
+    "name": "玻尿酸填充-基础版",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "risk_level": 2,
+    "indications": "面部凹陷填充、法令纹、泪沟、嘴唇丰盈",
+    "contraindications": "妊娠期、哺乳期女性；注射部位有感染或炎症者",
+    "description": "通过注射玻尿酸实现面部轮廓塑形和填充"
+  },
+  {
+    "project_code": "FILLER-002",
+    "name": "玻尿酸填充-高端版",
+    "category": "INJECTION",
+    "body_part": "面部",
+    "risk_level": 3,
+    "indications": "面部轮廓精细塑形、下颌线条、苹果肌、太阳穴填充",
+    "contraindications": "妊娠期、哺乳期女性；注射部位有感染或炎症者",
+    "description": "使用高端玻尿酸产品，实现更精细的面部轮廓塑形"
+  },
+  {
+    "project_code": "LASER-001",
+    "name": "激光祛斑",
+    "category": "LASER",
+    "body_part": "面部",
+    "risk_level": 1,
+    "indications": "色素性皮肤问题，如雀斑、老年斑、晒斑、黄褐斑",
+    "contraindications": "光敏性皮肤；近期有日晒史；疤痕体质",
+    "description": "通过激光能量精准作用于色素细胞，达到祛斑效果"
+  },
+  {
+    "project_code": "THERMAGE-001",
+    "name": "热玛吉",
+    "category": "RADIOFREQUENCY",
+    "body_part": "面部",
+    "risk_level": 2,
+    "indications": "皮肤松弛、面部轮廓下垂、细纹",
+    "contraindications": "体内有金属植入物；妊娠期；皮肤有炎症",
+    "description": "利用射频能量刺激胶原蛋白再生，实现皮肤紧致提升"
+  },
+  {
+    "project_code": "ULTHERA-001",
+    "name": "超声刀",
+    "category": "HIFU",
+    "body_part": "面部",
+    "risk_level": 2,
+    "indications": "面部松弛、下颌轮廓模糊、颈部松弛",
+    "contraindications": "妊娠期；面部有金属植入物；皮肤有开放性伤口",
+    "description": "利用高强度聚焦超声波作用于SMAS层，实现深层提拉"
+  },
+  {
+    "project_code": "MICRO-001",
+    "name": "微针治疗",
+    "category": "MICRO-NEEDLING",
+    "body_part": "面部",
+    "risk_level": 1,
+    "indications": "毛孔粗大、痘坑痘印、肤色不均、细纹",
+    "contraindications": "皮肤有炎症或感染；疤痕体质；血液疾病",
+    "description": "通过微针刺激皮肤自我修复机制，促进胶原蛋白生成"
+  }
+]
+

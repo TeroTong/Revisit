@@ -1,0 +1,20 @@
+{
+  "_description": "客户数据模板（机构特定）",
+  "_note": "带下划线的字段为说明字段，导入时会被忽略",
+
+  "customer_code": "客户编码，唯一，建议格式：{机构编码}-C{序号}，如 BJ-HA-001-C0001",
+  "person": {
+    "_note": "自然人信息，如果手机号已存在则关联现有自然人",
+    "name": "姓名，必填",
+    "phone": "手机号，必填，唯一标识",
+    "gender": "性别：MALE(男) / FEMALE(女) / UNKNOWN(未知)",
+    "birthday": "生日，格式 YYYY-MM-DD"
+  },
+  "vip_level": "会员等级，根据机构自定义，如：NORMAL / SILVER / GOLD / PLATINUM / DIAMOND",
+  "status": "状态：ACTIVE(活跃) / DORMANT(沉睡) / CHURNED(流失) / SUSPENDED(暂停)",
+  "first_visit_date": "首次到访日期，格式 YYYY-MM-DD",
+  "last_visit_date": "最近到访日期，格式 YYYY-MM-DD",
+  "referrer_code": "推荐人客户编码，可为 null",
+  "doctor_code": "专属医生编码，可为 null"
+}
+

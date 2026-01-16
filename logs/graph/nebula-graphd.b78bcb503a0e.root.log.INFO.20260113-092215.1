@@ -1,0 +1,188 @@
+Log file created at: 2026/01/13 09:22:15
+Running on machine: b78bcb503a0e
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20260113 09:22:15.399259     1 GraphDaemon.cpp:122] Starting Graph HTTP Service
+I20260113 09:22:15.416640     7 WebService.cpp:124] Web service started on HTTP[19669]
+I20260113 09:22:15.417003     1 GraphDaemon.cpp:136] Number of networking IO threads: 2
+I20260113 09:22:15.417299     1 GraphDaemon.cpp:145] Number of worker threads: 2
+I20260113 09:22:15.438930     1 MetaClient.cpp:80] Create meta client to "metad":9559
+I20260113 09:22:15.439163     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 0
+I20260113 09:22:15.453262    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:16.468207    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:17.474231    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:18.476367    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+E20260113 09:22:18.477553    29 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260113 09:22:18.495095    29 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260113 09:22:18.496294     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260113 09:22:18.497614     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260113 09:22:28.498497    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:29.500576    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:30.502948    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:31.504405    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+E20260113 09:22:31.504745    30 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260113 09:22:31.505290    30 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260113 09:22:31.505757     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260113 09:22:31.506162     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260113 09:22:41.505717    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:42.507827    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:43.509689    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:44.511456    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+E20260113 09:22:44.512240    29 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260113 09:22:44.514665    29 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260113 09:22:44.516268     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260113 09:22:44.517059     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+I20260113 09:22:54.517910    30 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:54.521747    29 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.20.0.3":9559
+I20260113 09:22:54.529546     1 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:22:54.529708     1 MetaClient.cpp:3269] Load leader ok
+I20260113 09:22:54.531536     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20260113 09:22:54.532469     1 GraphSessionManager.cpp:337] Total of 34 sessions are loaded
+E20260113 09:22:54.532852     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/27.000MiB
+I20260113 09:22:54.533479     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20260113 09:22:54.534518     1 Snowflake.cpp:17] WorkerId init success: 1
+I20260113 09:22:54.535030    48 GraphServer.cpp:63] Starting nebula-graphd on graphd:9669
+I20260113 09:22:54.996100    19 GraphService.cpp:77] Authenticating user root from 172.20.0.8:45214
+E20260113 09:22:55.007083    19 QueryInstance.cpp:151] Existed!, query: ADD HOSTS "storaged":9779
+I20260113 09:23:04.730662    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:23:04.735009    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:23:20.213689    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:44314
+I20260113 09:23:20.226053    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+W20260113 09:23:25.265254    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Key not existed!
+E20260113 09:23:25.266374    19 QueryInstance.cpp:151] Key not existed!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+I20260113 09:29:55.359712    19 GraphService.cpp:77] Authenticating user root from 172.20.0.8:52200
+E20260113 09:30:22.348304    19 QueryInstance.cpp:151] SemanticError: Space was not chosen., query: DROP TAG IF EXISTS institution_customer;
+I20260113 09:31:03.599813    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+W20260113 09:31:13.480187    20 TagExecutor.cpp:72] SpaceId: 1, Drop tag `institution_customer' failed: Related index exists, please drop index first
+E20260113 09:31:13.480593    20 QueryInstance.cpp:151] Related index exists, please drop index first, query: DROP TAG IF EXISTS institution_customer;
+I20260113 09:33:05.418368    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:33:05.422101    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:33:15.442902    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:33:15.443184    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:33:25.459256    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:33:25.460059    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:33:35.473889    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:33:35.474152    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:33:45.497352    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:33:45.497674    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:33:55.515349    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:33:55.515625    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:34:05.535159    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:34:05.535472    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:34:15.554409    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:34:15.555163    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:34:25.566602    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:34:25.566900    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:35:05.618983    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:35:05.619243    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:35:15.640276    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:35:15.641754    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:35:25.662966    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:35:25.663472    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:35:35.687703    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:35:35.688329    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:35:45.701570    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:35:45.701833    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:35:55.714030    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:35:55.714803    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:36:25.748005    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:36:25.748211    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:36:35.761083    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:36:35.761297    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:36:45.773383    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:36:45.773550    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:37:05.793982    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:37:05.794557    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:37:15.839921    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:37:15.843550    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:37:25.859395    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:37:25.859917    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:37:35.874882    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:37:35.875425    45 MetaClient.cpp:3269] Load leader ok
+E20260113 09:37:42.469177    20 QueryInstance.cpp:151] SyntaxError: syntax error near `EDGE', query: EDGE IF EXISTS product_related_to_project;
+I20260113 09:37:45.896205    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:37:45.896515    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:37:55.909574    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:37:55.910035    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:38:05.922482    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:38:05.922811    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:38:15.929572    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:38:15.929864    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:38:25.944801    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:38:25.945237    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:38:35.961362    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:38:35.961926    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:38:45.982856    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:38:45.983250    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:38:55.998257    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:38:55.998509    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:39:06.011636    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:39:06.011813    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:39:16.025625    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:39:16.027240    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:39:26.046386    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:39:26.046958    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:39:36.060168    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:39:36.061342    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:39:56.084749    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:39:56.087271    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:40:16.117709    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:40:16.117863    45 MetaClient.cpp:3269] Load leader ok
+I20260113 09:44:26.297106    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:47378
+I20260113 09:44:57.741717    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:39958
+I20260113 09:45:36.674716    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:57282
+I20260113 09:45:36.687616    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+W20260113 09:45:41.781953    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Invalid param!
+E20260113 09:45:41.783219    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+I20260113 09:45:46.524878    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 09:45:46.525310    45 MetaClient.cpp:3269] Load leader ok
+I20260113 10:02:05.542912    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:37964
+I20260113 10:02:05.555272    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+W20260113 10:02:16.612270    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_customer_id' at tag: `institution_customer' failed: Invalid param!
+E20260113 10:02:16.616504    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_customer_id ON institution_customer(institution_customer_id)
+W20260113 10:02:17.636108    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_institution_id' at tag: `institution' failed: Invalid param!
+E20260113 10:02:17.636940    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_institution_id ON institution(institution_id)
+W20260113 10:02:18.651187    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_doctor_id' at tag: `doctor' failed: Invalid param!
+E20260113 10:02:18.652195    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_doctor_id ON doctor(doctor_id)
+W20260113 10:02:19.667374    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_project_id' at tag: `project' failed: Invalid param!
+E20260113 10:02:19.668545    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_project_id ON project(project_id)
+W20260113 10:02:20.684562    19 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `idx_product_id' at tag: `product' failed: Invalid param!
+E20260113 10:02:20.685552    19 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX IF NOT EXISTS idx_product_id ON product(product_id)
+W20260113 10:02:21.705302    19 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `idx_purchases_order' at edge: `customer_purchases_project' failed: Invalid param!
+E20260113 10:02:21.706401    19 QueryInstance.cpp:151] Invalid param!, query: CREATE EDGE INDEX IF NOT EXISTS idx_purchases_order ON customer_purchases_project(order_number)
+I20260113 10:11:55.071091    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:48026
+I20260113 10:11:55.076848    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+E20260113 10:11:55.079016    20 QueryInstance.cpp:151] SyntaxError: syntax error near `"', query: DESCRIBE TAG "doctor"
+E20260113 10:11:55.080482    19 QueryInstance.cpp:151] SyntaxError: syntax error near `"', query: DESCRIBE TAG "institution"
+E20260113 10:11:55.082069    20 QueryInstance.cpp:151] SyntaxError: syntax error near `"', query: DESCRIBE TAG "institution_customer"
+E20260113 10:11:55.083348    20 QueryInstance.cpp:151] SyntaxError: syntax error near `"', query: DESCRIBE TAG "product"
+E20260113 10:11:55.084592    20 QueryInstance.cpp:151] SyntaxError: syntax error near `"', query: DESCRIBE TAG "project"
+I20260113 10:11:58.130477    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 10:11:58.130805    45 MetaClient.cpp:3269] Load leader ok
+W20260113 10:11:59.131479    20 TagIndexExecutor.cpp:31] SpaceId: 1, Create index `test_str_idx1' at tag: `institution_customer' failed: Invalid param!
+E20260113 10:11:59.132025    20 QueryInstance.cpp:151] Invalid param!, query: CREATE TAG INDEX test_str_idx1 ON institution_customer(name)
+W20260113 10:12:01.151661    20 EdgeIndexExecutor.cpp:32] SpaceId: 1, Create index `test_edge_time_idx' at edge: `customer_purchases_project' failed: Existed!
+E20260113 10:12:01.152248    20 QueryInstance.cpp:151] Existed!, query: CREATE EDGE INDEX test_edge_time_idx ON customer_purchases_project(order_date)
+I20260113 10:12:08.153514    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 10:12:08.153769    45 MetaClient.cpp:3269] Load leader ok
+I20260113 10:15:02.004240    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:46940
+I20260113 10:15:02.014142    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260113 10:15:28.383711    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 10:15:28.383980    45 MetaClient.cpp:3269] Load leader ok
+I20260113 10:15:38.399289    45 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260113 10:15:38.399559    45 MetaClient.cpp:3269] Load leader ok
+E20260113 10:15:42.387717    19 QueryInstance.cpp:151] SyntaxError: syntax error near `BUILD', query: BUILD TAG INDEX
+E20260113 10:15:42.391827    20 QueryInstance.cpp:151] SyntaxError: syntax error near `BUILD', query: BUILD EDGE INDEX
+I20260113 10:18:55.621754    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:43144
+I20260113 10:18:55.624908    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260113 10:20:16.522889    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:40274
+I20260113 10:20:16.532184    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260113 10:46:48.341774    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:34666
+I20260113 10:46:48.351742    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260113 10:53:25.354054    20 GraphService.cpp:77] Authenticating user root from 172.20.0.1:55232
+I20260113 10:53:25.367296    19 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1
+I20260113 10:55:37.643225    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:48266
+I20260113 11:00:44.374876    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:45562
+I20260113 11:05:10.666147    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:34134
+I20260113 12:15:10.674356    19 GraphService.cpp:77] Authenticating user root from 172.20.0.1:35990
+I20260113 12:15:10.699043    20 SwitchSpaceExecutor.cpp:45] Graph switched to `revisit', space id: 1

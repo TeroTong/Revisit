@@ -1,0 +1,472 @@
+2026-01-08 13:17:38,489 - __main__ - INFO - ============================================================
+2026-01-08 13:17:38,489 - __main__ - INFO - 开始初始化数据库
+2026-01-08 13:17:38,489 - __main__ - INFO - 环境: development
+2026-01-08 13:17:38,489 - __main__ - INFO - ============================================================
+2026-01-08 13:17:38,489 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 13:17:38,574 - __main__ - ERROR - PostgreSQL初始化失败: database "revisit" does not exist
+2026-01-08 13:17:38,574 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 13:18:23,923 - __main__ - INFO - ============================================================
+2026-01-08 13:18:23,934 - __main__ - INFO - 开始初始化数据库
+2026-01-08 13:18:23,934 - __main__ - INFO - 环境: development
+2026-01-08 13:18:23,934 - __main__ - INFO - ============================================================
+2026-01-08 13:18:23,934 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 13:18:24,004 - __main__ - ERROR - PostgreSQL初始化失败: database "revisit" does not exist
+2026-01-08 13:18:24,004 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 13:18:41,841 - __main__ - INFO - ============================================================
+2026-01-08 13:18:41,841 - __main__ - INFO - 开始初始化数据库
+2026-01-08 13:18:41,841 - __main__ - INFO - 环境: development
+2026-01-08 13:18:41,841 - __main__ - INFO - ============================================================
+2026-01-08 13:18:41,841 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 13:18:41,920 - __main__ - ERROR - PostgreSQL初始化失败: database "revisit" does not exist
+2026-01-08 13:18:41,920 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 13:24:05,242 - __main__ - INFO - ============================================================
+2026-01-08 13:24:05,242 - __main__ - INFO - 开始初始化数据库
+2026-01-08 13:24:05,242 - __main__ - INFO - 环境: development
+2026-01-08 13:24:05,242 - __main__ - INFO - ============================================================
+2026-01-08 13:24:05,242 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 13:24:05,314 - __main__ - ERROR - PostgreSQL初始化失败: database "revisit" does not exist
+2026-01-08 13:24:05,314 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 13:34:22,976 - __main__ - INFO - ============================================================
+2026-01-08 13:34:22,976 - __main__ - INFO - 开始初始化数据库
+2026-01-08 13:34:22,976 - __main__ - INFO - 环境: development
+2026-01-08 13:34:22,976 - __main__ - INFO - ============================================================
+2026-01-08 13:34:22,976 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 13:34:23,041 - __main__ - ERROR - PostgreSQL初始化失败: database "revisit" does not exist
+2026-01-08 13:34:23,041 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 13:50:08,197 - __main__ - INFO - ============================================================
+2026-01-08 13:50:08,197 - __main__ - INFO - 开始初始化数据库
+2026-01-08 13:50:08,197 - __main__ - INFO - 环境: development
+2026-01-08 13:50:08,197 - __main__ - INFO - ============================================================
+2026-01-08 13:50:08,197 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 13:50:08,197 - __main__ - ERROR - PostgreSQL初始化失败: 'Settings' object has no attribute 'POSTGRESQL'
+2026-01-08 13:50:08,197 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 13:58:55,742 - __main__ - INFO - ============================================================
+2026-01-08 13:58:55,742 - __main__ - INFO - 开始初始化数据库
+2026-01-08 13:58:55,742 - __main__ - INFO - 环境: development
+2026-01-08 13:58:55,742 - __main__ - INFO - ============================================================
+2026-01-08 13:58:55,742 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 13:58:55,742 - __main__ - ERROR - 数据库连接失败: 'Settings' object has no attribute 'POSTGRES_DB'
+2026-01-08 13:58:55,743 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:00:27,845 - __main__ - INFO - ============================================================
+2026-01-08 14:00:27,845 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:00:27,845 - __main__ - INFO - 环境: development
+2026-01-08 14:00:27,845 - __main__ - INFO - ============================================================
+2026-01-08 14:00:27,845 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:00:27,845 - __main__ - ERROR - 数据库连接失败: 'Settings' object has no attribute 'POSTGRES_DB'
+2026-01-08 14:00:27,845 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:00:52,965 - __main__ - INFO - ============================================================
+2026-01-08 14:00:52,965 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:00:52,965 - __main__ - INFO - 环境: development
+2026-01-08 14:00:52,965 - __main__ - INFO - ============================================================
+2026-01-08 14:00:52,965 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:00:52,965 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:00:53,054 - __main__ - INFO - 数据库 'revisit' 不存在，开始创建...
+2026-01-08 14:00:53,481 - __main__ - INFO - ✅ 数据库 'revisit' 创建成功
+2026-01-08 14:00:53,481 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:00:53,739 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:00:53,823 - __main__ - ERROR - PostgreSQL初始化失败: relation "unique_natural_person_institution" already exists
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 230, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 255, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.DuplicateTableError: relation "unique_natural_person_institution" already exists
+2026-01-08 14:00:53,828 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:10:38,144 - __main__ - INFO - ============================================================
+2026-01-08 14:10:38,144 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:10:38,144 - __main__ - INFO - 环境: development
+2026-01-08 14:10:38,144 - __main__ - INFO - ============================================================
+2026-01-08 14:10:38,144 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:10:38,144 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:10:38,217 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:10:38,218 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:10:38,464 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:10:38,486 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:10:38,488 - database.postgres.models - INFO - 📋 约束 unique_natural_person_institution 在表 institution_customer_bj_ha_001 中已存在，跳过
+2026-01-08 14:10:38,499 - __main__ - ERROR - PostgreSQL初始化失败: relation "unique_natural_person_institution" already exists
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 264, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.DuplicateTableError: relation "unique_natural_person_institution" already exists
+2026-01-08 14:10:38,500 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:19:24,091 - __main__ - INFO - ============================================================
+2026-01-08 14:19:24,091 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:19:24,091 - __main__ - INFO - 环境: development
+2026-01-08 14:19:24,091 - __main__ - INFO - ============================================================
+2026-01-08 14:19:24,091 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:19:24,091 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:19:24,167 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:19:24,167 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:19:24,397 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:19:24,404 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:19:24,417 - __main__ - ERROR - PostgreSQL初始化失败: column "identity_type" named in key does not exist
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 305, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.UndefinedColumnError: column "identity_type" named in key does not exist
+2026-01-08 14:19:24,417 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:22:44,682 - __main__ - INFO - ============================================================
+2026-01-08 14:22:44,682 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:22:44,682 - __main__ - INFO - 环境: development
+2026-01-08 14:22:44,682 - __main__ - INFO - ============================================================
+2026-01-08 14:22:44,682 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:22:44,682 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:22:44,759 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:22:44,759 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:22:44,999 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:22:45,007 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:22:45,010 - __main__ - ERROR - PostgreSQL初始化失败: column "institution_code" named in key does not exist
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 305, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.UndefinedColumnError: column "institution_code" named in key does not exist
+2026-01-08 14:22:45,011 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:23:26,782 - __main__ - INFO - ============================================================
+2026-01-08 14:23:26,782 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:23:26,782 - __main__ - INFO - 环境: development
+2026-01-08 14:23:26,782 - __main__ - INFO - ============================================================
+2026-01-08 14:23:26,782 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:23:26,782 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:23:26,855 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:23:26,855 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:23:27,113 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:23:27,122 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:23:27,123 - database.postgres.models - INFO - ✅ 约束 unique_natural_person_institution 添加到表 institution_customer_bj_ha_001
+2026-01-08 14:23:27,133 - __main__ - ERROR - PostgreSQL初始化失败: relation "unique_natural_person_institution" already exists
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 264, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.DuplicateTableError: relation "unique_natural_person_institution" already exists
+2026-01-08 14:23:27,138 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:31:29,146 - __main__ - INFO - ============================================================
+2026-01-08 14:31:29,146 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:31:29,146 - __main__ - INFO - 环境: development
+2026-01-08 14:31:29,146 - __main__ - INFO - ============================================================
+2026-01-08 14:31:29,146 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:31:29,146 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:31:29,220 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:31:29,220 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:31:29,460 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:31:29,477 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:31:29,480 - __main__ - ERROR - PostgreSQL初始化失败: operator does not exist: name = regclass
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 295, in _create_institution_customer_table
+    constraint_exists = await conn.fetchval("""
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 718, in fetchval
+    data = await self._execute(query, args, 1, timeout)
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 1873, in _execute
+    result, _ = await self.__execute(
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 1970, in __execute
+    result, stmt = await self._do_execute(
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 2021, in _do_execute
+    stmt = await self._get_statement(
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: name = regclass
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+2026-01-08 14:31:29,481 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:37:44,729 - __main__ - INFO - ============================================================
+2026-01-08 14:37:44,729 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:37:44,729 - __main__ - INFO - 环境: development
+2026-01-08 14:37:44,729 - __main__ - INFO - ============================================================
+2026-01-08 14:37:44,729 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:37:44,729 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:37:44,811 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:37:44,811 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:37:45,051 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:37:45,058 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:37:45,059 - database.postgres.models - ERROR - ❌ 约束定义错误: column "institution_code" named in key does not exist
+2026-01-08 14:37:45,059 - database.postgres.models - INFO - 检查表结构并调整约束定义...
+2026-01-08 14:37:45,061 - __main__ - ERROR - PostgreSQL初始化失败: syntax error at or near ")"
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 267, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.PostgresSyntaxError: syntax error at or near ")"
+2026-01-08 14:37:45,063 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:38:16,187 - __main__ - INFO - ============================================================
+2026-01-08 14:38:16,187 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:38:16,187 - __main__ - INFO - 环境: development
+2026-01-08 14:38:16,187 - __main__ - INFO - ============================================================
+2026-01-08 14:38:16,187 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:38:16,187 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:38:16,259 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:38:16,259 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:38:16,518 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:38:16,523 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:38:16,524 - database.postgres.models - INFO - 📋 约束 unique_natural_person_institution 已存在，跳过
+2026-01-08 14:38:16,526 - __main__ - ERROR - PostgreSQL初始化失败: syntax error at or near ")"
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 267, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.PostgresSyntaxError: syntax error at or near ")"
+2026-01-08 14:38:16,528 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:41:18,347 - __main__ - INFO - ============================================================
+2026-01-08 14:41:18,348 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:41:18,348 - __main__ - INFO - 环境: development
+2026-01-08 14:41:18,348 - __main__ - INFO - ============================================================
+2026-01-08 14:41:18,348 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:41:18,348 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:41:18,422 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:41:18,422 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:41:18,665 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:41:18,667 - database.postgres.models - INFO - 📋 表 institution_customer_bj_ha_001 已存在，跳过创建
+2026-01-08 14:41:18,667 - database.postgres.models - INFO - 📋 约束 unique_natural_person_institution 已存在，跳过
+2026-01-08 14:41:18,680 - database.postgres.models - INFO - ✅ 验证: 约束 unique_natural_person_institution 确实存在
+2026-01-08 14:41:18,684 - __main__ - ERROR - PostgreSQL初始化失败: syntax error at or near ")"
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 232, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 267, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.PostgresSyntaxError: syntax error at or near ")"
+2026-01-08 14:41:18,684 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 14:57:07,969 - __main__ - INFO - ============================================================
+2026-01-08 14:57:07,969 - __main__ - INFO - 开始初始化数据库
+2026-01-08 14:57:07,969 - __main__ - INFO - 环境: development
+2026-01-08 14:57:07,969 - __main__ - INFO - ============================================================
+2026-01-08 14:57:07,969 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 14:57:07,969 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 14:57:08,042 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 14:57:08,042 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 14:57:08,275 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 14:57:08,332 - __main__ - ERROR - PostgreSQL初始化失败: relation "unique_natural_person_institution" already exists
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 235, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 253, in _create_institution_customer_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.DuplicateTableError: relation "unique_natural_person_institution" already exists
+2026-01-08 14:57:08,332 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 15:04:18,297 - __main__ - INFO - ============================================================
+2026-01-08 15:04:18,298 - __main__ - INFO - 开始初始化数据库
+2026-01-08 15:04:18,298 - __main__ - INFO - 环境: development
+2026-01-08 15:04:18,298 - __main__ - INFO - ============================================================
+2026-01-08 15:04:18,298 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 15:04:18,298 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 15:04:18,483 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 15:04:18,483 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 15:04:18,729 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 15:04:18,858 - __main__ - ERROR - PostgreSQL初始化失败: column "updated_at" of relation "institution" does not exist
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 38, in migrate_all
+    await self._insert_initial_data()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 119, in _insert_initial_data
+    await self.conn.execute('''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 357, in execute
+    _, status, _ = await self._execute(
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 1873, in _execute
+    result, _ = await self.__execute(
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 1970, in __execute
+    result, stmt = await self._do_execute(
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 2021, in _do_execute
+    stmt = await self._get_statement(
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 443, in _get_statement
+    statement = await self._protocol.prepare(
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: column "updated_at" of relation "institution" does not exist
+2026-01-08 15:04:18,858 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 15:17:11,494 - __main__ - INFO - ============================================================
+2026-01-08 15:17:11,494 - __main__ - INFO - 开始初始化数据库
+2026-01-08 15:17:11,494 - __main__ - INFO - 环境: development
+2026-01-08 15:17:11,494 - __main__ - INFO - ============================================================
+2026-01-08 15:17:11,494 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 15:17:11,494 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 15:17:11,570 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 15:17:11,570 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 15:17:11,813 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 15:17:11,822 - __main__ - ERROR - PostgreSQL初始化失败: column "institution_code" does not exist
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 237, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 291, in _create_institution_customer_table
+    await conn.execute(index_sql)
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.UndefinedColumnError: column "institution_code" does not exist
+2026-01-08 15:17:11,827 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 15:20:16,415 - __main__ - INFO - ============================================================
+2026-01-08 15:20:16,415 - __main__ - INFO - 开始初始化数据库
+2026-01-08 15:20:16,415 - __main__ - INFO - 环境: development
+2026-01-08 15:20:16,415 - __main__ - INFO - ============================================================
+2026-01-08 15:20:16,415 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 15:20:16,417 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 15:20:16,491 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 15:20:16,491 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 15:20:16,725 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 15:20:16,726 - __main__ - ERROR - PostgreSQL初始化失败: column "institution_code" does not exist
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 32, in migrate_all
+    await self._create_institution_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 59, in _create_institution_tables
+    await InstitutionTableCreator.create_tables_for_institution(
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 237, in create_tables_for_institution
+    await cls._create_institution_customer_table(conn, suffix)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 291, in _create_institution_customer_table
+    await conn.execute(index_sql)
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.UndefinedColumnError: column "institution_code" does not exist
+2026-01-08 15:20:16,732 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 15:32:50,928 - __main__ - INFO - ============================================================
+2026-01-08 15:32:50,928 - __main__ - INFO - 开始初始化数据库
+2026-01-08 15:32:50,929 - __main__ - INFO - 环境: development
+2026-01-08 15:32:50,929 - __main__ - INFO - ============================================================
+2026-01-08 15:32:50,929 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 15:32:50,929 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 15:32:51,001 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 15:32:51,001 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 15:32:51,235 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 15:32:51,235 - __main__ - ERROR - PostgreSQL初始化失败: column "institution_code" does not exist
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 29, in migrate_all
+    await self._create_base_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 50, in _create_base_tables
+    await Doctor.create_table(self.conn)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 210, in create_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.UndefinedColumnError: column "institution_code" does not exist
+2026-01-08 15:32:51,235 - __main__ - ERROR - PostgreSQL初始化失败，退出
+2026-01-08 15:36:12,626 - __main__ - INFO - ============================================================
+2026-01-08 15:36:12,626 - __main__ - INFO - 开始初始化数据库
+2026-01-08 15:36:12,626 - __main__ - INFO - 环境: development
+2026-01-08 15:36:12,626 - __main__ - INFO - ============================================================
+2026-01-08 15:36:12,626 - __main__ - INFO - 正在初始化PostgreSQL...
+2026-01-08 15:36:12,626 - __main__ - INFO - 尝试直接连接到数据库 'revisit'...
+2026-01-08 15:36:12,706 - __main__ - INFO - ✅ 数据库 'revisit' 已存在，直接连接成功
+2026-01-08 15:36:12,706 - __main__ - INFO - 正在创建数据库连接池...
+2026-01-08 15:36:12,946 - __main__ - INFO - 正在运行数据库迁移...
+2026-01-08 15:36:12,949 - __main__ - ERROR - PostgreSQL初始化失败: column "institution_code" does not exist
+Traceback (most recent call last):
+  File "D:\pyspace\Revisit\scripts\init_databases.py", line 107, in initialize_postgresql
+    await migrator.migrate_all()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 29, in migrate_all
+    await self._create_base_tables()
+  File "D:\pyspace\Revisit\database\postgres\migrations.py", line 50, in _create_base_tables
+    await Doctor.create_table(self.conn)
+  File "D:\pyspace\Revisit\database\postgres\models.py", line 210, in create_table
+    await conn.execute(f'''
+  File "C:\Users\uestc\.conda\envs\ai\lib\site-packages\asyncpg\connection.py", line 354, in execute
+    result = await self._protocol.query(query, timeout)
+  File "asyncpg/protocol/protocol.pyx", line 369, in query
+asyncpg.exceptions.UndefinedColumnError: column "institution_code" does not exist
+2026-01-08 15:36:12,949 - __main__ - ERROR - PostgreSQL初始化失败，退出

@@ -1,0 +1,14 @@
+{
+  "_description": "项目数据模板",
+  "_note": "带下划线的字段为说明字段，导入时会被忽略",
+
+  "project_code": "项目编码，唯一，如 BOTOX-001",
+  "name": "项目名称，必填",
+  "category": "分类：INJECTION(注射) / LASER(激光) / RADIOFREQUENCY(射频) / HIFU(超声) / MICRO-NEEDLING(微针) / SURGERY(手术) / OTHER(其他)",
+  "body_part": "作用部位，如：面部 / 眼部 / 鼻部 / 胸部 / 全身",
+  "risk_level": "风险等级 1-5，1最低5最高",
+  "indications": "适应症，描述适合的人群和情况",
+  "contraindications": "禁忌症，描述不适合的人群和情况",
+  "description": "项目描述"
+}
+

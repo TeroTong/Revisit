@@ -1,0 +1,23 @@
+{
+  "operation": "INSERT",
+  "timestamp": "2026-01-14T10:30:00",
+  "institution_code": "BJ-HA-001",
+  "data": [
+    {
+      "customer_code": "BJ-HA-001-C0006",
+      "person": {
+        "name": "孙小美",
+        "phone": "13811110006",
+        "gender": "FEMALE",
+        "birthday": "1993-09-18"
+      },
+      "vip_level": "NORMAL",
+      "status": "ACTIVE",
+      "first_visit_date": "2026-01-14",
+      "last_visit_date": "2026-01-14",
+      "referrer_code": "BJ-HA-001-C0001",
+      "doctor_code": null
+    }
+  ]
+}
+

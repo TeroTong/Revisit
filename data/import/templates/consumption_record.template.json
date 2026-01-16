@@ -1,0 +1,30 @@
+{
+  "_description": "消费记录数据模板（机构特定）",
+  "_note": "带下划线的字段为说明字段，导入时会被忽略",
+
+  "order_number": "订单号，唯一，建议格式：{机构编码}-ORD-{日期}-{序号}",
+  "customer_code": "客户编码，必填，关联客户表",
+  "order_date": "订单日期，格式 YYYY-MM-DD，必填",
+  "order_time": "订单时间，格式 HH:MM:SS，可选",
+  "order_type": "订单类型：PROJECT(项目) / PRODUCT(产品) / PACKAGE(套餐)",
+
+  "project_code": "项目编码，可为 null",
+  "product_code": "产品编码，可为 null",
+  "doctor_code": "执行医生编码，可为 null",
+
+  "current_times": "当前次数，疗程项目使用，默认 1",
+  "total_times": "总次数，疗程项目使用，默认 1",
+
+  "total_amount": "订单总额，必填",
+  "discount_amount": "折扣金额，默认 0",
+  "actual_amount": "实付金额，必填",
+  "payment_method": "支付方式：CASH(现金) / CARD(刷卡) / WECHAT(微信) / ALIPAY(支付宝) / OTHER(其他)",
+  "payment_status": "支付状态：PAID(已付) / PENDING(待付) / REFUNDED(已退款)",
+
+  "is_refund": "是否退款，布尔值",
+  "refund_amount": "退款金额，退款时填写",
+  "refund_reason": "退款原因",
+
+  "notes": "备注"
+}
+

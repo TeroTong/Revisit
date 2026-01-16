@@ -1,0 +1,258 @@
+services:
+
+  # ======================
+  # PostgreSQL
+  # ======================
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_DB: revisit
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: lancy
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+        test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+    restart: unless-stopped
+    networks:
+      - nebula-net
+
+  # ======================
+  # Nebula Graph
+  # ======================
+  metad:
+    image: docker.io/vesoft/nebula-metad:v3.8.0
+    environment:
+      USER: root
+      TZ: "${TZ}"
+    command:
+      - --meta_server_addrs=metad:9559
+      - --local_ip=metad
+      - --ws_ip=metad
+      - --port=9559
+      - --ws_http_port=19559
+      - --data_path=/data/meta
+      - --log_dir=/logs
+      - --v=0
+      - --minloglevel=0
+    healthcheck:
+      test: [ "CMD", "curl", "-sf", "http://metad:19559/status" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    ports:
+      - 9559
+      - 19559
+      - 19560
+    volumes:
+      - ./data/meta:/data/meta
+      - ./logs/meta:/logs
+    networks:
+      - nebula-net
+    restart: on-failure
+    cap_add:
+      - SYS_PTRACE
+
+  storaged:
+    image: docker.io/vesoft/nebula-storaged:v3.8.0
+    environment:
+      USER: root
+      TZ: "${TZ}"
+    command:
+      - --meta_server_addrs=metad:9559
+      - --local_ip=storaged
+      - --ws_ip=storaged
+      - --port=9779
+      - --ws_http_port=19779
+      - --data_path=/data/storage
+      - --log_dir=/logs
+      - --v=0
+      - --minloglevel=0
+    depends_on:
+      - metad
+    healthcheck:
+      test: [ "CMD", "curl", "-sf", "http://storaged:19779/status" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    ports:
+      - 9779
+      - 19779
+      - 19780
+    volumes:
+      - ./data/storage:/data/storage
+      - ./logs/storage:/logs
+    networks:
+      - nebula-net
+    restart: on-failure
+    cap_add:
+      - SYS_PTRACE
+
+  graphd:
+    image: docker.io/vesoft/nebula-graphd:v3.8.0
+    environment:
+      USER: root
+      TZ: "${TZ}"
+    command:
+      - --meta_server_addrs=metad:9559
+      - --port=9669
+      - --local_ip=graphd
+      - --ws_ip=graphd
+      - --ws_http_port=19669
+      - --log_dir=/logs
+      - --v=0
+      - --minloglevel=0
+    depends_on:
+      - storaged
+    healthcheck:
+      test: [ "CMD", "curl", "-sf", "http://graphd:19669/status" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    ports:
+      - "9669:9669"
+      - 19669
+      - 19670
+    volumes:
+      - ./logs/graph:/logs
+    networks:
+      - nebula-net
+    restart: on-failure
+    cap_add:
+      - SYS_PTRACE
+
+  console:
+    image: docker.io/vesoft/nebula-console:v3.6.0
+    entrypoint: ""
+    command:
+      - sh
+      - -c
+      - |
+        for i in `seq 1 60`;do
+          var=`nebula-console -addr graphd -port 9669 -u root -p nebula -e 'ADD HOSTS "storaged":9779'`;
+          if [[ $$? == 0 ]];then
+            break;
+          fi;
+          sleep 1;
+          echo "retry to add hosts.";
+        done && tail -f /dev/null;
+    depends_on:
+      - graphd
+    networks:
+      - nebula-net
+
+  # ======================
+  # ClickHouse
+  # ======================
+  clickhouse:
+    image: clickhouse/clickhouse-server:23.10
+    container_name: clickhouse
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    environment:
+      CLICKHOUSE_DB: revisit
+    healthcheck:
+      test: [ "CMD", "clickhouse-client", "--query", "SELECT 1" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    restart: unless-stopped
+    networks:
+      - nebula-net
+
+  # ======================
+  # Qdrant
+  # ======================
+  qdrant:
+    image: qdrant/qdrant:v1.16.2
+    container_name: qdrant
+    volumes:
+      - qdrant_data:/qdrant/storage
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    healthcheck:
+      test: ["CMD", "sh", "-c", "timeout 5 bash -c 'cat < /dev/null > /dev/tcp/127.0.0.1/6333'"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - nebula-net
+
+  # ======================
+  # Application
+  # ======================
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    environment:
+      # PostgreSQL
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=lancy
+      - POSTGRES_DB=revisit
+      # NebulaGraph
+      - NEBULA_HOST=graphd
+      - NEBULA_PORT=9669
+      - NEBULA_USER=root
+      - NEBULA_PASSWORD=nebula
+      - NEBULA_SPACE=revisit
+      # ClickHouse
+      - CLICKHOUSE_HOST=clickhouse
+      - CLICKHOUSE_PORT=9000
+      - CLICKHOUSE_USER=default
+      - CLICKHOUSE_PASSWORD=
+      - CLICKHOUSE_DB=revisit
+      # Qdrant
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+      - QDRANT_COLLECTIONS=customer_profiles,medical_knowledge,consultation_patterns
+      # App
+      - APP_ENVIRONMENT=development
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./prompts:/app/prompts
+    command: >
+      sh -c "python scripts/init_databases.py &&
+             uvicorn api.main:app --host 0.0.0.0 --port 8000"
+    restart: unless-stopped
+    networks:
+      - nebula-net
+
+volumes:
+  postgres_data:
+  clickhouse_data:
+  qdrant_data:
+
+networks:
+  nebula-net:
+    driver: bridge
