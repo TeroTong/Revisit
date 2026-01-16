@@ -261,8 +261,29 @@ class DataImporter:
                         self.sync_service.sync_to_nebula_customer(cust, ids, institution_code)
                         self.sync_service.sync_to_qdrant_customer(cust, ids)
 
-                        self.stats['customers'] += 1
+                        # 同步到 ClickHouse
                         person = cust.get('person', {})
+                        ch_customer_data = {
+                            'institution_customer_id': ids['institution_customer_id'],
+                            'person_id': ids['person_id'],
+                            'institution_id': ids['institution_id'],
+                            'customer_code': cust['customer_code'],
+                            'name': person.get('name', ''),
+                            'phone': person.get('phone', ''),
+                            'gender': person.get('gender', ''),
+                            'birthday': person.get('birthday'),
+                            'vip_level': cust.get('vip_level', 'NORMAL'),
+                            'status': cust.get('status', 'ACTIVE'),
+                            'first_visit_date': cust.get('first_visit_date'),
+                            'last_visit_date': cust.get('last_visit_date'),
+                            'consumption_count': 0,
+                            'total_consumption': 0,
+                            'referrer_id': '',
+                            'doctor_id': cust.get('doctor_code', '')
+                        }
+                        await self.sync_service.sync_to_clickhouse_customer(ch_customer_data, institution_code)
+
+                        self.stats['customers'] += 1
                         logger.info(f"    ✅ {cust['customer_code']}: {person.get('name', 'N/A')}")
 
                 except Exception as e:

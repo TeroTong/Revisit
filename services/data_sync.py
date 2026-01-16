@@ -949,6 +949,120 @@ class DataSyncService:
         except Exception as e:
             logger.error(f"同步消费记录到 ClickHouse 异常: {e}")
 
+    async def sync_to_clickhouse_customer(self, customer_data: Dict, institution_code: str):
+        """同步客户到 ClickHouse"""
+        try:
+            # 处理生日
+            birthday = customer_data.get('birthday')
+            birthday_str = f"'{birthday}'" if birthday else 'NULL'
+
+            # 处理日期
+            first_visit = customer_data.get('first_visit_date')
+            first_visit_str = f"'{first_visit}'" if first_visit else 'NULL'
+
+            last_visit = customer_data.get('last_visit_date')
+            last_visit_str = f"'{last_visit}'" if last_visit else 'NULL'
+
+            query = f'''
+                INSERT INTO {settings.DATABASE.CLICKHOUSE_DB}.dim_customer 
+                    (institution_customer_id, person_id, customer_code, name, phone, gender, birthday,
+                     institution_id, institution_code, vip_level, status,
+                     first_visit_date, last_visit_date, consumption_count, total_consumption,
+                     referrer_id, doctor_id)
+                VALUES (
+                    '{customer_data['institution_customer_id']}', 
+                    '{customer_data['person_id']}',
+                    '{customer_data['customer_code']}', 
+                    '{self._escape_ch(customer_data.get('name', ''))}',
+                    '{customer_data.get('phone', '')}', 
+                    '{customer_data.get('gender', '')}',
+                    {birthday_str},
+                    '{customer_data.get('institution_id', '')}', 
+                    '{institution_code}',
+                    '{customer_data.get('vip_level', 'NORMAL')}', 
+                    '{customer_data.get('status', 'ACTIVE')}',
+                    {first_visit_str}, 
+                    {last_visit_str},
+                    {customer_data.get('consumption_count', 0)}, 
+                    {customer_data.get('total_consumption', 0)},
+                    '{customer_data.get('referrer_id', '')}', 
+                    '{customer_data.get('doctor_id', '')}'
+                )
+            '''
+            await ch_execute_query(query)
+            logger.debug(f"✅ 同步客户到 ClickHouse: {customer_data['customer_code']}")
+        except Exception as e:
+            logger.error(f"同步客户到 ClickHouse 异常: {e}")
+
+    async def sync_existing_customers_to_clickhouse(self):
+        """同步所有现有客户数据到 ClickHouse（用于修复遗漏数据）"""
+        logger.info("开始同步现有客户数据到 ClickHouse...")
+        synced_count = 0
+
+        async with self.pg.get_connection() as conn:
+            # 获取所有机构
+            institutions = await conn.fetch('SELECT institution_code FROM institution')
+
+            for inst in institutions:
+                institution_code = inst['institution_code']
+                suffix = institution_code.lower().replace('-', '_')
+                customer_table = f"institution_customer_{suffix}"
+
+                try:
+                    # 检查表是否存在
+                    exists = await conn.fetchval('''
+                        SELECT EXISTS (
+                            SELECT FROM pg_tables 
+                            WHERE schemaname = 'public' 
+                            AND tablename = $1
+                        )
+                    ''', customer_table)
+
+                    if not exists:
+                        continue
+
+                    # 获取该机构的所有客户
+                    customers = await conn.fetch(f'''
+                        SELECT 
+                            ic.institution_customer_id::text,
+                            ic.institution_id::text,
+                            ic.person_id::text,
+                            ic.customer_code,
+                            ic.vip_level,
+                            ic.status,
+                            ic.first_visit_date,
+                            ic.last_visit_date,
+                            ic.consumption_count,
+                            ic.total_consumption,
+                            ic.referrer_id::text,
+                            ic.doctor_id::text,
+                            np.name,
+                            np.phone,
+                            np.gender,
+                            np.birthday
+                        FROM {customer_table} ic
+                        JOIN natural_person np ON ic.person_id = np.person_id
+                    ''')
+
+                    for customer in customers:
+                        customer_data = dict(customer)
+                        # 转换日期格式
+                        if customer_data.get('birthday'):
+                            customer_data['birthday'] = customer_data['birthday'].strftime('%Y-%m-%d')
+                        if customer_data.get('first_visit_date'):
+                            customer_data['first_visit_date'] = customer_data['first_visit_date'].strftime('%Y-%m-%d')
+                        if customer_data.get('last_visit_date'):
+                            customer_data['last_visit_date'] = customer_data['last_visit_date'].strftime('%Y-%m-%d')
+
+                        await self.sync_to_clickhouse_customer(customer_data, institution_code)
+                        synced_count += 1
+
+                except Exception as e:
+                    logger.error(f"同步机构 {institution_code} 客户时出错: {e}")
+
+        logger.info(f"✅ 客户数据同步完成，共同步 {synced_count} 条记录")
+        return synced_count
+
 
 # 全局实例
 data_sync_service = DataSyncService()

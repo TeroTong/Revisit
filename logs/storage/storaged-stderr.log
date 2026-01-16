@@ -2319,3 +2319,289 @@ E20260116 02:08:02.304309     1 MemoryUtils.cpp:167] Total memory less than untr
 I20260116 02:08:02.305647     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
 I20260116 02:08:14.885082   115 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
 I20260116 02:08:14.888484   115 MetaClient.cpp:3269] Load leader ok
+I20260116 08:42:17.785063     1 StorageDaemon.cpp:201] Signal 15(Terminated) received, stopping this server
+I20260116 08:42:17.809942     1 NebulaStore.cpp:343] Stop the raft service...
+I20260116 08:42:17.810837     1 RaftexService.cpp:67] Stopping the raftex service on port 9780
+I20260116 08:42:17.812803     1 RaftexService.cpp:77] All partitions have stopped
+I20260116 08:42:17.813820     1 NebulaStore.cpp:346] Stop kv engine...
+I20260116 08:42:17.945106     1 AdminTaskManager.cpp:176] enter AdminTaskManager::shutdown()
+I20260116 08:42:17.947252   167 AdminTaskManager.cpp:146] Unreported-Admin-Thread stopped
+I20260116 08:42:17.960713   166 AdminTaskManager.cpp:231] detect AdminTaskManager::shutdown()
+I20260116 08:42:17.964951     1 RocksEngine.h:247] Release rocksdb on /data/storage/nebula/0
+I20260116 08:42:17.990722     1 AdminTaskManager.cpp:193] exit AdminTaskManager::shutdown()
+I20260116 08:42:17.991986     1 NebulaStore.cpp:343] Stop the raft service...
+I20260116 08:42:17.992630     1 RaftexService.cpp:67] Stopping the raftex service on port 9780
+I20260116 08:42:17.993333     1 RaftexService.cpp:77] All partitions have stopped
+I20260116 08:42:17.993940     1 NebulaStore.cpp:346] Stop kv engine...
+I20260116 08:42:17.994613     1 NebulaStore.cpp:36] Cut off the relationship with meta client
+I20260116 08:42:17.995949     1 Part.h:59] [Port: 9780, Space: 2, Part: 49] ~Part()
+I20260116 08:42:18.003435     1 Part.h:59] [Port: 9780, Space: 2, Part: 50] ~Part()
+I20260116 08:42:18.010309     1 Part.h:59] [Port: 9780, Space: 2, Part: 45] ~Part()
+I20260116 08:42:18.017858     1 Part.h:59] [Port: 9780, Space: 2, Part: 22] ~Part()
+I20260116 08:42:18.025610     1 Part.h:59] [Port: 9780, Space: 2, Part: 23] ~Part()
+I20260116 08:42:18.037766     1 Part.h:59] [Port: 9780, Space: 2, Part: 17] ~Part()
+I20260116 08:42:18.045199     1 Part.h:59] [Port: 9780, Space: 2, Part: 18] ~Part()
+I20260116 08:42:18.053256     1 Part.h:59] [Port: 9780, Space: 2, Part: 20] ~Part()
+I20260116 08:42:18.062218     1 Part.h:59] [Port: 9780, Space: 2, Part: 19] ~Part()
+I20260116 08:42:18.072485     1 Part.h:59] [Port: 9780, Space: 2, Part: 13] ~Part()
+I20260116 08:42:18.081890     1 Part.h:59] [Port: 9780, Space: 2, Part: 14] ~Part()
+I20260116 08:42:18.089954     1 Part.h:59] [Port: 9780, Space: 2, Part: 16] ~Part()
+I20260116 08:42:18.097597     1 Part.h:59] [Port: 9780, Space: 2, Part: 15] ~Part()
+I20260116 08:42:18.106465     1 Part.h:59] [Port: 9780, Space: 2, Part: 9] ~Part()
+I20260116 08:42:18.114809     1 Part.h:59] [Port: 9780, Space: 2, Part: 7] ~Part()
+I20260116 08:42:18.124387     1 Part.h:59] [Port: 9780, Space: 2, Part: 2] ~Part()
+I20260116 08:42:18.133435     1 Part.h:59] [Port: 9780, Space: 2, Part: 24] ~Part()
+I20260116 08:42:18.146859     1 Part.h:59] [Port: 9780, Space: 2, Part: 1] ~Part()
+I20260116 08:42:18.153396     1 Part.h:59] [Port: 9780, Space: 2, Part: 48] ~Part()
+I20260116 08:42:18.159664     1 Part.h:59] [Port: 9780, Space: 2, Part: 12] ~Part()
+I20260116 08:42:18.165752     1 Part.h:59] [Port: 9780, Space: 2, Part: 3] ~Part()
+I20260116 08:42:18.175936     1 Part.h:59] [Port: 9780, Space: 2, Part: 4] ~Part()
+I20260116 08:42:18.186378     1 Part.h:59] [Port: 9780, Space: 2, Part: 8] ~Part()
+I20260116 08:42:18.193838     1 Part.h:59] [Port: 9780, Space: 2, Part: 5] ~Part()
+I20260116 08:42:18.201632     1 Part.h:59] [Port: 9780, Space: 2, Part: 6] ~Part()
+I20260116 08:42:18.211895     1 Part.h:59] [Port: 9780, Space: 2, Part: 11] ~Part()
+I20260116 08:42:18.218106     1 Part.h:59] [Port: 9780, Space: 2, Part: 10] ~Part()
+I20260116 08:42:18.227165     1 Part.h:59] [Port: 9780, Space: 2, Part: 21] ~Part()
+I20260116 08:42:18.236495     1 Part.h:59] [Port: 9780, Space: 2, Part: 27] ~Part()
+I20260116 08:42:18.244482     1 Part.h:59] [Port: 9780, Space: 2, Part: 26] ~Part()
+I20260116 08:42:18.252758     1 Part.h:59] [Port: 9780, Space: 2, Part: 28] ~Part()
+I20260116 08:42:18.260524     1 Part.h:59] [Port: 9780, Space: 2, Part: 25] ~Part()
+I20260116 08:42:18.266911     1 Part.h:59] [Port: 9780, Space: 2, Part: 31] ~Part()
+I20260116 08:42:18.273300     1 Part.h:59] [Port: 9780, Space: 2, Part: 30] ~Part()
+I20260116 08:42:18.284766     1 Part.h:59] [Port: 9780, Space: 2, Part: 32] ~Part()
+I20260116 08:42:18.293887     1 Part.h:59] [Port: 9780, Space: 2, Part: 29] ~Part()
+I20260116 08:42:18.300801     1 Part.h:59] [Port: 9780, Space: 2, Part: 35] ~Part()
+I20260116 08:42:18.309835     1 Part.h:59] [Port: 9780, Space: 2, Part: 34] ~Part()
+I20260116 08:42:18.320592     1 Part.h:59] [Port: 9780, Space: 2, Part: 33] ~Part()
+I20260116 08:42:18.330230     1 Part.h:59] [Port: 9780, Space: 2, Part: 36] ~Part()
+I20260116 08:42:18.337931     1 Part.h:59] [Port: 9780, Space: 2, Part: 38] ~Part()
+I20260116 08:42:18.345213     1 Part.h:59] [Port: 9780, Space: 2, Part: 39] ~Part()
+I20260116 08:42:18.354547     1 Part.h:59] [Port: 9780, Space: 2, Part: 40] ~Part()
+I20260116 08:42:18.362711     1 Part.h:59] [Port: 9780, Space: 2, Part: 37] ~Part()
+I20260116 08:42:18.372704     1 Part.h:59] [Port: 9780, Space: 2, Part: 42] ~Part()
+I20260116 08:42:18.381312     1 Part.h:59] [Port: 9780, Space: 2, Part: 43] ~Part()
+I20260116 08:42:18.389052     1 Part.h:59] [Port: 9780, Space: 2, Part: 44] ~Part()
+I20260116 08:42:18.399453     1 Part.h:59] [Port: 9780, Space: 2, Part: 41] ~Part()
+I20260116 08:42:18.406587     1 Part.h:59] [Port: 9780, Space: 2, Part: 46] ~Part()
+I20260116 08:42:18.412643     1 Part.h:59] [Port: 9780, Space: 2, Part: 47] ~Part()
+I20260116 08:42:18.421854     1 RocksEngine.h:247] Release rocksdb on /data/storage/nebula/2
+I20260116 08:42:18.445020     1 NebulaStore.cpp:44] ~NebulaStore()
+I20260116 08:42:18.449556     1 StorageDaemon.cpp:186] The storage Daemon stopped
+I20260116 09:00:16.290827     1 StorageDaemon.cpp:132] localhost = "storaged":9779
+I20260116 09:00:16.299233     1 StorageDaemon.cpp:147] data path= /data/storage
+I20260116 09:00:16.315083     1 MetaClient.cpp:80] Create meta client to "metad":9559
+I20260116 09:00:16.315629     1 MetaClient.cpp:81] root path: /usr/local/nebula, data path size: 1
+W20260116 09:00:16.316095     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20260116 09:00:16.345909    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:17.361967    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:18.364774    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:19.367635    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+E20260116 09:00:19.368232    49 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260116 09:00:19.371958    49 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260116 09:00:19.372597     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260116 09:00:19.373016     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+W20260116 09:00:29.371693     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20260116 09:00:29.373087    55 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:30.375563    55 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:31.378018    55 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:32.381229    55 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+E20260116 09:00:32.381788    55 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260116 09:00:32.382438    55 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260116 09:00:32.382944     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260116 09:00:32.383488     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+W20260116 09:00:42.383888     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20260116 09:00:42.385529    56 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:43.424383    56 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:44.427615    56 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:45.430588    56 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+E20260116 09:00:45.431167    56 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260116 09:00:45.431926    56 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260116 09:00:45.432587     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260116 09:00:45.433249     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+W20260116 09:00:55.432238     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20260116 09:00:55.433743    57 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:56.436143    57 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:57.467020    57 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:00:58.512609    57 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+E20260116 09:00:58.527182    57 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260116 09:00:58.549013    57 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260116 09:00:58.550609     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260116 09:00:58.552742     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+W20260116 09:01:08.553155     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20260116 09:01:08.554101    72 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:09.556296    72 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:10.558531    72 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:11.560901    72 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+E20260116 09:01:11.561528    72 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260116 09:01:11.562821    72 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260116 09:01:11.563870     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260116 09:01:11.566532     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+W20260116 09:01:21.566982     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20260116 09:01:21.568622    73 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:22.570921    73 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:23.577096    73 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:24.581744    73 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+E20260116 09:01:24.582950    73 MetaClient.cpp:772] Send request to "metad":9559, exceed retry limit
+E20260116 09:01:24.584739    73 MetaClient.cpp:773] RpcResponse exception: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connection refused): Connection refused
+E20260116 09:01:24.586896     1 MetaClient.cpp:112] Heartbeat failed, status:RPC failure in MetaClient: apache::thrift::transport::TTransportException: Dropping unsent request. Connection closed after: apache::thrift::transport::TTransportException: AsyncSocketException: connect failed, type = Socket not open, errno = 111 (Connect
+I20260116 09:01:24.588181     1 MetaClient.cpp:137] Waiting for the metad to be ready!
+W20260116 09:01:34.588662     1 FileBasedClusterIdMan.cpp:43] Open file failed, error No such file or directory
+I20260116 09:01:34.590818    74 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.595476    74 MetaClient.cpp:2672] Persist the cluster Id from metad 5324093806865848853
+I20260116 09:01:34.595844    74 FileBasedClusterIdMan.cpp:21] Remove the existed file cluster.id
+I20260116 09:01:34.596136    74 FileBasedClusterIdMan.cpp:34] Persist clusterId 5324093806865848853 succeeded!
+I20260116 09:01:34.596830    83 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.598301    92 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.599534    93 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.600801    94 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.601948    95 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.603438    96 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.604526    97 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.605888    98 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.606889    99 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.608222    49 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.609293    55 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.610380    56 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.611384    57 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.612227    72 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.613004     1 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260116 09:01:34.613381     1 MetaClient.cpp:3269] Load leader ok
+I20260116 09:01:34.614153    73 ThriftClientManager-inl.h:67] resolve "metad":9559 as "172.18.0.5":9559
+I20260116 09:01:34.616559     1 MetaClient.cpp:162] Register time task for heartbeat!
+I20260116 09:01:34.617013     1 StorageServer.cpp:250] Init schema manager
+I20260116 09:01:34.617297     1 StorageServer.cpp:253] Init index manager
+I20260116 09:01:34.617549     1 StorageServer.cpp:256] Init kvstore
+I20260116 09:01:34.617875     1 NebulaStore.cpp:48] Start the raft service...
+I20260116 09:01:34.618533     1 NebulaSnapshotManager.cpp:25] Send snapshot is rate limited to 10485760 for each part by default
+I20260116 09:01:34.633719     1 RaftexService.cpp:46] Start raft service on 9780
+I20260116 09:01:34.636618     1 NebulaStore.cpp:82] Scan the local path, and init the spaces_
+I20260116 09:01:34.638777     1 NebulaStore.cpp:90] Scan path "/data/storage/nebula/0"
+I20260116 09:01:34.639034     1 NebulaStore.cpp:90] Scan path "/data/storage/nebula/2"
+I20260116 09:01:34.645448   113 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20260116 09:01:34.646047   113 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20260116 09:01:34.646477   113 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20260116 09:01:34.647078   113 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20260116 09:01:34.888172   113 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/2/data
+I20260116 09:01:34.888499     1 NebulaStore.cpp:117] Load space 2 from disk
+I20260116 09:01:34.888863     1 NebulaStore.cpp:220] Load space 2 from disk
+I20260116 09:01:34.889075     1 NebulaStore.cpp:229] Need to open 50 parts of space 2
+I20260116 09:01:38.510742   109 NebulaStore.cpp:252] Load part 2, 3 from disk
+I20260116 09:01:38.529553   110 NebulaStore.cpp:252] Load part 2, 4 from disk
+I20260116 09:01:38.535214   108 NebulaStore.cpp:252] Load part 2, 2 from disk
+I20260116 09:01:38.572259   107 NebulaStore.cpp:252] Load part 2, 1 from disk
+I20260116 09:01:42.057332   109 NebulaStore.cpp:252] Load part 2, 7 from disk
+I20260116 09:01:42.062242   110 NebulaStore.cpp:252] Load part 2, 8 from disk
+I20260116 09:01:42.092512   108 NebulaStore.cpp:252] Load part 2, 6 from disk
+I20260116 09:01:42.098604   107 NebulaStore.cpp:252] Load part 2, 5 from disk
+I20260116 09:01:44.903097   109 NebulaStore.cpp:252] Load part 2, 11 from disk
+I20260116 09:01:44.904417   110 NebulaStore.cpp:252] Load part 2, 12 from disk
+I20260116 09:01:44.917281   107 NebulaStore.cpp:252] Load part 2, 9 from disk
+I20260116 09:01:44.937510   108 NebulaStore.cpp:252] Load part 2, 10 from disk
+I20260116 09:01:47.745739   109 NebulaStore.cpp:252] Load part 2, 15 from disk
+I20260116 09:01:47.747468   110 NebulaStore.cpp:252] Load part 2, 16 from disk
+I20260116 09:01:47.758790   107 NebulaStore.cpp:252] Load part 2, 13 from disk
+I20260116 09:01:47.785872   108 NebulaStore.cpp:252] Load part 2, 14 from disk
+I20260116 09:01:51.161439   107 NebulaStore.cpp:252] Load part 2, 17 from disk
+I20260116 09:01:51.168306   110 NebulaStore.cpp:252] Load part 2, 20 from disk
+I20260116 09:01:51.169793   108 NebulaStore.cpp:252] Load part 2, 18 from disk
+I20260116 09:01:51.177904   109 NebulaStore.cpp:252] Load part 2, 19 from disk
+I20260116 09:01:54.314610   107 NebulaStore.cpp:252] Load part 2, 21 from disk
+I20260116 09:01:54.316624   108 NebulaStore.cpp:252] Load part 2, 22 from disk
+I20260116 09:01:54.324110   109 NebulaStore.cpp:252] Load part 2, 23 from disk
+I20260116 09:01:54.325801   110 NebulaStore.cpp:252] Load part 2, 24 from disk
+I20260116 09:01:57.140674   107 NebulaStore.cpp:252] Load part 2, 25 from disk
+I20260116 09:01:57.176955   108 NebulaStore.cpp:252] Load part 2, 26 from disk
+I20260116 09:01:57.189232   110 NebulaStore.cpp:252] Load part 2, 28 from disk
+I20260116 09:01:57.190548   109 NebulaStore.cpp:252] Load part 2, 27 from disk
+I20260116 09:02:00.468112   107 NebulaStore.cpp:252] Load part 2, 29 from disk
+I20260116 09:02:00.540536   109 NebulaStore.cpp:252] Load part 2, 31 from disk
+I20260116 09:02:00.542464   108 NebulaStore.cpp:252] Load part 2, 30 from disk
+I20260116 09:02:00.543540   110 NebulaStore.cpp:252] Load part 2, 32 from disk
+I20260116 09:02:03.654639   107 NebulaStore.cpp:252] Load part 2, 33 from disk
+I20260116 09:02:03.705681   108 NebulaStore.cpp:252] Load part 2, 34 from disk
+I20260116 09:02:03.707798   110 NebulaStore.cpp:252] Load part 2, 36 from disk
+I20260116 09:02:03.722277   109 NebulaStore.cpp:252] Load part 2, 35 from disk
+I20260116 09:02:06.892138   107 NebulaStore.cpp:252] Load part 2, 37 from disk
+I20260116 09:02:06.949537   108 NebulaStore.cpp:252] Load part 2, 38 from disk
+I20260116 09:02:06.984513   110 NebulaStore.cpp:252] Load part 2, 40 from disk
+I20260116 09:02:07.011242   109 NebulaStore.cpp:252] Load part 2, 39 from disk
+I20260116 09:02:10.285636   107 NebulaStore.cpp:252] Load part 2, 41 from disk
+I20260116 09:02:10.322458   108 NebulaStore.cpp:252] Load part 2, 42 from disk
+I20260116 09:02:10.350497   110 NebulaStore.cpp:252] Load part 2, 44 from disk
+I20260116 09:02:10.382036   109 NebulaStore.cpp:252] Load part 2, 43 from disk
+I20260116 09:02:13.597908   107 NebulaStore.cpp:252] Load part 2, 45 from disk
+I20260116 09:02:13.641512   108 NebulaStore.cpp:252] Load part 2, 46 from disk
+I20260116 09:02:13.680043   110 NebulaStore.cpp:252] Load part 2, 48 from disk
+I20260116 09:02:13.683732   109 NebulaStore.cpp:252] Load part 2, 47 from disk
+I20260116 09:02:15.626394   107 NebulaStore.cpp:252] Load part 2, 49 from disk
+I20260116 09:02:15.654915   108 NebulaStore.cpp:252] Load part 2, 50 from disk
+I20260116 09:02:15.655475     1 NebulaStore.cpp:286] Load space 2 complete
+I20260116 09:02:15.657553     1 NebulaStore.cpp:292] Init data from partManager for "storaged":9779
+I20260116 09:02:15.657996     1 NebulaStore.cpp:399] Data space 2 has existed!
+I20260116 09:02:15.658420     1 NebulaStore.cpp:451] [Space: 2, Part: 1] has existed!
+I20260116 09:02:15.658896     1 NebulaStore.cpp:451] [Space: 2, Part: 2] has existed!
+I20260116 09:02:15.660262     1 NebulaStore.cpp:451] [Space: 2, Part: 3] has existed!
+I20260116 09:02:15.660975     1 NebulaStore.cpp:451] [Space: 2, Part: 4] has existed!
+I20260116 09:02:15.661412     1 NebulaStore.cpp:451] [Space: 2, Part: 5] has existed!
+I20260116 09:02:15.661646     1 NebulaStore.cpp:451] [Space: 2, Part: 6] has existed!
+I20260116 09:02:15.661927     1 NebulaStore.cpp:451] [Space: 2, Part: 7] has existed!
+I20260116 09:02:15.662158     1 NebulaStore.cpp:451] [Space: 2, Part: 8] has existed!
+I20260116 09:02:15.662385     1 NebulaStore.cpp:451] [Space: 2, Part: 9] has existed!
+I20260116 09:02:15.662612     1 NebulaStore.cpp:451] [Space: 2, Part: 10] has existed!
+I20260116 09:02:15.662839     1 NebulaStore.cpp:451] [Space: 2, Part: 11] has existed!
+I20260116 09:02:15.663086     1 NebulaStore.cpp:451] [Space: 2, Part: 12] has existed!
+I20260116 09:02:15.663455     1 NebulaStore.cpp:451] [Space: 2, Part: 13] has existed!
+I20260116 09:02:15.663712     1 NebulaStore.cpp:451] [Space: 2, Part: 14] has existed!
+I20260116 09:02:15.663913     1 NebulaStore.cpp:451] [Space: 2, Part: 15] has existed!
+I20260116 09:02:15.664166     1 NebulaStore.cpp:451] [Space: 2, Part: 16] has existed!
+I20260116 09:02:15.664474     1 NebulaStore.cpp:451] [Space: 2, Part: 17] has existed!
+I20260116 09:02:15.664696     1 NebulaStore.cpp:451] [Space: 2, Part: 18] has existed!
+I20260116 09:02:15.664916     1 NebulaStore.cpp:451] [Space: 2, Part: 19] has existed!
+I20260116 09:02:15.665129     1 NebulaStore.cpp:451] [Space: 2, Part: 20] has existed!
+I20260116 09:02:15.665342     1 NebulaStore.cpp:451] [Space: 2, Part: 21] has existed!
+I20260116 09:02:15.665566     1 NebulaStore.cpp:451] [Space: 2, Part: 22] has existed!
+I20260116 09:02:15.665781     1 NebulaStore.cpp:451] [Space: 2, Part: 23] has existed!
+I20260116 09:02:15.666059     1 NebulaStore.cpp:451] [Space: 2, Part: 24] has existed!
+I20260116 09:02:15.666318     1 NebulaStore.cpp:451] [Space: 2, Part: 25] has existed!
+I20260116 09:02:15.666563     1 NebulaStore.cpp:451] [Space: 2, Part: 26] has existed!
+I20260116 09:02:15.666811     1 NebulaStore.cpp:451] [Space: 2, Part: 27] has existed!
+I20260116 09:02:15.667057     1 NebulaStore.cpp:451] [Space: 2, Part: 28] has existed!
+I20260116 09:02:15.667301     1 NebulaStore.cpp:451] [Space: 2, Part: 29] has existed!
+I20260116 09:02:15.668633     1 NebulaStore.cpp:451] [Space: 2, Part: 30] has existed!
+I20260116 09:02:15.669032     1 NebulaStore.cpp:451] [Space: 2, Part: 31] has existed!
+I20260116 09:02:15.669308     1 NebulaStore.cpp:451] [Space: 2, Part: 32] has existed!
+I20260116 09:02:15.669526     1 NebulaStore.cpp:451] [Space: 2, Part: 33] has existed!
+I20260116 09:02:15.669741     1 NebulaStore.cpp:451] [Space: 2, Part: 34] has existed!
+I20260116 09:02:15.669960     1 NebulaStore.cpp:451] [Space: 2, Part: 35] has existed!
+I20260116 09:02:15.671638     1 NebulaStore.cpp:451] [Space: 2, Part: 36] has existed!
+I20260116 09:02:15.672282     1 NebulaStore.cpp:451] [Space: 2, Part: 37] has existed!
+I20260116 09:02:15.672729     1 NebulaStore.cpp:451] [Space: 2, Part: 38] has existed!
+I20260116 09:02:15.673220     1 NebulaStore.cpp:451] [Space: 2, Part: 39] has existed!
+I20260116 09:02:15.673666     1 NebulaStore.cpp:451] [Space: 2, Part: 40] has existed!
+I20260116 09:02:15.674113     1 NebulaStore.cpp:451] [Space: 2, Part: 41] has existed!
+I20260116 09:02:15.674692     1 NebulaStore.cpp:451] [Space: 2, Part: 42] has existed!
+I20260116 09:02:15.674988     1 NebulaStore.cpp:451] [Space: 2, Part: 43] has existed!
+I20260116 09:02:15.675315     1 NebulaStore.cpp:451] [Space: 2, Part: 44] has existed!
+I20260116 09:02:15.675706     1 NebulaStore.cpp:451] [Space: 2, Part: 45] has existed!
+I20260116 09:02:15.675922     1 NebulaStore.cpp:451] [Space: 2, Part: 46] has existed!
+I20260116 09:02:15.676133     1 NebulaStore.cpp:451] [Space: 2, Part: 47] has existed!
+I20260116 09:02:15.676360     1 NebulaStore.cpp:451] [Space: 2, Part: 48] has existed!
+I20260116 09:02:15.676565     1 NebulaStore.cpp:451] [Space: 2, Part: 49] has existed!
+I20260116 09:02:15.676869     1 NebulaStore.cpp:451] [Space: 2, Part: 50] has existed!
+I20260116 09:02:15.677167     1 NebulaStore.cpp:75] Register handler...
+I20260116 09:02:15.677425     1 StorageServer.cpp:259] Init LogMonitor
+I20260116 09:02:15.677775     1 StorageServer.cpp:126] Starting Storage HTTP Service
+I20260116 09:02:15.678238     1 StorageServer.cpp:130] Http Thread Pool started
+I20260116 09:02:15.695277   150 WebService.cpp:124] Web service started on HTTP[19779]
+I20260116 09:02:15.703984     1 RocksEngineConfig.cpp:371] Emplace rocksdb option max_bytes_for_level_base=268435456
+I20260116 09:02:15.709609     1 RocksEngineConfig.cpp:371] Emplace rocksdb option max_write_buffer_number=4
+I20260116 09:02:15.710336     1 RocksEngineConfig.cpp:371] Emplace rocksdb option write_buffer_size=67108864
+I20260116 09:02:15.711326     1 RocksEngineConfig.cpp:371] Emplace rocksdb option block_size=8192
+I20260116 09:02:15.809103     1 RocksEngine.cpp:107] open rocksdb on /data/storage/nebula/0/data
+I20260116 09:02:15.810115     1 AdminTaskManager.cpp:22] max concurrent subtasks: 10
+I20260116 09:02:15.810755     1 AdminTaskManager.cpp:40] exit AdminTaskManager::init()
+I20260116 09:02:15.810823   171 AdminTaskManager.cpp:224] waiting for incoming task
+E20260116 09:02:15.817343     1 MemoryUtils.cpp:167] Total memory less than untracked 50 Mib, MemoryTracker limit is not set properly,  Current memory stats:MemoryStats: 8589934592.000GiB/131.013MiB
+I20260116 09:02:15.819142     1 MemoryUtils.cpp:171] MemoryTracker set static ratio: 0.8
+I20260116 09:02:35.354298   106 MetaClient.cpp:3263] Load leader of "storaged":9779 in 1 space
+I20260116 09:02:35.355258   106 MetaClient.cpp:3269] Load leader ok
