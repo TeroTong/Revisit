@@ -31194,3 +31194,4 @@ I20260116 09:39:41.151849   147 HBProcessor.cpp:33] Receive heartbeat from "grap
 I20260116 09:39:47.622947   147 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
 I20260116 09:39:51.164775   147 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
 I20260116 09:39:57.627380   147 HBProcessor.cpp:33] Receive heartbeat from "storaged":9779, role = STORAGE
+I20260116 09:40:01.170265   147 HBProcessor.cpp:33] Receive heartbeat from "graphd":9669, role = GRAPH
