@@ -8,7 +8,7 @@ from contextlib import asynccontextmanager
 import logging
 
 from config.settings import settings
-from api.routes import customers, reminders, analytics
+from api.routes import reminders
 from database.postgres.connection import create_pool, close_pool
 
 logger = logging.getLogger(__name__)
@@ -53,9 +53,7 @@ app.add_middleware(
 )
 
 # 注册路由
-app.include_router(customers.router, prefix="/api/v1", tags=["客户管理"])
 app.include_router(reminders.router, prefix="/api/v1", tags=["回访管理"])
-app.include_router(analytics.router, prefix="/api/v1", tags=["数据分析"])
 
 
 # 全局异常处理
