@@ -70,7 +70,7 @@ class LLMConfig(BaseSettings):
 
     OPENAI_API_KEY: str = Field("sk-0f09f31732564f60aecdda5c8bed0431", env="OPENAI_API_KEY")
     OPENAI_API_BASE: str = Field("https://dashscope.aliyuncs.com/compatible-mode/v1", env="OPENAI_API_BASE")
-    OPENAI_MODEL: str = Field("qwen2-1.5b-instruct", env="OPENAI_MODEL")
+    OPENAI_MODEL: str = Field("deepseek-r1-distill-qwen-1.5b", env="OPENAI_MODEL")
     OPENAI_MAX_TOKENS: int = Field(1000, env="OPENAI_MAX_TOKENS")
     OPENAI_TEMPERATURE: float = Field(0.7, env="OPENAI_TEMPERATURE")
 
