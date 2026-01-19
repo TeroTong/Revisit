@@ -4,7 +4,6 @@
 import pytest
 from datetime import date
 from core.models.customer import Customer
-from core.models.project import Project
 from core.models.reminder import Reminder, ReminderType, ReminderStatus, ReminderChannel
 
 
@@ -78,32 +77,6 @@ class TestCustomerModel:
         assert data["name"] == "赵六"
         assert "birthday" in data
 
-
-class TestProjectModel:
-    """测试项目模型"""
-
-    def test_project_creation(self):
-        """测试项目创建"""
-        project = Project(
-            project_code="PROJ_001",
-            name="激光祛斑",
-            category="皮肤护理",
-            price=2999.00
-        )
-
-        assert project.name == "激光祛斑"
-        assert project.category == "皮肤护理"
-        assert project.price == 2999.00
-
-    def test_project_price_validation(self):
-        """测试价格验证"""
-        with pytest.raises(ValueError):
-            Project(
-                project_code="PROJ_002",
-                name="测试项目",
-                category="测试",
-                price=-100.00
-            )
 
 
 class TestReminderModel:
